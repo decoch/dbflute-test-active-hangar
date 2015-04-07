@@ -1,0 +1,15 @@
+map:{
+    ; 2014/10/22 18:48:10 = map:{
+        ; diffDate = 2014/10/22 18:48:10
+        ; tableCount = map:{
+            ; next = 25
+            ; previous = 24
+        }
+        ; tableDiff = map:{
+            ; WHITE_DATE_TERM = map:{
+                ; tableName = WHITE_DATE_TERM
+                ; diffType = ADD
+            }
+        }
+    }
+}
