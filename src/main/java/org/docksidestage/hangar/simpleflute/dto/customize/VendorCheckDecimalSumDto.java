@@ -12,6 +12,6 @@ import org.docksidestage.hangar.simpleflute.dto.bs.customize.BsVendorCheckDecima
  */
 public class VendorCheckDecimalSumDto extends BsVendorCheckDecimalSumDto {
 
-    /** Serial version UID. (Default) */
+    /** The serial version UID for object serialization. (Default) */
     private static final long serialVersionUID = 1L;
 }

@@ -91,7 +91,7 @@ public class MemberAddressDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                         Column Info
     //                                                                         ===========
-    protected final ColumnInfo _columnMemberAddressId = cci("MEMBER_ADDRESS_ID", "MEMBER_ADDRESS_ID", null, "会員住所ID", Integer.class, "memberAddressId", null, true, true, true, "INTEGER", 10, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_0B33B4C3_2141_45F6_B61F_ABC85F6B462B", false, null, "会員住所を識別するID。\n期間ごとに同じ会員のデータを保持することがあるため、これは単なるPKであってFKではない。", null, null, null, false);
+    protected final ColumnInfo _columnMemberAddressId = cci("MEMBER_ADDRESS_ID", "MEMBER_ADDRESS_ID", null, "会員住所ID", Integer.class, "memberAddressId", null, true, true, true, "INTEGER", 10, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_AFFA7139_CDCF_4C18_91B3_5CCF2A938D29", false, null, "会員住所を識別するID。\n期間ごとに同じ会員のデータを保持することがあるため、これは単なるPKであってFKではない。", null, null, null, false);
     protected final ColumnInfo _columnMemberId = cci("MEMBER_ID", "MEMBER_ID", null, "会員ID", Integer.class, "memberId", null, false, false, true, "INTEGER", 10, 0, null, false, null, "会員を参照するID。\n期間ごとのデータがあるので、これだけではユニークにはならない。有効開始日と合わせて複合ユニーク制約となるが、厳密には完全な制約にはなっていない。有効期間の概念はRDBでは表現しきれないのである。", "member", null, null, false);
     protected final ColumnInfo _columnValidBeginDate = cci("VALID_BEGIN_DATE", "VALID_BEGIN_DATE", null, "有効開始日", java.time.LocalDate.class, "validBeginDate", null, false, false, true, "DATE", 8, 0, null, false, null, "一つの有効期間の開始を示す日付。\n前の有効終了日の次の日の値が格納される。", null, null, null, false);
     protected final ColumnInfo _columnValidEndDate = cci("VALID_END_DATE", "VALID_END_DATE", null, "有効終了日", java.time.LocalDate.class, "validEndDate", null, false, false, true, "DATE", 8, 0, null, false, null, "有効期間の終了日。\n期間の最後の日が格納される。基本的に、次の有効開始日の一日前の値となるが、次の有効期間がない場合は 9999/12/31 となる。", null, null, null, false);
@@ -243,9 +243,9 @@ public class MemberAddressDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.MemberAddress"; }
-    public String getConditionBeanTypeName() { return "org.docksidestage.hanger.dbflute.cbean.MemberAddressCB"; }
-    public String getBehaviorTypeName() { return "org.docksidestage.hanger.dbflute.exbhv.MemberAddressBhv"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.MemberAddress"; }
+    public String getConditionBeanTypeName() { return "org.docksidestage.hangar.dbflute.cbean.MemberAddressCB"; }
+    public String getBehaviorTypeName() { return "org.docksidestage.hangar.dbflute.exbhv.MemberAddressBhv"; }
 
     // ===================================================================================
     //                                                                         Object Type

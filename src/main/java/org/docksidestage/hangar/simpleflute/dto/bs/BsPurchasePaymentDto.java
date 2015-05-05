@@ -5,9 +5,7 @@ import java.util.*;
 
 import net.arnx.jsonic.JSONHint;
 import net.vvakame.util.jsonpullparser.annotation.*;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import org.docksidestage.hangar.simpleflute.AppCDef;
 import org.docksidestage.hangar.simpleflute.dto.*;
 

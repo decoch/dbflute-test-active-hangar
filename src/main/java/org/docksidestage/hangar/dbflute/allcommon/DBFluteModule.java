@@ -3,7 +3,6 @@ package org.docksidestage.hangar.dbflute.allcommon;
 import javax.sql.DataSource;
 
 import com.google.inject.AbstractModule;
-
 import org.dbflute.bhv.BehaviorSelector;
 import org.dbflute.bhv.core.BehaviorCommandInvoker;
 import org.dbflute.bhv.core.InvokerAssistant;

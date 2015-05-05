@@ -81,7 +81,7 @@ public class DBFluteConfig {
     protected DataSourceHandler _dataSourceHandler;
     protected PhysicalConnectionDigger _physicalConnectionDigger;
     protected SQLExceptionDigger _sqlExceptionDigger;
-    protected String _outsideSqlPackage = "org.docksidestage.hanger.dbflute.exbhv";
+    protected String _outsideSqlPackage = "org.docksidestage.hangar.dbflute.exbhv";
     protected boolean _useSqlLogRegistry = false;
     protected MappingDateTimeZoneProvider _mappingDateTimeZoneProvider;
 

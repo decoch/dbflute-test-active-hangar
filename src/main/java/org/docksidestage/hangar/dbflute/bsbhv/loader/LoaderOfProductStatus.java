@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.dbflute.bhv.*;
 import org.dbflute.bhv.referrer.*;
-import org.docksidestage.hangar.dbflute.cbean.*;
 import org.docksidestage.hangar.dbflute.exbhv.*;
 import org.docksidestage.hangar.dbflute.exentity.*;
+import org.docksidestage.hangar.dbflute.cbean.*;
 
 /**
  * The referrer loader of (商品ステータス)PRODUCT_STATUS as TABLE. <br>

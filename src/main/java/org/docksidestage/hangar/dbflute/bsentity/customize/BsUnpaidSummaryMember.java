@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import org.dbflute.dbmeta.DBMeta;
 import org.dbflute.dbmeta.AbstractEntity;
 import org.dbflute.dbmeta.accessory.CustomizeEntity;
-import org.docksidestage.hangar.dbflute.exentity.*;
 import org.docksidestage.hangar.dbflute.exentity.customize.*;
+import org.docksidestage.hangar.dbflute.exentity.*;
 
 /**
  * The entity of UnpaidSummaryMember. <br>

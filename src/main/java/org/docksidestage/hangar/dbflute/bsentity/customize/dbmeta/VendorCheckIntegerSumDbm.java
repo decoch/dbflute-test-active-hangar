@@ -111,7 +111,7 @@ public class VendorCheckIntegerSumDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.customize.VendorCheckIntegerSum"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.customize.VendorCheckIntegerSum"; }
     public String getConditionBeanTypeName() { return null; }
     public String getBehaviorTypeName() { return null; }
 

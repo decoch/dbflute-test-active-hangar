@@ -325,9 +325,9 @@ public class VendorCheckDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.VendorCheck"; }
-    public String getConditionBeanTypeName() { return "org.docksidestage.hanger.dbflute.cbean.VendorCheckCB"; }
-    public String getBehaviorTypeName() { return "org.docksidestage.hanger.dbflute.exbhv.VendorCheckBhv"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.VendorCheck"; }
+    public String getConditionBeanTypeName() { return "org.docksidestage.hangar.dbflute.cbean.VendorCheckCB"; }
+    public String getBehaviorTypeName() { return "org.docksidestage.hangar.dbflute.exbhv.VendorCheckBhv"; }
 
     // ===================================================================================
     //                                                                         Object Type

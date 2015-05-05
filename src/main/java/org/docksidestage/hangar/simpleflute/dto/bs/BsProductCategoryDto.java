@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.*;
 
 import net.vvakame.util.jsonpullparser.annotation.*;
-
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**

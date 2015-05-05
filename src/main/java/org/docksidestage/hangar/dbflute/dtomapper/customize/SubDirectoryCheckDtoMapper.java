@@ -1,7 +1,6 @@
 package org.docksidestage.hangar.dbflute.dtomapper.customize;
 
 import java.util.Map;
-
 import org.dbflute.Entity;
 import org.docksidestage.hangar.dbflute.dtomapper.bs.customize.BsSubDirectoryCheckDtoMapper;
 

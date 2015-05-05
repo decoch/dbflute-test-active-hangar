@@ -12,6 +12,6 @@ import org.docksidestage.hangar.simpleflute.dto.bs.customize.BsSimpleMemberDto;
  */
 public class SimpleMemberDto extends BsSimpleMemberDto {
 
-    /** Serial version UID. (Default) */
+    /** The serial version UID for object serialization. (Default) */
     private static final long serialVersionUID = 1L;
 }

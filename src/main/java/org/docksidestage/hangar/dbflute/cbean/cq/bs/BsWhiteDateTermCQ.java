@@ -8,9 +8,9 @@ import org.dbflute.cbean.coption.*;
 import org.dbflute.cbean.cvalue.ConditionValue;
 import org.dbflute.cbean.sqlclause.SqlClause;
 import org.dbflute.exception.IllegalConditionBeanOperationException;
+import org.docksidestage.hangar.dbflute.cbean.cq.ciq.*;
 import org.docksidestage.hangar.dbflute.cbean.*;
 import org.docksidestage.hangar.dbflute.cbean.cq.*;
-import org.docksidestage.hangar.dbflute.cbean.cq.ciq.*;
 
 /**
  * The base condition-query of WHITE_DATE_TERM.

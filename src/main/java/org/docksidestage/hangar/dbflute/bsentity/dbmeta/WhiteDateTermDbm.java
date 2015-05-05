@@ -133,9 +133,9 @@ public class WhiteDateTermDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.WhiteDateTerm"; }
-    public String getConditionBeanTypeName() { return "org.docksidestage.hanger.dbflute.cbean.WhiteDateTermCB"; }
-    public String getBehaviorTypeName() { return "org.docksidestage.hanger.dbflute.exbhv.WhiteDateTermBhv"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.WhiteDateTerm"; }
+    public String getConditionBeanTypeName() { return "org.docksidestage.hangar.dbflute.cbean.WhiteDateTermCB"; }
+    public String getBehaviorTypeName() { return "org.docksidestage.hangar.dbflute.exbhv.WhiteDateTermBhv"; }
 
     // ===================================================================================
     //                                                                         Object Type

@@ -119,7 +119,7 @@ public class PmCommentHintDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.customize.PmCommentHint"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.customize.PmCommentHint"; }
     public String getConditionBeanTypeName() { return null; }
     public String getBehaviorTypeName() { return null; }
 

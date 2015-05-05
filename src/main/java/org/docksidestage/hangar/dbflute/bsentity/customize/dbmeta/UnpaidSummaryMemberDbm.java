@@ -133,7 +133,7 @@ public class UnpaidSummaryMemberDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.customize.UnpaidSummaryMember"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.customize.UnpaidSummaryMember"; }
     public String getConditionBeanTypeName() { return null; }
     public String getBehaviorTypeName() { return null; }
 

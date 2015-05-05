@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.dbflute.bhv.*;
 import org.dbflute.bhv.referrer.*;
-import org.docksidestage.hangar.dbflute.cbean.*;
 import org.docksidestage.hangar.dbflute.exbhv.*;
 import org.docksidestage.hangar.dbflute.exentity.*;
+import org.docksidestage.hangar.dbflute.cbean.*;
 
 /**
  * The referrer loader of (サービスランク)SERVICE_RANK as TABLE. <br>
