@@ -59,7 +59,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     @JsonKey
     protected Integer _memberId;
 
-    /** (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(50)} */
+    /** (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(100)} */
     @JsonKey
     protected String _loginPassword;
 
@@ -209,7 +209,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     }
 
     /**
-     * [get] (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(50)} <br>
+     * [get] (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(100)} <br>
      * @return The value of the column 'LOGIN_PASSWORD'. (NullAllowed)
      */
     public String getLoginPassword() {
@@ -217,7 +217,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     }
 
     /**
-     * [set] (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(50)} <br>
+     * [set] (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(100)} <br>
      * @param loginPassword The value of the column 'LOGIN_PASSWORD'. (NullAllowed)
      */
     public void setLoginPassword(String loginPassword) {
