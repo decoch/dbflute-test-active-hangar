@@ -12,6 +12,6 @@ import org.docksidestage.hangar.dbflute.bsentity.customize.BsSimpleMember;
  */
 public class SimpleMember extends BsSimpleMember {
 
-    /** Serial version UID. (Default) */
+    /** The serial version UID for object serialization. (Default) */
     private static final long serialVersionUID = 1L;
 }

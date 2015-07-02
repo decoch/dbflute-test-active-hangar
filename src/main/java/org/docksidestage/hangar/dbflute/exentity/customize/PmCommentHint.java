@@ -12,6 +12,6 @@ import org.docksidestage.hangar.dbflute.bsentity.customize.BsPmCommentHint;
  */
 public class PmCommentHint extends BsPmCommentHint {
 
-    /** Serial version UID. (Default) */
+    /** The serial version UID for object serialization. (Default) */
     private static final long serialVersionUID = 1L;
 }

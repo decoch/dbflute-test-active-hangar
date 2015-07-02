@@ -16,9 +16,9 @@ import org.dbflute.helper.beans.DfBeanDesc;
 import org.dbflute.helper.beans.DfPropertyDesc;
 import org.dbflute.helper.beans.factory.DfBeanDescFactory;
 import org.dbflute.jdbc.Classification;
-import org.docksidestage.hangar.dbflute.dtomapper.*;
 import org.docksidestage.hangar.dbflute.exentity.*;
 import org.docksidestage.hangar.simpleflute.dto.*;
+import org.docksidestage.hangar.dbflute.dtomapper.*;
 
 /**
  * The DTO mapper of VENDOR_IDENTITY_ONLY as TABLE. <br>

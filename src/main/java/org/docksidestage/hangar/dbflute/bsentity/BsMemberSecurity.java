@@ -8,8 +8,8 @@ import org.dbflute.dbmeta.DBMeta;
 import org.dbflute.dbmeta.AbstractEntity;
 import org.dbflute.dbmeta.accessory.DomainEntity;
 import org.dbflute.optional.OptionalEntity;
-import org.docksidestage.hangar.dbflute.allcommon.DBMetaInstanceHandler;
 import org.docksidestage.hangar.dbflute.allcommon.EntityDefinedCommonColumn;
+import org.docksidestage.hangar.dbflute.allcommon.DBMetaInstanceHandler;
 import org.docksidestage.hangar.dbflute.exentity.*;
 
 /**
@@ -82,7 +82,7 @@ public abstract class BsMemberSecurity extends AbstractEntity implements DomainE
     /** (会員ID)MEMBER_ID: {PK, NotNull, INTEGER(10), FK to MEMBER} */
     protected Integer _memberId;
 
-    /** (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(50)} */
+    /** (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(100)} */
     protected String _loginPassword;
 
     /** (リマインダ質問)REMINDER_QUESTION: {NotNull, VARCHAR(50)} */
@@ -253,7 +253,7 @@ public abstract class BsMemberSecurity extends AbstractEntity implements DomainE
     }
 
     /**
-     * [get] (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(50)} <br>
+     * [get] (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(100)} <br>
      * @return The value of the column 'LOGIN_PASSWORD'. (basically NotNull if selected: for the constraint)
      */
     public String getLoginPassword() {
@@ -262,7 +262,7 @@ public abstract class BsMemberSecurity extends AbstractEntity implements DomainE
     }
 
     /**
-     * [set] (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(50)} <br>
+     * [set] (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(100)} <br>
      * @param loginPassword The value of the column 'LOGIN_PASSWORD'. (basically NotNull if update: for the constraint)
      */
     public void setLoginPassword(String loginPassword) {

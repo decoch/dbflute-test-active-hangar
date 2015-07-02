@@ -178,9 +178,9 @@ public class SummaryProductDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.SummaryProduct"; }
-    public String getConditionBeanTypeName() { return "org.docksidestage.hanger.dbflute.cbean.SummaryProductCB"; }
-    public String getBehaviorTypeName() { return "org.docksidestage.hanger.dbflute.exbhv.SummaryProductBhv"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.SummaryProduct"; }
+    public String getConditionBeanTypeName() { return "org.docksidestage.hangar.dbflute.cbean.SummaryProductCB"; }
+    public String getBehaviorTypeName() { return "org.docksidestage.hangar.dbflute.exbhv.SummaryProductBhv"; }
 
     // ===================================================================================
     //                                                                         Object Type

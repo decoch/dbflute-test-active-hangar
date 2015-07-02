@@ -1,7 +1,6 @@
 package org.docksidestage.hangar.dbflute.cbean.cq.ciq;
 
 import java.util.Map;
-
 import org.dbflute.cbean.*;
 import org.dbflute.cbean.ckey.*;
 import org.dbflute.cbean.coption.ConditionOption;
@@ -9,8 +8,8 @@ import org.dbflute.cbean.cvalue.ConditionValue;
 import org.dbflute.cbean.sqlclause.SqlClause;
 import org.dbflute.exception.IllegalConditionBeanOperationException;
 import org.docksidestage.hangar.dbflute.cbean.*;
-import org.docksidestage.hangar.dbflute.cbean.cq.*;
 import org.docksidestage.hangar.dbflute.cbean.cq.bs.*;
+import org.docksidestage.hangar.dbflute.cbean.cq.*;
 
 /**
  * The condition-query for in-line of MEMBER_WITHDRAWAL.

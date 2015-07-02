@@ -1,7 +1,6 @@
 package org.docksidestage.hangar.dbflute.dtomapper.customize;
 
 import java.util.Map;
-
 import org.dbflute.Entity;
 import org.docksidestage.hangar.dbflute.dtomapper.bs.customize.BsSimpleVendorCheckDtoMapper;
 
@@ -15,7 +14,7 @@ import org.docksidestage.hangar.dbflute.dtomapper.bs.customize.BsSimpleVendorChe
  */
 public class SimpleVendorCheckDtoMapper extends BsSimpleVendorCheckDtoMapper {
 
-    /** Serial version UID. (Default) */
+    /** The serial version UID for object serialization. (Default) */
     private static final long serialVersionUID = 1L;
 
     public SimpleVendorCheckDtoMapper() {

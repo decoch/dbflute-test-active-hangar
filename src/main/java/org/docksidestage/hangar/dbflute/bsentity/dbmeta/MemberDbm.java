@@ -102,7 +102,7 @@ public class MemberDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                         Column Info
     //                                                                         ===========
-    protected final ColumnInfo _columnMemberId = cci("MEMBER_ID", "MEMBER_ID", null, "会員ID", Integer.class, "memberId", null, true, true, true, "INTEGER", 10, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_6667511F_4678_4830_91BE_0B86014CD0C6", false, null, "連番として自動採番される。会員IDだけに限らず採番方法はDBMS次第。", "memberAddressAsValid,memberSecurityAsOne,memberServiceAsOne,memberWithdrawalAsOne", "memberAddressList,memberFollowingByMyMemberIdList,memberFollowingByYourMemberIdList,memberLoginList,purchaseList", null, false);
+    protected final ColumnInfo _columnMemberId = cci("MEMBER_ID", "MEMBER_ID", null, "会員ID", Integer.class, "memberId", null, true, true, true, "INTEGER", 10, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_77112A9B_35CB_45C5_A410_D9D6FC325A3F", false, null, "連番として自動採番される。会員IDだけに限らず採番方法はDBMS次第。", "memberAddressAsValid,memberSecurityAsOne,memberServiceAsOne,memberWithdrawalAsOne", "memberAddressList,memberFollowingByMyMemberIdList,memberFollowingByYourMemberIdList,memberLoginList,purchaseList", null, false);
     protected final ColumnInfo _columnMemberName = cci("MEMBER_NAME", "MEMBER_NAME", null, "会員名称", String.class, "memberName", null, false, false, true, "VARCHAR", 200, 0, null, false, null, "会員のフルネームの名称。\n苗字と名前を分けて管理することが多いが、ここでは単純にひとまとめ。", null, null, null, false);
     protected final ColumnInfo _columnMemberAccount = cci("MEMBER_ACCOUNT", "MEMBER_ACCOUNT", null, "会員アカウント", String.class, "memberAccount", null, false, false, true, "VARCHAR", 50, 0, null, false, null, "ログインIDとして利用する。\n昨今メールアドレスをログインIDとすることが多いので、あまり見かけないかも!?", null, null, null, false);
     protected final ColumnInfo _columnMemberStatusCode = cci("MEMBER_STATUS_CODE", "MEMBER_STATUS_CODE", null, "会員ステータスコード", String.class, "memberStatusCode", null, false, false, true, "CHAR", 3, 0, null, false, null, "会員ステータスを参照するコード。\nステータスが変わるたびに、このカラムが更新される。", "memberStatus", null, CDef.DefMeta.MemberStatus, false);
@@ -317,9 +317,9 @@ public class MemberDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.Member"; }
-    public String getConditionBeanTypeName() { return "org.docksidestage.hanger.dbflute.cbean.MemberCB"; }
-    public String getBehaviorTypeName() { return "org.docksidestage.hanger.dbflute.exbhv.MemberBhv"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.Member"; }
+    public String getConditionBeanTypeName() { return "org.docksidestage.hangar.dbflute.cbean.MemberCB"; }
+    public String getBehaviorTypeName() { return "org.docksidestage.hangar.dbflute.exbhv.MemberBhv"; }
 
     // ===================================================================================
     //                                                                         Object Type

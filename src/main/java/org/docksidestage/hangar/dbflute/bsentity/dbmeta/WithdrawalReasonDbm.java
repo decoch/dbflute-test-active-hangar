@@ -150,9 +150,9 @@ public class WithdrawalReasonDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.WithdrawalReason"; }
-    public String getConditionBeanTypeName() { return "org.docksidestage.hanger.dbflute.cbean.WithdrawalReasonCB"; }
-    public String getBehaviorTypeName() { return "org.docksidestage.hanger.dbflute.exbhv.WithdrawalReasonBhv"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.WithdrawalReason"; }
+    public String getConditionBeanTypeName() { return "org.docksidestage.hangar.dbflute.cbean.WithdrawalReasonCB"; }
+    public String getBehaviorTypeName() { return "org.docksidestage.hangar.dbflute.exbhv.WithdrawalReasonBhv"; }
 
     // ===================================================================================
     //                                                                         Object Type

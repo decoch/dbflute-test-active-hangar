@@ -12,6 +12,6 @@ import org.docksidestage.hangar.dbflute.bsentity.customize.BsSimpleVendorCheck;
  */
 public class SimpleVendorCheck extends BsSimpleVendorCheck {
 
-    /** Serial version UID. (Default) */
+    /** The serial version UID for object serialization. (Default) */
     private static final long serialVersionUID = 1L;
 }

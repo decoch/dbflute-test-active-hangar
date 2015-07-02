@@ -84,7 +84,7 @@ public class MemberFollowingDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                         Column Info
     //                                                                         ===========
-    protected final ColumnInfo _columnMemberFollowingId = cci("MEMBER_FOLLOWING_ID", "MEMBER_FOLLOWING_ID", null, "会員フォローイングID", Long.class, "memberFollowingId", null, true, true, true, "BIGINT", 19, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_F881BCCF_640F_43BF_B0EF_CDFE5372561C", false, null, "連番", null, null, null, false);
+    protected final ColumnInfo _columnMemberFollowingId = cci("MEMBER_FOLLOWING_ID", "MEMBER_FOLLOWING_ID", null, "会員フォローイングID", Long.class, "memberFollowingId", null, true, true, true, "BIGINT", 19, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_9A2C4CFF_8D81_46BE_AB86_90ACD882185C", false, null, "連番", null, null, null, false);
     protected final ColumnInfo _columnMyMemberId = cci("MY_MEMBER_ID", "MY_MEMBER_ID", null, "わたし", Integer.class, "myMemberId", null, false, false, true, "INTEGER", 10, 0, null, false, null, "気になった人がいて...勇気を振り絞った会員のID。", "memberByMyMemberId", null, null, false);
     protected final ColumnInfo _columnYourMemberId = cci("YOUR_MEMBER_ID", "YOUR_MEMBER_ID", null, "あなた", Integer.class, "yourMemberId", null, false, false, true, "INTEGER", 10, 0, null, false, null, "いきなりのアクションに...ちょっと心揺らいだ会員のID。", "memberByYourMemberId", null, null, false);
     protected final ColumnInfo _columnFollowDatetime = cci("FOLLOW_DATETIME", "FOLLOW_DATETIME", null, "その瞬間", java.time.LocalDateTime.class, "followDatetime", null, false, false, true, "TIMESTAMP", 23, 10, null, false, null, "ふりかえるとちょっと恥ずかしい気持ちになる日時", null, null, null, false);
@@ -178,9 +178,9 @@ public class MemberFollowingDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.MemberFollowing"; }
-    public String getConditionBeanTypeName() { return "org.docksidestage.hanger.dbflute.cbean.MemberFollowingCB"; }
-    public String getBehaviorTypeName() { return "org.docksidestage.hanger.dbflute.exbhv.MemberFollowingBhv"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.MemberFollowing"; }
+    public String getConditionBeanTypeName() { return "org.docksidestage.hangar.dbflute.cbean.MemberFollowingCB"; }
+    public String getBehaviorTypeName() { return "org.docksidestage.hangar.dbflute.exbhv.MemberFollowingBhv"; }
 
     // ===================================================================================
     //                                                                         Object Type

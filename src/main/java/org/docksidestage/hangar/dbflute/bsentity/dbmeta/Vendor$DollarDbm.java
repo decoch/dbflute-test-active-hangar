@@ -117,9 +117,9 @@ public class Vendor$DollarDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.Vendor$Dollar"; }
-    public String getConditionBeanTypeName() { return "org.docksidestage.hanger.dbflute.cbean.Vendor$DollarCB"; }
-    public String getBehaviorTypeName() { return "org.docksidestage.hanger.dbflute.exbhv.Vendor$DollarBhv"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.Vendor$Dollar"; }
+    public String getConditionBeanTypeName() { return "org.docksidestage.hangar.dbflute.cbean.Vendor$DollarCB"; }
+    public String getBehaviorTypeName() { return "org.docksidestage.hangar.dbflute.exbhv.Vendor$DollarBhv"; }
 
     // ===================================================================================
     //                                                                         Object Type

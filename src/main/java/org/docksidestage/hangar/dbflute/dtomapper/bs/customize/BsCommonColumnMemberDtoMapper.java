@@ -16,9 +16,9 @@ import org.dbflute.helper.beans.DfBeanDesc;
 import org.dbflute.helper.beans.DfPropertyDesc;
 import org.dbflute.helper.beans.factory.DfBeanDescFactory;
 import org.dbflute.jdbc.Classification;
-import org.docksidestage.hangar.dbflute.dtomapper.customize.*;
 import org.docksidestage.hangar.dbflute.exentity.customize.*;
 import org.docksidestage.hangar.simpleflute.dto.customize.*;
+import org.docksidestage.hangar.dbflute.dtomapper.customize.*;
 
 /**
  * The DTO mapper of CommonColumnMember. <br>

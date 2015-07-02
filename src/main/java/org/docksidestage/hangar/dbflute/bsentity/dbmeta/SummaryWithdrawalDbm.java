@@ -175,9 +175,9 @@ public class SummaryWithdrawalDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.SummaryWithdrawal"; }
-    public String getConditionBeanTypeName() { return "org.docksidestage.hanger.dbflute.cbean.SummaryWithdrawalCB"; }
-    public String getBehaviorTypeName() { return "org.docksidestage.hanger.dbflute.exbhv.SummaryWithdrawalBhv"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.SummaryWithdrawal"; }
+    public String getConditionBeanTypeName() { return "org.docksidestage.hangar.dbflute.cbean.SummaryWithdrawalCB"; }
+    public String getBehaviorTypeName() { return "org.docksidestage.hangar.dbflute.exbhv.SummaryWithdrawalBhv"; }
 
     // ===================================================================================
     //                                                                         Object Type

@@ -13,11 +13,11 @@ import org.dbflute.cbean.result.*;
 import org.dbflute.exception.*;
 import org.dbflute.optional.OptionalEntity;
 import org.dbflute.outsidesql.executor.*;
+import org.docksidestage.hangar.dbflute.exbhv.*;
 import org.docksidestage.hangar.dbflute.bsbhv.loader.*;
+import org.docksidestage.hangar.dbflute.exentity.*;
 import org.docksidestage.hangar.dbflute.bsentity.dbmeta.*;
 import org.docksidestage.hangar.dbflute.cbean.*;
-import org.docksidestage.hangar.dbflute.exbhv.*;
-import org.docksidestage.hangar.dbflute.exentity.*;
 
 /**
  * The behavior of (商品)PRODUCT as TABLE. <br>

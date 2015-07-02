@@ -109,9 +109,9 @@ public class VendorPrimaryKeyOnlyDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.VendorPrimaryKeyOnly"; }
-    public String getConditionBeanTypeName() { return "org.docksidestage.hanger.dbflute.cbean.VendorPrimaryKeyOnlyCB"; }
-    public String getBehaviorTypeName() { return "org.docksidestage.hanger.dbflute.exbhv.VendorPrimaryKeyOnlyBhv"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.VendorPrimaryKeyOnly"; }
+    public String getConditionBeanTypeName() { return "org.docksidestage.hangar.dbflute.cbean.VendorPrimaryKeyOnlyCB"; }
+    public String getBehaviorTypeName() { return "org.docksidestage.hangar.dbflute.exbhv.VendorPrimaryKeyOnlyBhv"; }
 
     // ===================================================================================
     //                                                                         Object Type

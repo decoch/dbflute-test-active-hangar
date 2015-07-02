@@ -8,9 +8,9 @@ import org.dbflute.cbean.coption.*;
 import org.dbflute.cbean.cvalue.ConditionValue;
 import org.dbflute.cbean.sqlclause.SqlClause;
 import org.dbflute.exception.IllegalConditionBeanOperationException;
+import org.docksidestage.hangar.dbflute.cbean.cq.ciq.*;
 import org.docksidestage.hangar.dbflute.cbean.*;
 import org.docksidestage.hangar.dbflute.cbean.cq.*;
-import org.docksidestage.hangar.dbflute.cbean.cq.ciq.*;
 
 /**
  * The base condition-query of MEMBER_SECURITY.
@@ -101,14 +101,14 @@ public class BsMemberSecurityCQ extends AbstractBsMemberSecurityCQ {
 
     /** 
      * Add order-by as ascend. <br>
-     * (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(50)}
+     * (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(100)}
      * @return this. (NotNull)
      */
     public BsMemberSecurityCQ addOrderBy_LoginPassword_Asc() { regOBA("LOGIN_PASSWORD"); return this; }
 
     /**
      * Add order-by as descend. <br>
-     * (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(50)}
+     * (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(100)}
      * @return this. (NotNull)
      */
     public BsMemberSecurityCQ addOrderBy_LoginPassword_Desc() { regOBD("LOGIN_PASSWORD"); return this; }

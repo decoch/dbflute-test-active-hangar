@@ -63,7 +63,7 @@ public class VendorIdentityOnlyDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                         Column Info
     //                                                                         ===========
-    protected final ColumnInfo _columnIdentityOnlyId = cci("IDENTITY_ONLY_ID", "IDENTITY_ONLY_ID", null, null, Long.class, "identityOnlyId", null, true, true, true, "BIGINT", 19, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_DA785FD3_74B3_4C0C_BF71_717CBD46CBC1", false, null, null, null, null, null, false);
+    protected final ColumnInfo _columnIdentityOnlyId = cci("IDENTITY_ONLY_ID", "IDENTITY_ONLY_ID", null, null, Long.class, "identityOnlyId", null, true, true, true, "BIGINT", 19, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_3481CA73_CB65_4FE1_AA4D_9AEA0980B79A", false, null, null, null, null, null, false);
 
     /**
      * IDENTITY_ONLY_ID: {PK, ID, NotNull, BIGINT(19)}
@@ -110,9 +110,9 @@ public class VendorIdentityOnlyDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.docksidestage.hanger.dbflute.exentity.VendorIdentityOnly"; }
-    public String getConditionBeanTypeName() { return "org.docksidestage.hanger.dbflute.cbean.VendorIdentityOnlyCB"; }
-    public String getBehaviorTypeName() { return "org.docksidestage.hanger.dbflute.exbhv.VendorIdentityOnlyBhv"; }
+    public String getEntityTypeName() { return "org.docksidestage.hangar.dbflute.exentity.VendorIdentityOnly"; }
+    public String getConditionBeanTypeName() { return "org.docksidestage.hangar.dbflute.cbean.VendorIdentityOnlyCB"; }
+    public String getBehaviorTypeName() { return "org.docksidestage.hangar.dbflute.exbhv.VendorIdentityOnlyBhv"; }
 
     // ===================================================================================
     //                                                                         Object Type

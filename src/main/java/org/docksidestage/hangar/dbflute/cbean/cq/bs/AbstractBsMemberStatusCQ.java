@@ -512,6 +512,6 @@ public abstract class AbstractBsMemberStatusCQ extends AbstractConditionQuery {
     protected String xabUDT() { return Date.class.getName(); }
     protected String xabCQ() { return MemberStatusCQ.class.getName(); }
     protected String xabLSO() { return LikeSearchOption.class.getName(); }
-    protected String xabSSQS() { return HpSSQSetupper.class.getName(); }
+    protected String xabSLCS() { return HpSLCSetupper.class.getName(); }
     protected String xabSCP() { return SubQuery.class.getName(); }
 }
