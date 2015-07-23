@@ -38,7 +38,6 @@ public class CachedMemberWithdrawal {
     private CachedMemberWithdrawal() {
     }
 
-    // TODO jflute test: Hanger, cache big data, null allowed column
     // ===================================================================================
     //                                                                        Column Cache
     //                                                                        ============
