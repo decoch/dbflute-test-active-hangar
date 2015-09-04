@@ -46,7 +46,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * (会員サービスID)MEMBER_SERVICE_ID: {PK, ID, NotNull, INTEGER(10)}
-     * @param memberServiceId The value of memberServiceId as equal. (NullAllowed: if null, no condition)
+     * @param memberServiceId The value of memberServiceId as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setMemberServiceId_Equal(Integer memberServiceId) {
         doSetMemberServiceId_Equal(memberServiceId);
@@ -59,7 +59,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * (会員サービスID)MEMBER_SERVICE_ID: {PK, ID, NotNull, INTEGER(10)}
-     * @param memberServiceId The value of memberServiceId as notEqual. (NullAllowed: if null, no condition)
+     * @param memberServiceId The value of memberServiceId as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setMemberServiceId_NotEqual(Integer memberServiceId) {
         doSetMemberServiceId_NotEqual(memberServiceId);
@@ -72,7 +72,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * (会員サービスID)MEMBER_SERVICE_ID: {PK, ID, NotNull, INTEGER(10)}
-     * @param memberServiceId The value of memberServiceId as greaterThan. (NullAllowed: if null, no condition)
+     * @param memberServiceId The value of memberServiceId as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setMemberServiceId_GreaterThan(Integer memberServiceId) {
         regMemberServiceId(CK_GT, memberServiceId);
@@ -81,7 +81,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * (会員サービスID)MEMBER_SERVICE_ID: {PK, ID, NotNull, INTEGER(10)}
-     * @param memberServiceId The value of memberServiceId as lessThan. (NullAllowed: if null, no condition)
+     * @param memberServiceId The value of memberServiceId as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setMemberServiceId_LessThan(Integer memberServiceId) {
         regMemberServiceId(CK_LT, memberServiceId);
@@ -90,7 +90,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * (会員サービスID)MEMBER_SERVICE_ID: {PK, ID, NotNull, INTEGER(10)}
-     * @param memberServiceId The value of memberServiceId as greaterEqual. (NullAllowed: if null, no condition)
+     * @param memberServiceId The value of memberServiceId as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setMemberServiceId_GreaterEqual(Integer memberServiceId) {
         regMemberServiceId(CK_GE, memberServiceId);
@@ -99,7 +99,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * (会員サービスID)MEMBER_SERVICE_ID: {PK, ID, NotNull, INTEGER(10)}
-     * @param memberServiceId The value of memberServiceId as lessEqual. (NullAllowed: if null, no condition)
+     * @param memberServiceId The value of memberServiceId as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setMemberServiceId_LessEqual(Integer memberServiceId) {
         regMemberServiceId(CK_LE, memberServiceId);
@@ -175,7 +175,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * (会員ID)MEMBER_ID: {UQ, IX, NotNull, INTEGER(10), FK to MEMBER}
-     * @param memberId The value of memberId as equal. (NullAllowed: if null, no condition)
+     * @param memberId The value of memberId as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setMemberId_Equal(Integer memberId) {
         doSetMemberId_Equal(memberId);
@@ -188,7 +188,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * (会員ID)MEMBER_ID: {UQ, IX, NotNull, INTEGER(10), FK to MEMBER}
-     * @param memberId The value of memberId as notEqual. (NullAllowed: if null, no condition)
+     * @param memberId The value of memberId as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setMemberId_NotEqual(Integer memberId) {
         doSetMemberId_NotEqual(memberId);
@@ -201,7 +201,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * (会員ID)MEMBER_ID: {UQ, IX, NotNull, INTEGER(10), FK to MEMBER}
-     * @param memberId The value of memberId as greaterThan. (NullAllowed: if null, no condition)
+     * @param memberId The value of memberId as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setMemberId_GreaterThan(Integer memberId) {
         regMemberId(CK_GT, memberId);
@@ -210,7 +210,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * (会員ID)MEMBER_ID: {UQ, IX, NotNull, INTEGER(10), FK to MEMBER}
-     * @param memberId The value of memberId as lessThan. (NullAllowed: if null, no condition)
+     * @param memberId The value of memberId as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setMemberId_LessThan(Integer memberId) {
         regMemberId(CK_LT, memberId);
@@ -219,7 +219,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * (会員ID)MEMBER_ID: {UQ, IX, NotNull, INTEGER(10), FK to MEMBER}
-     * @param memberId The value of memberId as greaterEqual. (NullAllowed: if null, no condition)
+     * @param memberId The value of memberId as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setMemberId_GreaterEqual(Integer memberId) {
         regMemberId(CK_GE, memberId);
@@ -228,7 +228,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * (会員ID)MEMBER_ID: {UQ, IX, NotNull, INTEGER(10), FK to MEMBER}
-     * @param memberId The value of memberId as lessEqual. (NullAllowed: if null, no condition)
+     * @param memberId The value of memberId as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setMemberId_LessEqual(Integer memberId) {
         regMemberId(CK_LE, memberId);
@@ -292,7 +292,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * (サービスポイント数)SERVICE_POINT_COUNT: {IX, NotNull, INTEGER(10)}
-     * @param servicePointCount The value of servicePointCount as equal. (NullAllowed: if null, no condition)
+     * @param servicePointCount The value of servicePointCount as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setServicePointCount_Equal(Integer servicePointCount) {
         doSetServicePointCount_Equal(servicePointCount);
@@ -305,7 +305,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * (サービスポイント数)SERVICE_POINT_COUNT: {IX, NotNull, INTEGER(10)}
-     * @param servicePointCount The value of servicePointCount as notEqual. (NullAllowed: if null, no condition)
+     * @param servicePointCount The value of servicePointCount as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setServicePointCount_NotEqual(Integer servicePointCount) {
         doSetServicePointCount_NotEqual(servicePointCount);
@@ -318,7 +318,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * (サービスポイント数)SERVICE_POINT_COUNT: {IX, NotNull, INTEGER(10)}
-     * @param servicePointCount The value of servicePointCount as greaterThan. (NullAllowed: if null, no condition)
+     * @param servicePointCount The value of servicePointCount as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setServicePointCount_GreaterThan(Integer servicePointCount) {
         regServicePointCount(CK_GT, servicePointCount);
@@ -327,7 +327,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * (サービスポイント数)SERVICE_POINT_COUNT: {IX, NotNull, INTEGER(10)}
-     * @param servicePointCount The value of servicePointCount as lessThan. (NullAllowed: if null, no condition)
+     * @param servicePointCount The value of servicePointCount as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setServicePointCount_LessThan(Integer servicePointCount) {
         regServicePointCount(CK_LT, servicePointCount);
@@ -336,7 +336,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * (サービスポイント数)SERVICE_POINT_COUNT: {IX, NotNull, INTEGER(10)}
-     * @param servicePointCount The value of servicePointCount as greaterEqual. (NullAllowed: if null, no condition)
+     * @param servicePointCount The value of servicePointCount as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setServicePointCount_GreaterEqual(Integer servicePointCount) {
         regServicePointCount(CK_GE, servicePointCount);
@@ -345,7 +345,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * (サービスポイント数)SERVICE_POINT_COUNT: {IX, NotNull, INTEGER(10)}
-     * @param servicePointCount The value of servicePointCount as lessEqual. (NullAllowed: if null, no condition)
+     * @param servicePointCount The value of servicePointCount as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setServicePointCount_LessEqual(Integer servicePointCount) {
         regServicePointCount(CK_LE, servicePointCount);
@@ -419,7 +419,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
      * Equal(=). As ServiceRank. And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
      * (サービスランクコード)SERVICE_RANK_CODE: {IX, NotNull, CHAR(3), FK to SERVICE_RANK, classification=ServiceRank} <br>
      * rank of service member gets
-     * @param cdef The instance of classification definition (as ENUM type). (NullAllowed: if null, no condition)
+     * @param cdef The instance of classification definition (as ENUM type). (basically NotNull: error as default, or no condition as option)
      */
     public void setServiceRankCode_Equal_AsServiceRank(CDef.ServiceRank cdef) {
         doSetServiceRankCode_Equal(cdef != null ? cdef.code() : null);
@@ -482,7 +482,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
      * NotEqual(&lt;&gt;). As ServiceRank. And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
      * (サービスランクコード)SERVICE_RANK_CODE: {IX, NotNull, CHAR(3), FK to SERVICE_RANK, classification=ServiceRank} <br>
      * rank of service member gets
-     * @param cdef The instance of classification definition (as ENUM type). (NullAllowed: if null, no condition)
+     * @param cdef The instance of classification definition (as ENUM type). (basically NotNull: error as default, or no condition as option)
      */
     public void setServiceRankCode_NotEqual_AsServiceRank(CDef.ServiceRank cdef) {
         doSetServiceRankCode_NotEqual(cdef != null ? cdef.code() : null);
@@ -584,7 +584,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * REGISTER_DATETIME: {NotNull, TIMESTAMP(23, 10)}
-     * @param registerDatetime The value of registerDatetime as equal. (NullAllowed: if null, no condition)
+     * @param registerDatetime The value of registerDatetime as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegisterDatetime_Equal(java.time.LocalDateTime registerDatetime) {
         regRegisterDatetime(CK_EQ,  registerDatetime);
@@ -612,7 +612,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPDATE_DATETIME: {NotNull, TIMESTAMP(23, 10)}
-     * @param updateDatetime The value of updateDatetime as equal. (NullAllowed: if null, no condition)
+     * @param updateDatetime The value of updateDatetime as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdateDatetime_Equal(java.time.LocalDateTime updateDatetime) {
         regUpdateDatetime(CK_EQ,  updateDatetime);
@@ -640,7 +640,7 @@ public abstract class AbstractBsMemberServiceCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, BIGINT(19)}
-     * @param versionNo The value of versionNo as equal. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_Equal(Long versionNo) {
         doSetVersionNo_Equal(versionNo);

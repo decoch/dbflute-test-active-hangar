@@ -46,7 +46,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * DATE_TERM_ID: {PK, NotNull, DECIMAL(16)}
-     * @param dateTermId The value of dateTermId as equal. (NullAllowed: if null, no condition)
+     * @param dateTermId The value of dateTermId as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setDateTermId_Equal(Long dateTermId) {
         doSetDateTermId_Equal(dateTermId);
@@ -59,7 +59,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * DATE_TERM_ID: {PK, NotNull, DECIMAL(16)}
-     * @param dateTermId The value of dateTermId as notEqual. (NullAllowed: if null, no condition)
+     * @param dateTermId The value of dateTermId as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setDateTermId_NotEqual(Long dateTermId) {
         doSetDateTermId_NotEqual(dateTermId);
@@ -72,7 +72,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * DATE_TERM_ID: {PK, NotNull, DECIMAL(16)}
-     * @param dateTermId The value of dateTermId as greaterThan. (NullAllowed: if null, no condition)
+     * @param dateTermId The value of dateTermId as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setDateTermId_GreaterThan(Long dateTermId) {
         regDateTermId(CK_GT, dateTermId);
@@ -81,7 +81,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * DATE_TERM_ID: {PK, NotNull, DECIMAL(16)}
-     * @param dateTermId The value of dateTermId as lessThan. (NullAllowed: if null, no condition)
+     * @param dateTermId The value of dateTermId as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setDateTermId_LessThan(Long dateTermId) {
         regDateTermId(CK_LT, dateTermId);
@@ -90,7 +90,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * DATE_TERM_ID: {PK, NotNull, DECIMAL(16)}
-     * @param dateTermId The value of dateTermId as greaterEqual. (NullAllowed: if null, no condition)
+     * @param dateTermId The value of dateTermId as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setDateTermId_GreaterEqual(Long dateTermId) {
         regDateTermId(CK_GE, dateTermId);
@@ -99,7 +99,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * DATE_TERM_ID: {PK, NotNull, DECIMAL(16)}
-     * @param dateTermId The value of dateTermId as lessEqual. (NullAllowed: if null, no condition)
+     * @param dateTermId The value of dateTermId as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setDateTermId_LessEqual(Long dateTermId) {
         regDateTermId(CK_LE, dateTermId);
@@ -274,7 +274,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * BEGIN_DATE: {NotNull, DATE(8)}
-     * @param beginDate The value of beginDate as equal. (NullAllowed: if null, no condition)
+     * @param beginDate The value of beginDate as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setBeginDate_Equal(java.time.LocalDate beginDate) {
         regBeginDate(CK_EQ,  beginDate);
@@ -283,7 +283,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * BEGIN_DATE: {NotNull, DATE(8)}
-     * @param beginDate The value of beginDate as greaterThan. (NullAllowed: if null, no condition)
+     * @param beginDate The value of beginDate as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setBeginDate_GreaterThan(java.time.LocalDate beginDate) {
         regBeginDate(CK_GT,  beginDate);
@@ -292,7 +292,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * BEGIN_DATE: {NotNull, DATE(8)}
-     * @param beginDate The value of beginDate as lessThan. (NullAllowed: if null, no condition)
+     * @param beginDate The value of beginDate as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setBeginDate_LessThan(java.time.LocalDate beginDate) {
         regBeginDate(CK_LT,  beginDate);
@@ -301,7 +301,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * BEGIN_DATE: {NotNull, DATE(8)}
-     * @param beginDate The value of beginDate as greaterEqual. (NullAllowed: if null, no condition)
+     * @param beginDate The value of beginDate as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setBeginDate_GreaterEqual(java.time.LocalDate beginDate) {
         regBeginDate(CK_GE,  beginDate);
@@ -310,7 +310,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * BEGIN_DATE: {NotNull, DATE(8)}
-     * @param beginDate The value of beginDate as lessEqual. (NullAllowed: if null, no condition)
+     * @param beginDate The value of beginDate as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setBeginDate_LessEqual(java.time.LocalDate beginDate) {
         regBeginDate(CK_LE, beginDate);
@@ -349,7 +349,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * END_DATE: {NotNull, DATE(8)}
-     * @param endDate The value of endDate as equal. (NullAllowed: if null, no condition)
+     * @param endDate The value of endDate as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setEndDate_Equal(java.time.LocalDate endDate) {
         regEndDate(CK_EQ,  endDate);
@@ -358,7 +358,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * END_DATE: {NotNull, DATE(8)}
-     * @param endDate The value of endDate as greaterThan. (NullAllowed: if null, no condition)
+     * @param endDate The value of endDate as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setEndDate_GreaterThan(java.time.LocalDate endDate) {
         regEndDate(CK_GT,  endDate);
@@ -367,7 +367,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * END_DATE: {NotNull, DATE(8)}
-     * @param endDate The value of endDate as lessThan. (NullAllowed: if null, no condition)
+     * @param endDate The value of endDate as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setEndDate_LessThan(java.time.LocalDate endDate) {
         regEndDate(CK_LT,  endDate);
@@ -376,7 +376,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * END_DATE: {NotNull, DATE(8)}
-     * @param endDate The value of endDate as greaterEqual. (NullAllowed: if null, no condition)
+     * @param endDate The value of endDate as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setEndDate_GreaterEqual(java.time.LocalDate endDate) {
         regEndDate(CK_GE,  endDate);
@@ -385,7 +385,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * END_DATE: {NotNull, DATE(8)}
-     * @param endDate The value of endDate as lessEqual. (NullAllowed: if null, no condition)
+     * @param endDate The value of endDate as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setEndDate_LessEqual(java.time.LocalDate endDate) {
         regEndDate(CK_LE, endDate);
