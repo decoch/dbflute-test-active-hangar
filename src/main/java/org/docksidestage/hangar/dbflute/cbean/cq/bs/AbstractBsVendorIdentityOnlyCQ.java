@@ -46,7 +46,7 @@ public abstract class AbstractBsVendorIdentityOnlyCQ extends AbstractConditionQu
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * IDENTITY_ONLY_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param identityOnlyId The value of identityOnlyId as equal. (NullAllowed: if null, no condition)
+     * @param identityOnlyId The value of identityOnlyId as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setIdentityOnlyId_Equal(Long identityOnlyId) {
         doSetIdentityOnlyId_Equal(identityOnlyId);
@@ -59,7 +59,7 @@ public abstract class AbstractBsVendorIdentityOnlyCQ extends AbstractConditionQu
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * IDENTITY_ONLY_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param identityOnlyId The value of identityOnlyId as notEqual. (NullAllowed: if null, no condition)
+     * @param identityOnlyId The value of identityOnlyId as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setIdentityOnlyId_NotEqual(Long identityOnlyId) {
         doSetIdentityOnlyId_NotEqual(identityOnlyId);
@@ -72,7 +72,7 @@ public abstract class AbstractBsVendorIdentityOnlyCQ extends AbstractConditionQu
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * IDENTITY_ONLY_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param identityOnlyId The value of identityOnlyId as greaterThan. (NullAllowed: if null, no condition)
+     * @param identityOnlyId The value of identityOnlyId as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setIdentityOnlyId_GreaterThan(Long identityOnlyId) {
         regIdentityOnlyId(CK_GT, identityOnlyId);
@@ -81,7 +81,7 @@ public abstract class AbstractBsVendorIdentityOnlyCQ extends AbstractConditionQu
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * IDENTITY_ONLY_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param identityOnlyId The value of identityOnlyId as lessThan. (NullAllowed: if null, no condition)
+     * @param identityOnlyId The value of identityOnlyId as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setIdentityOnlyId_LessThan(Long identityOnlyId) {
         regIdentityOnlyId(CK_LT, identityOnlyId);
@@ -90,7 +90,7 @@ public abstract class AbstractBsVendorIdentityOnlyCQ extends AbstractConditionQu
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * IDENTITY_ONLY_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param identityOnlyId The value of identityOnlyId as greaterEqual. (NullAllowed: if null, no condition)
+     * @param identityOnlyId The value of identityOnlyId as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setIdentityOnlyId_GreaterEqual(Long identityOnlyId) {
         regIdentityOnlyId(CK_GE, identityOnlyId);
@@ -99,7 +99,7 @@ public abstract class AbstractBsVendorIdentityOnlyCQ extends AbstractConditionQu
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * IDENTITY_ONLY_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param identityOnlyId The value of identityOnlyId as lessEqual. (NullAllowed: if null, no condition)
+     * @param identityOnlyId The value of identityOnlyId as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setIdentityOnlyId_LessEqual(Long identityOnlyId) {
         regIdentityOnlyId(CK_LE, identityOnlyId);
