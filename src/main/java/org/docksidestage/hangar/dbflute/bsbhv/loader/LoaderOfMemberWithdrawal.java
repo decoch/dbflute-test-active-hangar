@@ -13,7 +13,7 @@ import org.docksidestage.hangar.dbflute.exentity.*;
  *     MEMBER_ID
  *
  * [column]
- *     MEMBER_ID, WITHDRAWAL_REASON_CODE, WITHDRAWAL_REASON_INPUT_TEXT, WITHDRAWAL_DATETIME, REGISTER_DATETIME, REGISTER_USER, UPDATE_DATETIME, UPDATE_USER, VERSION_NO
+ *     MEMBER_ID, WITHDRAWAL_REASON_CODE, WITHDRAWAL_REASON_INPUT_TEXT, WITHDRAWAL_DATETIME, REGISTER_DATETIME, REGISTER_USER, UPDATE_DATETIME, UPDATE_USER
  *
  * [sequence]
  *     
@@ -22,7 +22,7 @@ import org.docksidestage.hangar.dbflute.exentity.*;
  *     
  *
  * [version-no]
- *     VERSION_NO
+ *     
  *
  * [foreign table]
  *     MEMBER, WITHDRAWAL_REASON

@@ -29,7 +29,7 @@ import org.docksidestage.hangar.dbflute.dtomapper.*;
  *     MEMBER_ID
  * 
  * [column]
- *     MEMBER_ID, WITHDRAWAL_REASON_CODE, WITHDRAWAL_REASON_INPUT_TEXT, WITHDRAWAL_DATETIME, REGISTER_DATETIME, REGISTER_USER, UPDATE_DATETIME, UPDATE_USER, VERSION_NO
+ *     MEMBER_ID, WITHDRAWAL_REASON_CODE, WITHDRAWAL_REASON_INPUT_TEXT, WITHDRAWAL_DATETIME, REGISTER_DATETIME, REGISTER_USER, UPDATE_DATETIME, UPDATE_USER
  * 
  * [sequence]
  *     
@@ -38,7 +38,7 @@ import org.docksidestage.hangar.dbflute.dtomapper.*;
  *     
  * 
  * [version-no]
- *     VERSION_NO
+ *     
  * 
  * [foreign-table]
  *     MEMBER, WITHDRAWAL_REASON
@@ -123,7 +123,6 @@ public abstract class BsMemberWithdrawalDtoMapper implements DtoMapper<MemberWit
         if (!exceptCommonColumn) {
             dto.setUpdateUser(entity.getUpdateUser());
         }
-        dto.setVersionNo(entity.getVersionNo());
         reflectDerivedProperty(entity, dto, true);
         if (instanceCache && entity.hasPrimaryKeyValue()) { // caches only a DTO that has a primary key value
             _relationDtoMap.put(localKey, dto);
@@ -246,9 +245,6 @@ public abstract class BsMemberWithdrawalDtoMapper implements DtoMapper<MemberWit
         }
         if (needsMapping(dto, dto.getUpdateUser(), "updateUser") && !exceptCommonColumn) {
             entity.setUpdateUser(dto.getUpdateUser());
-        }
-        if (needsMapping(dto, dto.getVersionNo(), "versionNo")) {
-            entity.setVersionNo(dto.getVersionNo());
         }
         reflectDerivedProperty(entity, dto, false);
         if (instanceCache && entity.hasPrimaryKeyValue()) { // caches only an entity that has a primary key value

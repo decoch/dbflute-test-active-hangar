@@ -16,7 +16,7 @@ import org.docksidestage.hangar.simpleflute.dto.*;
  *     MEMBER_ID
  * 
  * [column]
- *     MEMBER_ID, WITHDRAWAL_REASON_CODE, WITHDRAWAL_REASON_INPUT_TEXT, WITHDRAWAL_DATETIME, REGISTER_DATETIME, REGISTER_USER, UPDATE_DATETIME, UPDATE_USER, VERSION_NO
+ *     MEMBER_ID, WITHDRAWAL_REASON_CODE, WITHDRAWAL_REASON_INPUT_TEXT, WITHDRAWAL_DATETIME, REGISTER_DATETIME, REGISTER_USER, UPDATE_DATETIME, UPDATE_USER
  * 
  * [sequence]
  *     
@@ -25,7 +25,7 @@ import org.docksidestage.hangar.simpleflute.dto.*;
  *     
  * 
  * [version-no]
- *     VERSION_NO
+ *     
  * 
  * [foreign-table]
  *     MEMBER, WITHDRAWAL_REASON
@@ -87,10 +87,6 @@ public abstract class BsMemberWithdrawalDto implements Serializable {
     /** UPDATE_USER: {NotNull, VARCHAR(200)} */
     @JsonKey
     protected String _updateUser;
-
-    /** VERSION_NO: {NotNull, BIGINT(19)} */
-    @JsonKey
-    protected Long _versionNo;
 
     // -----------------------------------------------------
     //                                              Internal
@@ -292,7 +288,6 @@ public abstract class BsMemberWithdrawalDto implements Serializable {
         sb.append(c).append(getRegisterUser());
         sb.append(c).append(getUpdateDatetime());
         sb.append(c).append(getUpdateUser());
-        sb.append(c).append(getVersionNo());
         if (sb.length() > 0) { sb.delete(0, c.length()); }
         sb.insert(0, "{").append("}");
         return sb.toString();
@@ -441,23 +436,6 @@ public abstract class BsMemberWithdrawalDto implements Serializable {
     public void setUpdateUser(String updateUser) {
         __modifiedProperties.add("updateUser");
         this._updateUser = updateUser;
-    }
-
-    /**
-     * [get] VERSION_NO: {NotNull, BIGINT(19)} <br>
-     * @return The value of the column 'VERSION_NO'. (NullAllowed)
-     */
-    public Long getVersionNo() {
-        return _versionNo;
-    }
-
-    /**
-     * [set] VERSION_NO: {NotNull, BIGINT(19)} <br>
-     * @param versionNo The value of the column 'VERSION_NO'. (NullAllowed)
-     */
-    public void setVersionNo(Long versionNo) {
-        __modifiedProperties.add("versionNo");
-        this._versionNo = versionNo;
     }
 
 }

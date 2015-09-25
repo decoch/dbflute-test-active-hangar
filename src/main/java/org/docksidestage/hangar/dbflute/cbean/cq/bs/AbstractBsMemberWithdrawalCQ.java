@@ -558,48 +558,6 @@ public abstract class AbstractBsMemberWithdrawalCQ extends AbstractConditionQuer
     protected void regUpdateUser(ConditionKey ky, Object vl) { regQ(ky, vl, xgetCValueUpdateUser(), "UPDATE_USER"); }
     protected abstract ConditionValue xgetCValueUpdateUser();
 
-    /**
-     * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
-     * VERSION_NO: {NotNull, BIGINT(19)}
-     * @param versionNo The value of versionNo as equal. (basically NotNull: error as default, or no condition as option)
-     */
-    public void setVersionNo_Equal(Long versionNo) {
-        doSetVersionNo_Equal(versionNo);
-    }
-
-    protected void doSetVersionNo_Equal(Long versionNo) {
-        regVersionNo(CK_EQ, versionNo);
-    }
-
-    /**
-     * RangeOf with various options. (versatile) <br>
-     * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
-     * And NullIgnored, OnlyOnceRegistered. <br>
-     * VERSION_NO: {NotNull, BIGINT(19)}
-     * @param minNumber The min number of versionNo. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of versionNo. (NullAllowed: if null, no to-condition)
-     * @param opLambda The callback for option of range-of. (NotNull)
-     */
-    public void setVersionNo_RangeOf(Long minNumber, Long maxNumber, ConditionOptionCall<RangeOfOption> opLambda) {
-        setVersionNo_RangeOf(minNumber, maxNumber, xcROOP(opLambda));
-    }
-
-    /**
-     * RangeOf with various options. (versatile) <br>
-     * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
-     * And NullIgnored, OnlyOnceRegistered. <br>
-     * VERSION_NO: {NotNull, BIGINT(19)}
-     * @param minNumber The min number of versionNo. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of versionNo. (NullAllowed: if null, no to-condition)
-     * @param rangeOfOption The option of range-of. (NotNull)
-     */
-    protected void setVersionNo_RangeOf(Long minNumber, Long maxNumber, RangeOfOption rangeOfOption) {
-        regROO(minNumber, maxNumber, xgetCValueVersionNo(), "VERSION_NO", rangeOfOption);
-    }
-
-    protected void regVersionNo(ConditionKey ky, Object vl) { regQ(ky, vl, xgetCValueVersionNo(), "VERSION_NO"); }
-    protected abstract ConditionValue xgetCValueVersionNo();
-
     // ===================================================================================
     //                                                                     ScalarCondition
     //                                                                     ===============
