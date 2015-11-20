@@ -1,17 +1,17 @@
 map:{
-    ; JsonListMapNameGen = map:{
+    ; JsonMapEmptyGen = map:{
         ; resourceMap = map:{
             ; resourceType = JSON_KEY
-            ; resourceFile = ../src/main/resources/json/freegen_list_map_name.json
+            ; resourceFile = ../src/main/resources/json/freegen_map_empty.json
         }
         ; outputMap = map:{
             ; templateFile = JsonKey.vm
             ; outputDirectory = ../src/main/java
             ; package = com.example.dbflute.guice.freeflute.json
-            ; className = JsonListMapName
+            ; className = JsonMapEmpty
         }
         ; tableMap = map:{
-            ; keyPath = simpleKey -> list.map.code
+            ; keyPath = emptyKey -> map.keys
         }
     }
     ; JsonMapKeysGen = map:{
@@ -27,6 +27,21 @@ map:{
         }
         ; tableMap = map:{
             ; keyPath = basicKey -> map.keys
+        }
+    }
+    ; JsonListMapNameGen = map:{
+        ; resourceMap = map:{
+            ; resourceType = JSON_KEY
+            ; resourceFile = ../src/main/resources/json/freegen_list_map_name.json
+        }
+        ; outputMap = map:{
+            ; templateFile = JsonKey.vm
+            ; outputDirectory = ../src/main/java
+            ; package = com.example.dbflute.guice.freeflute.json
+            ; className = JsonListMapName
+        }
+        ; tableMap = map:{
+            ; keyPath = simpleKey -> list.map.code
         }
     }
     ; JsonMapNameMapKeysGen = map:{

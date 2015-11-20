@@ -1,7 +1,9 @@
 package org.docksidestage.hangar.dbflute.cbean.cq;
 
 import org.dbflute.cbean.ConditionQuery;
+import org.dbflute.cbean.coption.LikeSearchOption;
 import org.dbflute.cbean.sqlclause.SqlClause;
+import org.docksidestage.hangar.dbflute.bsentity.dbmeta.MemberDbm;
 import org.docksidestage.hangar.dbflute.cbean.cq.bs.BsMemberCQ;
 
 /**
@@ -45,5 +47,14 @@ public class MemberCQ extends BsMemberCQ {
         existsPurchase(purCB -> {
             purCB.query().setProductId_Equal(specialProductId);
         });
+    }
+
+    // ===================================================================================
+    //                                                                            Sorry...
+    //                                                                            ========
+    // the test of trick for classification's like search
+    public void setMemberStatusCode_LikeSearch(String statusCode, LikeSearchOption likeSearchOption) {
+        String columnDbName = MemberDbm.getInstance().columnMemberStatusCode().getColumnDbName();
+        regLSQ(CK_LS, fRES(statusCode), xgetCValueMemberStatusCode(), columnDbName, likeSearchOption);
     }
 }
