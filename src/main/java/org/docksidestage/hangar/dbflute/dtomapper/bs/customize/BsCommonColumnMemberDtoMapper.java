@@ -95,13 +95,22 @@ public abstract class BsCommonColumnMemberDtoMapper implements DtoMapper<CommonC
         if (entity == null) {
             return null;
         }
+        boolean exceptCommonColumn = isExceptCommonColumn();
         CommonColumnMemberDto dto = new CommonColumnMemberDto();
         dto.setMemberId(entity.getMemberId());
         dto.setMemberName(entity.getMemberName());
-        dto.setRegisterDatetime(entity.getRegisterDatetime());
-        dto.setRegisterUser(entity.getRegisterUser());
-        dto.setUpdateDatetime(entity.getUpdateDatetime());
-        dto.setUpdateUser(entity.getUpdateUser());
+        if (!exceptCommonColumn) {
+            dto.setRegisterDatetime(entity.getRegisterDatetime());
+        }
+        if (!exceptCommonColumn) {
+            dto.setRegisterUser(entity.getRegisterUser());
+        }
+        if (!exceptCommonColumn) {
+            dto.setUpdateDatetime(entity.getUpdateDatetime());
+        }
+        if (!exceptCommonColumn) {
+            dto.setUpdateUser(entity.getUpdateUser());
+        }
         reflectDerivedProperty(entity, dto, true);
         return dto;
     }
@@ -137,6 +146,7 @@ public abstract class BsCommonColumnMemberDtoMapper implements DtoMapper<CommonC
         if (dto == null) {
             return null;
         }
+        boolean exceptCommonColumn = isExceptCommonColumn();
         CommonColumnMember entity = new CommonColumnMember();
         if (needsMapping(dto, dto.getMemberId(), "memberId")) {
             entity.setMemberId(dto.getMemberId());
@@ -144,16 +154,16 @@ public abstract class BsCommonColumnMemberDtoMapper implements DtoMapper<CommonC
         if (needsMapping(dto, dto.getMemberName(), "memberName")) {
             entity.setMemberName(dto.getMemberName());
         }
-        if (needsMapping(dto, dto.getRegisterDatetime(), "registerDatetime")) {
+        if (needsMapping(dto, dto.getRegisterDatetime(), "registerDatetime") && !exceptCommonColumn) {
             entity.setRegisterDatetime(dto.getRegisterDatetime());
         }
-        if (needsMapping(dto, dto.getRegisterUser(), "registerUser")) {
+        if (needsMapping(dto, dto.getRegisterUser(), "registerUser") && !exceptCommonColumn) {
             entity.setRegisterUser(dto.getRegisterUser());
         }
-        if (needsMapping(dto, dto.getUpdateDatetime(), "updateDatetime")) {
+        if (needsMapping(dto, dto.getUpdateDatetime(), "updateDatetime") && !exceptCommonColumn) {
             entity.setUpdateDatetime(dto.getUpdateDatetime());
         }
-        if (needsMapping(dto, dto.getUpdateUser(), "updateUser")) {
+        if (needsMapping(dto, dto.getUpdateUser(), "updateUser") && !exceptCommonColumn) {
             entity.setUpdateUser(dto.getUpdateUser());
         }
         reflectDerivedProperty(entity, dto, false);

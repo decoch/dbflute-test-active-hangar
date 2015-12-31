@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import org.dbflute.dbmeta.DBMeta;
 import org.dbflute.dbmeta.AbstractEntity;
 import org.dbflute.dbmeta.accessory.CustomizeEntity;
+import org.docksidestage.hangar.dbflute.allcommon.EntityDefinedCommonColumn;
 import org.docksidestage.hangar.dbflute.exentity.customize.*;
 
 /**
@@ -56,7 +57,7 @@ import org.docksidestage.hangar.dbflute.exentity.customize.*;
  * </pre>
  * @author DBFlute(AutoGenerator)
  */
-public abstract class BsCommonColumnMember extends AbstractEntity implements CustomizeEntity {
+public abstract class BsCommonColumnMember extends AbstractEntity implements CustomizeEntity, EntityDefinedCommonColumn {
 
     // ===================================================================================
     //                                                                          Definition
