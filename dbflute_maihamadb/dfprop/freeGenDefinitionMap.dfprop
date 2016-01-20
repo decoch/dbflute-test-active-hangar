@@ -7,7 +7,7 @@ map:{
         ; outputMap = map:{
             ; templateFile = JsonKey.vm
             ; outputDirectory = ../src/main/java
-            ; package = com.example.dbflute.guice.freeflute.json
+            ; package = org.docksidestage.hangar.freeflute.json
             ; className = JsonMapEmpty
         }
         ; tableMap = map:{
@@ -22,7 +22,7 @@ map:{
         ; outputMap = map:{
             ; templateFile = JsonKey.vm
             ; outputDirectory = ../src/main/java
-            ; package = com.example.dbflute.guice.freeflute.json
+            ; package = org.docksidestage.hangar.freeflute.json
             ; className = JsonMapKeys
         }
         ; tableMap = map:{
@@ -37,7 +37,7 @@ map:{
         ; outputMap = map:{
             ; templateFile = JsonKey.vm
             ; outputDirectory = ../src/main/java
-            ; package = com.example.dbflute.guice.freeflute.json
+            ; package = org.docksidestage.hangar.freeflute.json
             ; className = JsonListMapName
         }
         ; tableMap = map:{
@@ -52,7 +52,7 @@ map:{
         ; outputMap = map:{
             ; templateFile = JsonKey.vm
             ; outputDirectory = ../src/main/java
-            ; package = com.example.dbflute.guice.freeflute.json
+            ; package = org.docksidestage.hangar.freeflute.json
             ; className = JsonMapNameMapKeys
         }
         ; tableMap = map:{
@@ -67,7 +67,7 @@ map:{
         ; outputMap = map:{
             ; templateFile = JsonKey.vm
             ; outputDirectory = ../src/main/java
-            ; package = com.example.dbflute.guice.freeflute.json
+            ; package = org.docksidestage.hangar.freeflute.json
             ; className = JsonMapValuesListKey
         }
         ; tableMap = map:{
@@ -83,7 +83,7 @@ map:{
         ; outputMap = map:{
             ; templateFile = unused
             ; outputDirectory = $$baseDir$$/java
-            ; package = com.example.dbflute.guice.freeflute.mongodb
+            ; package = org.docksidestage.hangar.freeflute.mongodb
             ; className = unused
         }
         ; tableMap = map:{
@@ -91,6 +91,21 @@ map:{
             ; mappingMap = map:{
                 ; type = map:{ numeric = Integer ; varchar = String }
             }
+        }
+    }
+    ; WebClsGen = map:{
+        ; resourceMap = map:{
+        	; baseDir = ../src/main
+            ; resourceType = WEB_CLS
+            ; resourceFile = $$baseDir$$/resources/hangar_webcls.dfprop
+        }
+        ; outputMap = map:{
+            ; templateFile = TestWebCls.vm
+            ; outputDirectory = $$baseDir$$/java
+            ; package = org.docksidestage.hangar.freeflute.web
+            ; className = WebCDef
+        }
+        ; tableMap = map:{
         }
     }
 }

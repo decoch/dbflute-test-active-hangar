@@ -1,7 +1,6 @@
 package org.docksidestage.hangar.freeflute.mongodb.bean.bs;
 
 import java.io.Serializable;
-
 import org.docksidestage.hangar.freeflute.mongodb.bean.ex.*;
 
 /**
