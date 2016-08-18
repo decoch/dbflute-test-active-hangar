@@ -16,31 +16,31 @@ import org.docksidestage.hangar.dbflute.exentity.*;
  * <pre>
  * [primary-key]
  *     THE_LONG_AND_WINDING_TABLE_AND_COLUMN_REF_ID
- * 
+ *
  * [column]
  *     THE_LONG_AND_WINDING_TABLE_AND_COLUMN_REF_ID, THE_LONG_AND_WINDING_TABLE_AND_COLUMN_ID, THE_LONG_AND_WINDING_TABLE_AND_COLUMN_REF_DATE, SHORT_DATE
- * 
+ *
  * [sequence]
  *     
- * 
+ *
  * [identity]
  *     
- * 
+ *
  * [version-no]
  *     
- * 
+ *
  * [foreign table]
  *     VENDOR_THE_LONG_AND_WINDING_TABLE_AND_COLUMN
- * 
+ *
  * [referrer table]
  *     
- * 
+ *
  * [foreign property]
  *     vendorTheLongAndWindingTableAndColumn
- * 
+ *
  * [referrer property]
  *     
- * 
+ *
  * [get/set template]
  * /= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
  * Long theLongAndWindingTableAndColumnRefId = entity.getTheLongAndWindingTableAndColumnRefId();
@@ -127,7 +127,7 @@ public abstract class BsVendorTheLongAndWindingTableAndColumnRef extends Abstrac
     // ===================================================================================
     //                                                                   Referrer Property
     //                                                                   =================
-    protected <ELEMENT> List<ELEMENT> newReferrerList() {
+    protected <ELEMENT> List<ELEMENT> newReferrerList() { // overriding to import
         return new ArrayList<ELEMENT>();
     }
 

@@ -15,31 +15,31 @@ import org.docksidestage.hangar.dbflute.exentity.*;
  * <pre>
  * [primary-key]
  *     WITHDRAWAL_REASON_CODE
- * 
+ *
  * [column]
  *     WITHDRAWAL_REASON_CODE, WITHDRAWAL_REASON_TEXT, DISPLAY_ORDER
- * 
+ *
  * [sequence]
  *     
- * 
+ *
  * [identity]
  *     
- * 
+ *
  * [version-no]
  *     
- * 
+ *
  * [foreign table]
  *     
- * 
+ *
  * [referrer table]
  *     MEMBER_WITHDRAWAL
- * 
+ *
  * [foreign property]
  *     
- * 
+ *
  * [referrer property]
  *     memberWithdrawalList
- * 
+ *
  * [get/set template]
  * /= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
  * String withdrawalReasonCode = entity.getWithdrawalReasonCode();
@@ -237,7 +237,7 @@ public abstract class BsWithdrawalReason extends AbstractEntity implements Domai
         _memberWithdrawalList = memberWithdrawalList;
     }
 
-    protected <ELEMENT> List<ELEMENT> newReferrerList() {
+    protected <ELEMENT> List<ELEMENT> newReferrerList() { // overriding to import
         return new ArrayList<ELEMENT>();
     }
 

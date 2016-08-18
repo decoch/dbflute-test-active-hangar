@@ -14,31 +14,31 @@ import org.docksidestage.hangar.dbflute.exentity.*;
  * <pre>
  * [primary-key]
  *     DATE_TERM_ID
- * 
+ *
  * [column]
  *     DATE_TERM_ID, DATE_TERM_VALUE, BEGIN_DATE, END_DATE
- * 
+ *
  * [sequence]
  *     
- * 
+ *
  * [identity]
  *     
- * 
+ *
  * [version-no]
  *     
- * 
+ *
  * [foreign table]
  *     
- * 
+ *
  * [referrer table]
  *     
- * 
+ *
  * [foreign property]
  *     
- * 
+ *
  * [referrer property]
  *     
- * 
+ *
  * [get/set template]
  * /= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
  * Long dateTermId = entity.getDateTermId();
@@ -104,7 +104,7 @@ public abstract class BsWhiteDateTerm extends AbstractEntity implements DomainEn
     // ===================================================================================
     //                                                                   Referrer Property
     //                                                                   =================
-    protected <ELEMENT> List<ELEMENT> newReferrerList() {
+    protected <ELEMENT> List<ELEMENT> newReferrerList() { // overriding to import
         return new ArrayList<ELEMENT>();
     }
 
