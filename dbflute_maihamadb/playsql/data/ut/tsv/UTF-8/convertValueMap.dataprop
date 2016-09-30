@@ -1,6 +1,6 @@
 map:{
     ; $$type(VARCHAR)$$ = map:{
-        # DESCRIPTION can be inserted
+        # DESCRIPTION can be inserted as empty string
         ; $$null$$ = $$empty$$
     }
 }

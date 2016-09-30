@@ -14,9 +14,9 @@
 
 	<properties>
 		<dbflute.version>1.1.1</dbflute.version>
-		<h2.jdbc.version>1.4.184</h2.jdbc.version>
+		<h2.jdbc.version>1.4.192</h2.jdbc.version>
 		<guice.version>3.0</guice.version>
-		<utflute.version>0.5.5</utflute.version>
+		<utflute.version>0.6.1B</utflute.version>
 	</properties>
 
 	<licenses>
@@ -217,32 +217,14 @@
 			<version>${guice.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.atomikos</groupId>
-			<artifactId>transactions</artifactId>
-			<version>3.3.4</version>
-		</dependency>
-		<!-- multi thread problem fixed but JDBC driver problem
-		<dependency>
-			<groupId>com.atomikos</groupId>
-			<artifactId>transactions</artifactId>
-			<version>3.9.3</version>
+			<groupId>javax.transaction</groupId>
+			<artifactId>javax.transaction-api</artifactId>
+			<version>1.2</version>
 		</dependency>
 		<dependency>
 			<groupId>com.atomikos</groupId>
 			<artifactId>transactions-jdbc</artifactId>
-			<version>3.9.3</version>
-		</dependency>
-		<dependency>
-			<groupId>com.atomikos</groupId>
-			<artifactId>transactions-jta</artifactId>
-			<version>3.9.3</version>
-		</dependency>
-		 -->
-		<dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-jta_1.1_spec</artifactId>
-			<version>1.0</version>
-			<scope>runtime</scope>
+			<version>4.0.4</version>
 		</dependency>
 
 		<!-- logging -->

@@ -82,7 +82,7 @@ public abstract class UnitContainerTestCase extends ContainerTestCase {
     protected DataSource createDataSource() {
         final AtomikosNonXADataSourceBean bean = new AtomikosNonXADataSourceBean();
         bean.setUniqueResourceName("NONXADBMS");
-        bean.setDriverClassName("org.h2.jdbcx.JdbcDataSource");
+        bean.setDriverClassName("org.h2.Driver");
         final EmbeddedH2UrlFactoryBean factoryBean = new EmbeddedH2UrlFactoryBean();
         factoryBean.setUrlSuffix("/database/maihamadb");
         factoryBean.setReferenceClassName(EmbeddedH2UrlFactoryBean.class.getName());
