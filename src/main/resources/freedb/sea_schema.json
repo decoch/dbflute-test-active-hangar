@@ -1,0 +1,26 @@
+SEA_MEMBER: {
+	$comment : "member table"
+	, $type : "table"
+	, MEMBER_ID : { type: "numeric", comment: "identity" }
+	, MEMBER_NAME : { type: "varchar" }
+	, MEMBER_ACCOUNT : { type: "varchar" }
+	, BIRTHDATE : { type: "date" }
+	, FORMALIZED_DATETIME : { type: "datetime" }
+	, MEMBER_STATUS_CODE : { type: "varchar" }
+	, SEA_MEMBER_STATUS : { type: "ref" }
+},
+SEA_PURCHASE: {
+	$comment : "purchase table"
+	, $type : "table"
+	, PURCHASE_ID : { type: "numeric" }
+	, MEMBER_ID : { type: "numeric" }
+	, PURCHASE_DATETIME : { type: "datetime" }
+	, PURCHASE_PRICE : { type: "numeric" }
+	, SEA_MEMBER : { type: "ref" }
+},
+SEA_MEMBER_STATUS: {
+	$comment : "member table"
+	, $type : "table"
+	, MEMBER_STATUS_CODE : { type: "varchar", comment: "code" }
+	, MEMBER_STATUS_NAME : { type: "varchar" }
+}

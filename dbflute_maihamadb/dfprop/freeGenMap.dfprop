@@ -1,0 +1,202 @@
+map:{
+    # ====================================================================================
+    #                                                                                Basic
+    #                                                                                =====
+    ; OneToOneGen = map:{
+        ; resourceMap = map:{
+            ; resourceType = PROP
+            ; resourceFile = ../src/main/resources/freedb/land_message.properties
+        }
+        ; outputMap = map:{
+            ; templateFile = basic/Messages.vm
+            ; outputDirectory = ../src/main/java
+            ; package = org.docksidestage.hangar.freeflute.basic.onetoone
+            ; className = LandMessages
+        }
+    }
+    ; OneToManyGen = map:{
+        ; resourceMap = map:{
+            ; resourceType = JSON_SCHEMA
+            ; resourceFile = ../src/main/resources/freedb/sea_schema.json
+        }
+        ; outputMap = map:{
+            ; templateFile = basic/TableBean.vm
+            ; outputDirectory = ../src/main/java
+            ; package = org.docksidestage.hangar.freeflute.basic.onetomany
+            ; className = unused
+        }
+        ; tableMap = map:{
+        	; tablePath = map
+            ; mappingMap = map:{
+                ; type = map:{
+                    ; numeric = Integer ; varchar = String
+                    ; date = java.time.LocalDate ; datetime = java.time.LocalDateTime
+                }
+            }
+        }
+    }
+    ; OneToFreeGen = map:{
+        ; resourceMap = map:{
+            ; resourceType = JSON_SCHEMA
+            ; resourceFile = ../src/main/resources/freedb/sea_schema.json
+        }
+        ; outputMap = map:{
+            ; templateFile = unused
+            ; outputDirectory = ../src/main/java
+            ; package = org.docksidestage.hangar.freeflute.basic.onetofree
+            ; className = unused
+        }
+        ; tableMap = map:{
+        	; tablePath = map
+            ; mappingMap = map:{
+                ; type = map:{
+                    ; numeric = Integer ; varchar = String
+                    ; date = java.time.LocalDate ; datetime = java.time.LocalDateTime
+                }
+            }
+        }
+    }
+
+    # ====================================================================================
+    #                                                                              JsonKey
+    #                                                                              =======
+    ; JsonMapEmptyGen = map:{
+        ; resourceMap = map:{
+            ; resourceType = JSON_KEY
+            ; resourceFile = ../src/main/resources/freedb/jsonkey_map_empty.json
+        }
+        ; outputMap = map:{
+            ; templateFile = jsonkey/Keys.vm
+            ; outputDirectory = ../src/main/java
+            ; package = org.docksidestage.hangar.freeflute.jsonkey
+            ; className = JsonMapEmpty
+        }
+        ; tableMap = map:{
+            ; keyPath = emptyKey -> map.keys
+        }
+    }
+    ; JsonMapKeysGen = map:{
+        ; resourceMap = map:{
+            ; resourceType = JSON_KEY
+            ; resourceFile = ../src/main/resources/freedb/jsonkey_map_keys.json
+        }
+        ; outputMap = map:{
+            ; templateFile = jsonkey/Keys.vm
+            ; outputDirectory = ../src/main/java
+            ; package = org.docksidestage.hangar.freeflute.jsonkey
+            ; className = JsonMapKeys
+        }
+        ; tableMap = map:{
+            ; keyPath = basicKey -> map.keys
+        }
+    }
+    ; JsonListMapNameGen = map:{
+        ; resourceMap = map:{
+            ; resourceType = JSON_KEY
+            ; resourceFile = ../src/main/resources/freedb/jsonkey_list_map_name.json
+        }
+        ; outputMap = map:{
+            ; templateFile = jsonkey/Keys.vm
+            ; outputDirectory = ../src/main/java
+            ; package = org.docksidestage.hangar.freeflute.jsonkey
+            ; className = JsonListMapName
+        }
+        ; tableMap = map:{
+            ; keyPath = simpleKey -> list.map.code
+        }
+    }
+    ; JsonMapNameMapKeysGen = map:{
+        ; resourceMap = map:{
+            ; resourceType = JSON_KEY
+            ; resourceFile = ../src/main/resources/freedb/jsonkey_map_name_map_keys.json
+        }
+        ; outputMap = map:{
+            ; templateFile = jsonkey/Keys.vm
+            ; outputDirectory = ../src/main/java
+            ; package = org.docksidestage.hangar.freeflute.jsonkey
+            ; className = JsonMapNameMapKeys
+        }
+        ; tableMap = map:{
+            ; keyPath = topKey -> map.fooBarStatus -> map.keys
+        }
+    }
+    ; JsonMapValuesGen = map:{
+        ; resourceMap = map:{
+            ; resourceType = JSON_KEY
+            ; resourceFile = ../src/main/resources/freedb/jsonkey_map_values_list.json
+        }
+        ; outputMap = map:{
+            ; templateFile = jsonkey/Keys.vm
+            ; outputDirectory = ../src/main/java
+            ; package = org.docksidestage.hangar.freeflute.jsonkey
+            ; className = JsonMapValuesListKey
+        }
+        ; tableMap = map:{
+            ; keyPath = clarinetKey -> map.values -> list.elements
+        }
+    }
+
+    # ====================================================================================
+    #                                                                              MongoDB
+    #                                                                              =======
+    ; MongoBeanGen = map:{
+        ; resourceMap = map:{
+        	; baseDir = ../src/main
+            ; resourceType = JSON_SCHEMA
+            ; resourceFile = $$baseDir$$/resources/freedb/mongo_schema.json
+        }
+        ; outputMap = map:{
+            ; templateFile = unused
+            ; outputDirectory = $$baseDir$$/java
+            ; package = org.docksidestage.hangar.freeflute.mongodb
+            ; className = unused
+        }
+        ; tableMap = map:{
+        	; tablePath = map
+            ; mappingMap = map:{
+                ; type = map:{ numeric = Integer ; varchar = String }
+            }
+        }
+    }
+
+    # ====================================================================================
+    #                                                                                Solr
+    #                                                                               ======
+    ; SolrBeanGen = map:{
+        ; resourceMap = map:{
+            ; resourceType = SOLR
+            ; resourceFile = ../src/main/resources/freedb/solr_schema.xml
+        }
+        ; outputMap = map:{
+            ; templateFile = unused
+            ; outputDirectory = ../src/main/java
+            ; package = org.docksidestage.hangar.freeflute.solr
+            ; className = unused
+        }
+        ; tableMap = map:{
+            ; baseBeanClassName = BsSolrFooBean
+            ; extendedBeanClassName = SolrFooBean
+            ; isContainsDynamicField = true
+            ; mappingMap = map:{ type = map:{ foo = String } }
+        }
+    }
+
+    # ====================================================================================
+    #                                                                               WebCls
+    #                                                                               ======
+    ; WebClsGen = map:{
+        ; resourceMap = map:{
+        	; baseDir = ../src/main
+            ; resourceType = WEB_CLS
+            ; resourceFile = $$baseDir$$/resources/freedb/webcls.dfprop
+        }
+        ; outputMap = map:{
+            ; templateFile = TestWebCls.vm
+            ; outputDirectory = $$baseDir$$/java
+            ; package = org.docksidestage.hangar.freeflute.web
+            ; className = WebCDef
+        }
+        ; tableMap = map:{
+        }
+    }
+}

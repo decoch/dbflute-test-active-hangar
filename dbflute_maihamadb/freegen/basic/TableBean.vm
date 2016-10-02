@@ -1,0 +1,49 @@
+package ${request.package};
+
+import java.io.Serializable;
+
+/**
+ * ${table.comment}
+ * @author FreeGen
+ */
+public class ${table.camelizedName} implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    // ===================================================================================
+    //                                                                           Attribute
+    //                                                                           =========
+#foreach ($column in $table.columnList)
+#if ($column.isNormalColumn)
+#set ($javaNative = ${column.type})
+#elseif ($column.isRefColumn)
+#set ($javaNative = ${column.camelizedName})
+#end
+    /** ${column.name}: ${column.comment} */
+    protected ${javaNative} ${column.uncapCamelName};
+
+#end
+    // [Referrers] *comment only
+#foreach ($referrer in $table.referrerList)
+    // o ${referrer.name}
+#end
+
+    // ===================================================================================
+    //                                                                            Accessor
+    //                                                                            ========
+#foreach ($column in $table.columnList)
+#if ($column.isNormalColumn)
+#set ($javaNative = ${column.type})
+#elseif ($column.isRefColumn)
+#set ($javaNative = ${column.camelizedName})
+#end
+    public ${javaNative} get${column.capCamelName}() {
+        return ${column.uncapCamelName};
+    }
+
+    public void set${column.capCamelName}(${javaNative} value) {
+        ${column.uncapCamelName} = value;
+    }
+
+#end
+}
