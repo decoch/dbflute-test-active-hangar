@@ -8,9 +8,9 @@ map:{
             ; resourceFile = ../src/main/resources/freedb/land_message.properties
         }
         ; outputMap = map:{
-            ; templateFile = basic/Messages.vm
             ; outputDirectory = ../src/main/java
             ; package = org.docksidestage.hangar.freeflute.basic.onetoone
+            ; templateFile = basic/Messages.vm
             ; className = LandMessages
         }
     }
@@ -20,9 +20,9 @@ map:{
             ; resourceFile = ../src/main/resources/freedb/sea_schema.json
         }
         ; outputMap = map:{
-            ; templateFile = basic/TableBean.vm
             ; outputDirectory = ../src/main/java
             ; package = org.docksidestage.hangar.freeflute.basic.onetomany
+            ; templateFile = basic/TableBean.vm
             ; className = unused
         }
         ; tableMap = map:{
@@ -41,9 +41,9 @@ map:{
             ; resourceFile = ../src/main/resources/freedb/sea_schema.json
         }
         ; outputMap = map:{
-            ; templateFile = unused
             ; outputDirectory = ../src/main/java
             ; package = org.docksidestage.hangar.freeflute.basic.onetofree
+            ; templateFile = unused
             ; className = unused
         }
         ; tableMap = map:{
@@ -58,6 +58,29 @@ map:{
     }
 
     # ====================================================================================
+    #                                                                             Database
+    #                                                                             ========
+    ; DatabaseCollaborationGen = map:{
+        ; resourceMap = map:{
+            ; resourceType = PROP
+            ; resourceFile = ../src/main/resources/freedb/land_message.properties
+        }
+        ; outputMap = map:{
+            ; outputDirectory = ../src/main/java
+            ; package = org.docksidestage.hangar.freeflute.dbcollabo
+            ; templateFile = dbcollabo/MessagesAndDatabase.vm
+            ; className = MessagesAndDatabase
+        }
+        ; optionMap = map:{
+            ; databaseMap = map:{
+                ; maihamadb = map:{
+                    ; schemaDir = ./schema
+                }
+            }
+        }
+    }
+
+    # ====================================================================================
     #                                                                              JsonKey
     #                                                                              =======
     ; JsonMapEmptyGen = map:{
@@ -66,9 +89,9 @@ map:{
             ; resourceFile = ../src/main/resources/freedb/jsonkey_map_empty.json
         }
         ; outputMap = map:{
-            ; templateFile = jsonkey/Keys.vm
             ; outputDirectory = ../src/main/java
             ; package = org.docksidestage.hangar.freeflute.jsonkey
+            ; templateFile = jsonkey/Keys.vm
             ; className = JsonMapEmpty
         }
         ; tableMap = map:{
@@ -81,9 +104,9 @@ map:{
             ; resourceFile = ../src/main/resources/freedb/jsonkey_map_keys.json
         }
         ; outputMap = map:{
-            ; templateFile = jsonkey/Keys.vm
             ; outputDirectory = ../src/main/java
             ; package = org.docksidestage.hangar.freeflute.jsonkey
+            ; templateFile = jsonkey/Keys.vm
             ; className = JsonMapKeys
         }
         ; tableMap = map:{
@@ -96,9 +119,9 @@ map:{
             ; resourceFile = ../src/main/resources/freedb/jsonkey_list_map_name.json
         }
         ; outputMap = map:{
-            ; templateFile = jsonkey/Keys.vm
             ; outputDirectory = ../src/main/java
             ; package = org.docksidestage.hangar.freeflute.jsonkey
+            ; templateFile = jsonkey/Keys.vm
             ; className = JsonListMapName
         }
         ; tableMap = map:{
@@ -111,9 +134,9 @@ map:{
             ; resourceFile = ../src/main/resources/freedb/jsonkey_map_name_map_keys.json
         }
         ; outputMap = map:{
-            ; templateFile = jsonkey/Keys.vm
             ; outputDirectory = ../src/main/java
             ; package = org.docksidestage.hangar.freeflute.jsonkey
+            ; templateFile = jsonkey/Keys.vm
             ; className = JsonMapNameMapKeys
         }
         ; tableMap = map:{
@@ -126,9 +149,9 @@ map:{
             ; resourceFile = ../src/main/resources/freedb/jsonkey_map_values_list.json
         }
         ; outputMap = map:{
-            ; templateFile = jsonkey/Keys.vm
             ; outputDirectory = ../src/main/java
             ; package = org.docksidestage.hangar.freeflute.jsonkey
+            ; templateFile = jsonkey/Keys.vm
             ; className = JsonMapValuesListKey
         }
         ; tableMap = map:{
@@ -146,9 +169,9 @@ map:{
             ; resourceFile = $$baseDir$$/resources/freedb/mongo_schema.json
         }
         ; outputMap = map:{
-            ; templateFile = unused
             ; outputDirectory = $$baseDir$$/java
             ; package = org.docksidestage.hangar.freeflute.mongodb
+            ; templateFile = unused
             ; className = unused
         }
         ; tableMap = map:{
@@ -195,8 +218,6 @@ map:{
             ; outputDirectory = $$baseDir$$/java
             ; package = org.docksidestage.hangar.freeflute.web
             ; className = WebCDef
-        }
-        ; tableMap = map:{
         }
     }
 }

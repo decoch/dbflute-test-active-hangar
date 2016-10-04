@@ -1,11 +1,11 @@
 package ${request.package}.bean.ex;
 
-import ${request.package}.bean.bs.${request.tableMap.baseBeanClassName};
+import ${request.package}.bean.bs.${request.optionMap.baseBeanClassName};
 
 /**
  * @author FreeGen
  */
-public class ${tableMap.extendedBeanClassName} extends ${tableMap.baseBeanClassName} {
+public class ${optionMap.extendedBeanClassName} extends ${optionMap.baseBeanClassName} {
 
     private static final long serialVersionUID = 1L;
 }

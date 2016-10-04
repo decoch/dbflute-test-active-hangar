@@ -2,7 +2,7 @@
 $manager.info("requestList: ${requestList.size()}")
 
 #foreach ($request in $requestList)
-#set ($tableMap = $request.tableMap)
+#set ($optionMap = $request.optionMap)
 $request.enableOutputDirectory()
 $manager.makeDirectory($request.generateDirPath)
 
@@ -45,12 +45,12 @@ $manager.makeDirectory($request.generateDirPath)
   ## <<<  Solr Gen  >>>
   ##
   #set ($table = $request.table)
-  #set ($path = "${request.generateDirPath}/bean/bs/${tableMap.baseBeanClassName}.java")
+  #set ($path = "${request.generateDirPath}/bean/bs/${optionMap.baseBeanClassName}.java")
   $manager.makeDirectory($path)
   $manager.info("parse('${path}')")
   $generator.parse("./solr/BsSolrBean.vm", $path, "", "")
 
-  #set ($path = "${request.generateDirPath}/bean/ex/${tableMap.extendedBeanClassName}.java")
+  #set ($path = "${request.generateDirPath}/bean/ex/${optionMap.extendedBeanClassName}.java")
   $manager.makeDirectory($path)
   $manager.info("parse('${path}')")
   #if (!$files.file(${generator.outputPath},$path).exists())
@@ -58,7 +58,7 @@ $manager.makeDirectory($request.generateDirPath)
   #end
 #else
   ##
-  ## <<<  Basic Gen  >>>
+  ## <<<  Normal Gen  >>>
   ##
   #if ($request.isOnlyOneTable())
     #set ($table = $request.table)

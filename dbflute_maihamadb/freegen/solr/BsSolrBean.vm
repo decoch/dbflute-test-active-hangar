@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * @author FreeGen
  */
-public class ${tableMap.baseBeanClassName} implements Serializable {
+public class ${optionMap.baseBeanClassName} implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
