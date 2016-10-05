@@ -160,29 +160,6 @@ map:{
     }
 
     # ====================================================================================
-    #                                                                              MongoDB
-    #                                                                              =======
-    ; MongoBeanGen = map:{
-        ; resourceMap = map:{
-        	; baseDir = ../src/main
-            ; resourceType = JSON_SCHEMA
-            ; resourceFile = $$baseDir$$/resources/freedb/mongo_schema.json
-        }
-        ; outputMap = map:{
-            ; outputDirectory = $$baseDir$$/java
-            ; package = org.docksidestage.hangar.freeflute.mongodb
-            ; templateFile = unused
-            ; className = unused
-        }
-        ; tableMap = map:{
-        	; tablePath = map
-            ; mappingMap = map:{
-                ; type = map:{ numeric = Integer ; varchar = String }
-            }
-        }
-    }
-
-    # ====================================================================================
     #                                                                                Solr
     #                                                                               ======
     ; SolrBeanGen = map:{

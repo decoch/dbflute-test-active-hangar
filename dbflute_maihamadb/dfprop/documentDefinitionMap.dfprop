@@ -192,7 +192,7 @@ map:{
     #   o password: The database password. (NotRequired - Default '')
     #
     ; schemaSyncCheckMap = map:{
-        ; url = jdbc:h2:file:../../dbflute-spring-example/src/main/resources/exampledb/exampledb
+        ; url = jdbc:h2:file:../../dbflute-spring-example/src/main/resources/maihamadb/maihamadb
         ; schema = PUBLIC
         ; user = sa
         ; password = 

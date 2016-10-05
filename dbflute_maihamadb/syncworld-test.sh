@@ -9,7 +9,7 @@ export DBFLUTE_ENVIRONMENT_TYPE=diffready
 
 . replace-schema.sh
 
-rm ./dfprop/syncworld/syncexampledb.mv.db
+rm ./dfprop/syncworld/syncmaihamadb.mv.db
 cp ./dfprop/diffworld/diffworlddb.mv.db ./dfprop/syncworld/syncworlddb.mv.db
 
 export DBFLUTE_ENVIRONMENT_TYPE=syncworld

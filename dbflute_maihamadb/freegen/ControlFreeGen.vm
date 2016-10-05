@@ -23,23 +23,6 @@ $manager.makeDirectory($request.generateDirPath)
       $generator.parse("./basic/ExTableBean.vm", $path, "", "")
     #end
   #end
-#elseif ($request.requestName == "MongoBeanGen")
-  ##
-  ## <<<  Mongo Bean Gen  >>>
-  ##
-  #foreach ($table in $request.tableList)
-    #set ($path = "${request.generateDirPath}bean/bs/Bs${table.camelizedName}.java")
-    $manager.makeDirectory($path)
-    $manager.info("parse('${path}')")
-    $generator.parse("./mongodb/BsMongoBean.vm", $path, "", "")
-
-    #set ($path = "${request.generateDirPath}bean/ex/${table.camelizedName}.java")
-    $manager.makeDirectory($path)
-    $manager.info("parse('${path}')")
-    #if (!$files.file(${generator.outputPath},$path).exists())
-      $generator.parse("./mongodb/ExMongoBean.vm", $path, "", "")
-    #end
-  #end
 #elseif ($request.isResourceTypeSolr())
   ##
   ## <<<  Solr Gen  >>>

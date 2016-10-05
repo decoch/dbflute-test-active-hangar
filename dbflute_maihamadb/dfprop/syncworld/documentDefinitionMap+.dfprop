@@ -1,6 +1,6 @@
 map:{
-    ; schemaHtmlFileName = syncworld-schema-exampledb.html
-    ; historyHtmlFileName = syncworld-history-exampledb.html
+    ; schemaHtmlFileName = syncworld-schema-maihamadb.html
+    ; historyHtmlFileName = syncworld-history-maihamadb.html
     ; coreCraftMetaDirPath = $$DEFAULT$$/syncworld
 
     ; schemaSyncCheckMap = map:{
