@@ -14,7 +14,7 @@ import org.dbflute.bhv.BehaviorWritable;
 import org.dbflute.bhv.writable.DeleteOption;
 import org.dbflute.cbean.ConditionBean;
 import org.dbflute.exception.NonSpecifiedColumnAccessException;
-import org.dbflute.utflute.core.smallhelper.ExceptionExaminer;
+import org.dbflute.utflute.core.exception.ExceptionExaminer;
 import org.dbflute.utflute.guice.ContainerTestCase;
 import org.docksidestage.hangar.EmbeddedH2UrlFactoryBean;
 import org.docksidestage.hangar.dbflute.exbhv.MemberAddressBhv;
@@ -60,6 +60,11 @@ public abstract class UnitContainerTestCase extends ContainerTestCase {
         _cbStack.clear();
     }
 
+    @Override
+    protected boolean isUseTestCaseLooseBinding() {
+        return true;
+    }
+    
     // -----------------------------------------------------
     //                                                Module
     //                                                ------
