@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Arrays;
 import java.util.Collections;
+import static org.docksidestage.hangar.simpleflute.AppCDef.XInternalCDefUtil.emptyStrings;
 
 /**
  * The definition of classification.
@@ -45,6 +46,9 @@ public interface AppCDef {
      */
     DefMeta meta();
 
+    class XInternalCDefUtil {
+        public static String[] emptyStrings() { return EMPTY_SISTERS; }
+    }
     /**
      * general boolean classification for every flg-column
      */
@@ -119,13 +123,13 @@ public interface AppCDef {
      */
     public enum MemberStatus implements AppCDef {
         /** Formalized: as formal member, allowed to use all service */
-        Formalized("FML", "Formalized", EMPTY_SISTERS)
+        Formalized("FML", "Formalized", emptyStrings())
         ,
         /** Withdrawal: withdrawal is fixed, not allowed to use service */
-        Withdrawal("WDL", "Withdrawal", EMPTY_SISTERS)
+        Withdrawal("WDL", "Withdrawal", emptyStrings())
         ,
         /** Provisional: first status after entry, allowed to use only part of service */
-        Provisional("PRV", "Provisional", EMPTY_SISTERS)
+        Provisional("PRV", "Provisional", emptyStrings())
         ;
         private static final Map<String, MemberStatus> _codeValueMap = new HashMap<String, MemberStatus>();
         static {
@@ -199,19 +203,19 @@ public interface AppCDef {
      */
     public enum ServiceRank implements AppCDef {
         /** PLATINUM: platinum rank */
-        Platinum("PLT", "PLATINUM", EMPTY_SISTERS)
+        Platinum("PLT", "PLATINUM", emptyStrings())
         ,
         /** GOLD: gold rank */
-        Gold("GLD", "GOLD", EMPTY_SISTERS)
+        Gold("GLD", "GOLD", emptyStrings())
         ,
         /** SILVER: silver rank */
-        Silver("SIL", "SILVER", EMPTY_SISTERS)
+        Silver("SIL", "SILVER", emptyStrings())
         ,
         /** BRONZE: bronze rank */
-        Bronze("BRZ", "BRONZE", EMPTY_SISTERS)
+        Bronze("BRZ", "BRONZE", emptyStrings())
         ,
         /** PLASTIC: plastic rank */
-        Plastic("PLS", "PLASTIC", EMPTY_SISTERS)
+        Plastic("PLS", "PLASTIC", emptyStrings())
         ;
         private static final Map<String, ServiceRank> _codeValueMap = new HashMap<String, ServiceRank>();
         static {
@@ -264,16 +268,16 @@ public interface AppCDef {
      */
     public enum Region implements AppCDef {
         /** AMERICA */
-        America("1", "AMERICA", EMPTY_SISTERS)
+        America("1", "AMERICA", emptyStrings())
         ,
         /** CANADA */
-        Canada("2", "CANADA", EMPTY_SISTERS)
+        Canada("2", "CANADA", emptyStrings())
         ,
         /** CHINA */
-        China("3", "CHINA", EMPTY_SISTERS)
+        China("3", "CHINA", emptyStrings())
         ,
         /** CHIBA */
-        Chiba("4", "CHIBA", EMPTY_SISTERS)
+        Chiba("4", "CHIBA", emptyStrings())
         ;
         private static final Map<String, Region> _codeValueMap = new HashMap<String, Region>();
         static {
@@ -388,19 +392,19 @@ public interface AppCDef {
      */
     public enum ProductCategory implements AppCDef {
         /** 音楽 */
-        音楽("MSC", "音楽", EMPTY_SISTERS)
+        音楽("MSC", "音楽", emptyStrings())
         ,
         /** 食品 */
-        食品("FOD", "食品", EMPTY_SISTERS)
+        食品("FOD", "食品", emptyStrings())
         ,
         /** ハーブ: of 食品 */
-        ハーブ("HEB", "ハーブ", EMPTY_SISTERS)
+        ハーブ("HEB", "ハーブ", emptyStrings())
         ,
         /** 音楽CD: of 音楽 */
-        音楽cd("MCD", "音楽CD", EMPTY_SISTERS)
+        音楽cd("MCD", "音楽CD", emptyStrings())
         ,
         /** 楽器: of 音楽 */
-        楽器("INS", "楽器", EMPTY_SISTERS)
+        楽器("INS", "楽器", emptyStrings())
         ;
         private static final Map<String, ProductCategory> _codeValueMap = new HashMap<String, ProductCategory>();
         static {
@@ -453,13 +457,13 @@ public interface AppCDef {
      */
     public enum ProductStatus implements AppCDef {
         /** 生産販売可能 */
-        生産販売可能("ONS", "生産販売可能", EMPTY_SISTERS)
+        生産販売可能("ONS", "生産販売可能", emptyStrings())
         ,
         /** 生産中止 */
-        生産中止("PST", "生産中止", EMPTY_SISTERS)
+        生産中止("PST", "生産中止", emptyStrings())
         ,
         /** 販売中止 */
-        販売中止("SST", "販売中止", EMPTY_SISTERS)
+        販売中止("SST", "販売中止", emptyStrings())
         ;
         private static final Map<String, ProductStatus> _codeValueMap = new HashMap<String, ProductStatus>();
         static {
@@ -512,13 +516,13 @@ public interface AppCDef {
      */
     public enum PaymentMethod implements AppCDef {
         /** by hand: payment by hand, face-to-face */
-        ByHand("HAN", "by hand", EMPTY_SISTERS)
+        ByHand("HAN", "by hand", emptyStrings())
         ,
         /** bank transfer: bank transfer payment */
-        BankTransfer("BAK", "bank transfer", EMPTY_SISTERS)
+        BankTransfer("BAK", "bank transfer", emptyStrings())
         ,
         /** credit card: credit card payment */
-        CreditCard("CRC", "credit card", EMPTY_SISTERS)
+        CreditCard("CRC", "credit card", emptyStrings())
         ;
         private static final Map<String, PaymentMethod> _codeValueMap = new HashMap<String, PaymentMethod>();
         static {

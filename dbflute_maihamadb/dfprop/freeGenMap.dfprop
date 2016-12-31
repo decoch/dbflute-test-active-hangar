@@ -180,21 +180,4 @@ map:{
             ; mappingMap = map:{ type = map:{ foo = String } }
         }
     }
-
-    # ====================================================================================
-    #                                                                               WebCls
-    #                                                                               ======
-    ; WebClsGen = map:{
-        ; resourceMap = map:{
-        	; baseDir = ../src/main
-            ; resourceType = WEB_CLS
-            ; resourceFile = $$baseDir$$/resources/freedb/webcls.dfprop
-        }
-        ; outputMap = map:{
-            ; templateFile = TestWebCls.vm
-            ; outputDirectory = $$baseDir$$/java
-            ; package = org.docksidestage.hangar.freeflute.web
-            ; className = WebCDef
-        }
-    }
 }
