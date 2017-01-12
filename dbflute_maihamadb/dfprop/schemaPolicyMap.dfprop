@@ -9,8 +9,17 @@
 # map:{
 #     ; tableExceptList = list:{}
 #     ; tableTargetList = list:{}
+#     ; columnExceptMap = map:{}
+#     ; isMainSchemaOnly = false
+#     
+#     ; wholeMap = map:{
+#         ; themeList = list:{ uniqueTableAlias ; sameColumnAliasIfSameColumnName }
+#     }
 #     ; tableMap = map:{
 #         ; themeList = list:{ hasPK ; upperCaseBasis ; identityIfPureIDPK }
+#         ; statementList = list:{
+#             ; if tableName is $$ALL$$ then fkName is prefix:FK_$$table$$
+#         }
 #     }
 #     ; columnMap = map:{
 #         ; themeList = list:{ upperCaseBasis }
@@ -18,6 +27,7 @@
 #             ; if columnName is suffix:_FLAG then bad
 #             ; if columnName is suffix:_FLG then notNull
 #             ; if columnName is suffix:_FLG then dbType is INTEGER 
+#             ; if columnName is suffix:_FLG then classification 
 #         }
 #     }
 # }
@@ -25,10 +35,19 @@
 # *The line that starts with '#' means comment-out.
 #
 map:{
-    ; tableExceptList = list:{}
+    ; tableExceptList = list:{ REGION ; prefix:VENDOR_ ; prefix:WHITE_ }
     ; tableTargetList = list:{}
+    ; columnExceptMap = map:{}
+    ; isMainSchemaOnly = false
+    
+    ; wholeMap = map:{
+        ; themeList = list:{ uniqueTableAlias ; sameColumnAliasIfSameColumnName }
+    }
     ; tableMap = map:{
-        ; themeList = list:{ hasPK ; upperCaseBasis }
+        ; themeList = list:{ hasPK ; upperCaseBasis ; identityIfPureIDPK }
+        ; statementList = list:{
+            ; if tableName is $$ALL$$ then fkName is prefix:FK_$$table$$
+        }
     }
     ; columnMap = map:{
         ; themeList = list:{ upperCaseBasis }
@@ -36,6 +55,7 @@ map:{
             ; if columnName is suffix:_FLAG then bad
             ; if columnName is suffix:_FLG then notNull
             ; if columnName is suffix:_FLG then dbType is INTEGER
+            ; if columnName is suffix:_FLG then classification
         }
     }
 }
