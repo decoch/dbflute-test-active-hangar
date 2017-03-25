@@ -53,6 +53,9 @@
 # *The line that starts with '#' means comment-out.
 #
 map:{
+    # the test of SchemaHTML procedures without generation
+    ; isShowSchemaHtmlProcedureRegardlessOfGeneration = true
+
     # /- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # o documentOutputDirectory (NotRequired - Default './output/doc')
     #  The output directory mainly for SchemaHtml and DataXlsTemplate.
