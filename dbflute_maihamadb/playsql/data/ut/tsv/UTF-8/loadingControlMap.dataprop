@@ -1,9 +1,12 @@
 map:{
     # ALL, NONE, PART
-    ; loggingInsertType = ALL
+    ; loggingInsertType = PART
 
     # true or false
     ; isSuppressBatchUpdate = false
+
+    # true or false
+    ; isContinueDifferentColumnValueCount = false
 
     # true or false
     ; isSuppressColumnDefCheck = false

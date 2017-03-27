@@ -55,6 +55,7 @@ public class DBMetaInstanceHandler implements DBMetaProvider {
         tmpMap.put("VENDOR_THE_LONG_AND_WINDING_TABLE_AND_COLUMN", "org.docksidestage.hangar.dbflute.bsentity.dbmeta.VendorTheLongAndWindingTableAndColumnDbm");
         tmpMap.put("VENDOR_THE_LONG_AND_WINDING_TABLE_AND_COLUMN_REF", "org.docksidestage.hangar.dbflute.bsentity.dbmeta.VendorTheLongAndWindingTableAndColumnRefDbm");
         tmpMap.put("WHITE_DATE_TERM", "org.docksidestage.hangar.dbflute.bsentity.dbmeta.WhiteDateTermDbm");
+        tmpMap.put("WHITE_TSV_LOADING", "org.docksidestage.hangar.dbflute.bsentity.dbmeta.WhiteTsvLoadingDbm");
         tmpMap.put("WITHDRAWAL_REASON", "org.docksidestage.hangar.dbflute.bsentity.dbmeta.WithdrawalReasonDbm");
         _tableDbNameClassNameMap = Collections.unmodifiableMap(tmpMap);
     }

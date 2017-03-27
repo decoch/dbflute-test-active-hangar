@@ -187,5 +187,10 @@ public class DBFluteModule extends AbstractModule {
             bhv.setBehaviorCommandInvoker(ker); bhv.setBehaviorSelector(tor); bhv.setCommonColumnAutoSetupper(per);
             bind(WhiteDateTermBhv.class).toInstance(bhv);
         }
+        {
+            WhiteTsvLoadingBhv bhv = new WhiteTsvLoadingBhv();
+            bhv.setBehaviorCommandInvoker(ker); bhv.setBehaviorSelector(tor); bhv.setCommonColumnAutoSetupper(per);
+            bind(WhiteTsvLoadingBhv.class).toInstance(bhv);
+        }
     }
 }

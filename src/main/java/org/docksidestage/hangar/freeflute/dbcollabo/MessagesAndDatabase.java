@@ -202,6 +202,14 @@ public class MessagesAndDatabase implements Serializable {
     //  - DATE_TERM_VALUE
     //  - BEGIN_DATE
     //  - END_DATE
+    // WHITE_TSV_LOADING
+    //  - TSV_LOADING_ID
+    //  - TSV_LOADING_NAME
+    //  - LOADING_COUNT
+    //  - LOADING_DATE
+    //  - BEGIN_DATETIME
+    //  - END_DATETIME
+    //  - DONE_FLG
     // WITHDRAWAL_REASON
     //  - WITHDRAWAL_REASON_CODE
     //  - WITHDRAWAL_REASON_TEXT
