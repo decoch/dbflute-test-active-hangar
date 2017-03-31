@@ -15,7 +15,7 @@ import org.docksidestage.hangar.simpleflute.AppCDef;
  *     TSV_LOADING_ID
  * 
  * [column]
- *     TSV_LOADING_ID, TSV_LOADING_NAME, LOADING_COUNT, LOADING_DATE, BEGIN_DATETIME, END_DATETIME, DONE_FLG
+ *     TSV_LOADING_ID, TSV_LOADING_NAME, LOADING_COUNT, LOADING_DATE, BEGIN_DATETIME, END_DATETIME, LARGE_FROM_FILE, DONE_FLG
  * 
  * [sequence]
  *     
@@ -78,6 +78,10 @@ public abstract class BsWhiteTsvLoadingDto implements Serializable {
     /** END_DATETIME: {TIMESTAMP(23, 10)} */
     @JsonKey
     protected java.time.LocalDateTime _endDatetime;
+
+    /** LARGE_FROM_FILE: {VARCHAR(500)} */
+    @JsonKey
+    protected String _largeFromFile;
 
     /** DONE_FLG: {NotNull, BOOLEAN(1), classification=Flg} */
     @JsonKey
@@ -223,6 +227,7 @@ public abstract class BsWhiteTsvLoadingDto implements Serializable {
         sb.append(c).append(getLoadingDate());
         sb.append(c).append(getBeginDatetime());
         sb.append(c).append(getEndDatetime());
+        sb.append(c).append(getLargeFromFile());
         sb.append(c).append(getDoneFlg());
         if (sb.length() > 0) { sb.delete(0, c.length()); }
         sb.insert(0, "{").append("}");
@@ -338,6 +343,23 @@ public abstract class BsWhiteTsvLoadingDto implements Serializable {
     public void setEndDatetime(java.time.LocalDateTime endDatetime) {
         __modifiedProperties.add("endDatetime");
         this._endDatetime = endDatetime;
+    }
+
+    /**
+     * [get] LARGE_FROM_FILE: {VARCHAR(500)} <br>
+     * @return The value of the column 'LARGE_FROM_FILE'. (NullAllowed)
+     */
+    public String getLargeFromFile() {
+        return _largeFromFile;
+    }
+
+    /**
+     * [set] LARGE_FROM_FILE: {VARCHAR(500)} <br>
+     * @param largeFromFile The value of the column 'LARGE_FROM_FILE'. (NullAllowed)
+     */
+    public void setLargeFromFile(String largeFromFile) {
+        __modifiedProperties.add("largeFromFile");
+        this._largeFromFile = largeFromFile;
     }
 
     /**

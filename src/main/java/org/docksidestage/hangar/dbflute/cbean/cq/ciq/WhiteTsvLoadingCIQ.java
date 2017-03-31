@@ -67,6 +67,7 @@ public class WhiteTsvLoadingCIQ extends AbstractBsWhiteTsvLoadingCQ {
     protected ConditionValue xgetCValueLoadingDate() { return _myCQ.xdfgetLoadingDate(); }
     protected ConditionValue xgetCValueBeginDatetime() { return _myCQ.xdfgetBeginDatetime(); }
     protected ConditionValue xgetCValueEndDatetime() { return _myCQ.xdfgetEndDatetime(); }
+    protected ConditionValue xgetCValueLargeFromFile() { return _myCQ.xdfgetLargeFromFile(); }
     protected ConditionValue xgetCValueDoneFlg() { return _myCQ.xdfgetDoneFlg(); }
     protected Map<String, Object> xfindFixedConditionDynamicParameterMap(String pp) { return null; }
     public String keepScalarCondition(WhiteTsvLoadingCQ sq)

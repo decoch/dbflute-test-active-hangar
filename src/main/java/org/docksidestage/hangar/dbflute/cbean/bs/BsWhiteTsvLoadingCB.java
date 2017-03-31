@@ -313,6 +313,11 @@ public class BsWhiteTsvLoadingCB extends AbstractConditionBean {
          */
         public SpecifiedColumn columnEndDatetime() { return doColumn("END_DATETIME"); }
         /**
+         * LARGE_FROM_FILE: {VARCHAR(500)}
+         * @return The information object of specified column. (NotNull)
+         */
+        public SpecifiedColumn columnLargeFromFile() { return doColumn("LARGE_FROM_FILE"); }
+        /**
          * DONE_FLG: {NotNull, BOOLEAN(1), classification=Flg}
          * @return The information object of specified column. (NotNull)
          */

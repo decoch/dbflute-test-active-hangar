@@ -209,6 +209,7 @@ public class MessagesAndDatabase implements Serializable {
     //  - LOADING_DATE
     //  - BEGIN_DATETIME
     //  - END_DATETIME
+    //  - LARGE_FROM_FILE
     //  - DONE_FLG
     // WITHDRAWAL_REASON
     //  - WITHDRAWAL_REASON_CODE

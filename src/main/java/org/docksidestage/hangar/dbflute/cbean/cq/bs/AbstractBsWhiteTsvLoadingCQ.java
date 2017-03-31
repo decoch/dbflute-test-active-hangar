@@ -599,6 +599,123 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
     protected abstract ConditionValue xgetCValueEndDatetime();
 
     /**
+     * Equal(=). And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)}
+     * @param largeFromFile The value of largeFromFile as equal. (NullAllowed: if null (or empty), no condition)
+     */
+    public void setLargeFromFile_Equal(String largeFromFile) {
+        doSetLargeFromFile_Equal(fRES(largeFromFile));
+    }
+
+    protected void doSetLargeFromFile_Equal(String largeFromFile) {
+        regLargeFromFile(CK_EQ, largeFromFile);
+    }
+
+    /**
+     * NotEqual(&lt;&gt;). And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)}
+     * @param largeFromFile The value of largeFromFile as notEqual. (NullAllowed: if null (or empty), no condition)
+     */
+    public void setLargeFromFile_NotEqual(String largeFromFile) {
+        doSetLargeFromFile_NotEqual(fRES(largeFromFile));
+    }
+
+    protected void doSetLargeFromFile_NotEqual(String largeFromFile) {
+        regLargeFromFile(CK_NES, largeFromFile);
+    }
+
+    /**
+     * InScope {in ('a', 'b')}. And NullOrEmptyIgnored, NullOrEmptyElementIgnored, SeveralRegistered. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)}
+     * @param largeFromFileList The collection of largeFromFile as inScope. (NullAllowed: if null (or empty), no condition)
+     */
+    public void setLargeFromFile_InScope(Collection<String> largeFromFileList) {
+        doSetLargeFromFile_InScope(largeFromFileList);
+    }
+
+    protected void doSetLargeFromFile_InScope(Collection<String> largeFromFileList) {
+        regINS(CK_INS, cTL(largeFromFileList), xgetCValueLargeFromFile(), "LARGE_FROM_FILE");
+    }
+
+    /**
+     * NotInScope {not in ('a', 'b')}. And NullOrEmptyIgnored, NullOrEmptyElementIgnored, SeveralRegistered. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)}
+     * @param largeFromFileList The collection of largeFromFile as notInScope. (NullAllowed: if null (or empty), no condition)
+     */
+    public void setLargeFromFile_NotInScope(Collection<String> largeFromFileList) {
+        doSetLargeFromFile_NotInScope(largeFromFileList);
+    }
+
+    protected void doSetLargeFromFile_NotInScope(Collection<String> largeFromFileList) {
+        regINS(CK_NINS, cTL(largeFromFileList), xgetCValueLargeFromFile(), "LARGE_FROM_FILE");
+    }
+
+    /**
+     * LikeSearch with various options. (versatile) {like '%xxx%' escape ...}. And NullOrEmptyIgnored, SeveralRegistered. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)} <br>
+     * <pre>e.g. setLargeFromFile_LikeSearch("xxx", op <span style="color: #90226C; font-weight: bold"><span style="font-size: 120%">-</span>&gt;</span> op.<span style="color: #CC4747">likeContain()</span>);</pre>
+     * @param largeFromFile The value of largeFromFile as likeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param opLambda The callback for option of like-search. (NotNull)
+     */
+    public void setLargeFromFile_LikeSearch(String largeFromFile, ConditionOptionCall<LikeSearchOption> opLambda) {
+        setLargeFromFile_LikeSearch(largeFromFile, xcLSOP(opLambda));
+    }
+
+    /**
+     * LikeSearch with various options. (versatile) {like '%xxx%' escape ...}. And NullOrEmptyIgnored, SeveralRegistered. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)} <br>
+     * <pre>e.g. setLargeFromFile_LikeSearch("xxx", new <span style="color: #CC4747">LikeSearchOption</span>().likeContain());</pre>
+     * @param largeFromFile The value of largeFromFile as likeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param likeSearchOption The option of like-search. (NotNull)
+     */
+    protected void setLargeFromFile_LikeSearch(String largeFromFile, LikeSearchOption likeSearchOption) {
+        regLSQ(CK_LS, fRES(largeFromFile), xgetCValueLargeFromFile(), "LARGE_FROM_FILE", likeSearchOption);
+    }
+
+    /**
+     * NotLikeSearch with various options. (versatile) {not like 'xxx%' escape ...} <br>
+     * And NullOrEmptyIgnored, SeveralRegistered. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)}
+     * @param largeFromFile The value of largeFromFile as notLikeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param opLambda The callback for option of like-search. (NotNull)
+     */
+    public void setLargeFromFile_NotLikeSearch(String largeFromFile, ConditionOptionCall<LikeSearchOption> opLambda) {
+        setLargeFromFile_NotLikeSearch(largeFromFile, xcLSOP(opLambda));
+    }
+
+    /**
+     * NotLikeSearch with various options. (versatile) {not like 'xxx%' escape ...} <br>
+     * And NullOrEmptyIgnored, SeveralRegistered. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)}
+     * @param largeFromFile The value of largeFromFile as notLikeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param likeSearchOption The option of not-like-search. (NotNull)
+     */
+    protected void setLargeFromFile_NotLikeSearch(String largeFromFile, LikeSearchOption likeSearchOption) {
+        regLSQ(CK_NLS, fRES(largeFromFile), xgetCValueLargeFromFile(), "LARGE_FROM_FILE", likeSearchOption);
+    }
+
+    /**
+     * IsNull {is null}. And OnlyOnceRegistered. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)}
+     */
+    public void setLargeFromFile_IsNull() { regLargeFromFile(CK_ISN, DOBJ); }
+
+    /**
+     * IsNullOrEmpty {is null or empty}. And OnlyOnceRegistered. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)}
+     */
+    public void setLargeFromFile_IsNullOrEmpty() { regLargeFromFile(CK_ISNOE, DOBJ); }
+
+    /**
+     * IsNotNull {is not null}. And OnlyOnceRegistered. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)}
+     */
+    public void setLargeFromFile_IsNotNull() { regLargeFromFile(CK_ISNN, DOBJ); }
+
+    protected void regLargeFromFile(ConditionKey ky, Object vl) { regQ(ky, vl, xgetCValueLargeFromFile(), "LARGE_FROM_FILE"); }
+    protected abstract ConditionValue xgetCValueLargeFromFile();
+
+    /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * DONE_FLG: {NotNull, BOOLEAN(1), classification=Flg}
      * @param doneFlg The value of doneFlg as equal. (basically NotNull: error as default, or no condition as option)

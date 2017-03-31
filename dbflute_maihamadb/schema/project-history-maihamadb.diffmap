@@ -1,4 +1,19 @@
 map:{
+    ; 2017/03/31 22:41:26 = map:{
+        ; diffDate = 2017/03/31 22:41:26
+        ; tableDiff = map:{
+            ; WHITE_TSV_LOADING = map:{
+                ; tableName = WHITE_TSV_LOADING
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; LARGE_FROM_FILE = map:{
+                        ; columnName = LARGE_FROM_FILE
+                        ; diffType = ADD
+                    }
+                }
+            }
+        }
+    }
     ; 2017/03/27 14:31:09 = map:{
         ; diffDate = 2017/03/27 14:31:09
         ; tableCount = map:{

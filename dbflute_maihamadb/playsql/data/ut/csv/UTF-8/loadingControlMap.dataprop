@@ -1,6 +1,6 @@
 map:{
     # ALL, NONE, PART
-    ; loggingInsertType = PART
+    ; loggingInsertType = ALL
 
     # true or false
     ; isSuppressBatchUpdate = false
@@ -19,10 +19,5 @@ map:{
     #     ; MEMBER = map:{ BIRTHDATE = addDay(0) }
     # }
     ; dateAdjustmentMap = map:{
-    }
-
-    # map:{ [table] = list:{ [column] } }
-    ; largeTextFileMap = map:{
-        ; WHITE_TSV_LOADING = list:{ LARGE_FROM_FILE }
     }
 }

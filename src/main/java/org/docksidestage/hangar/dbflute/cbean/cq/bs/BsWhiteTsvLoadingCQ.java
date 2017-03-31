@@ -193,6 +193,26 @@ public class BsWhiteTsvLoadingCQ extends AbstractBsWhiteTsvLoadingCQ {
      */
     public BsWhiteTsvLoadingCQ addOrderBy_EndDatetime_Desc() { regOBD("END_DATETIME"); return this; }
 
+    protected ConditionValue _largeFromFile;
+    public ConditionValue xdfgetLargeFromFile()
+    { if (_largeFromFile == null) { _largeFromFile = nCV(); }
+      return _largeFromFile; }
+    protected ConditionValue xgetCValueLargeFromFile() { return xdfgetLargeFromFile(); }
+
+    /** 
+     * Add order-by as ascend. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)}
+     * @return this. (NotNull)
+     */
+    public BsWhiteTsvLoadingCQ addOrderBy_LargeFromFile_Asc() { regOBA("LARGE_FROM_FILE"); return this; }
+
+    /**
+     * Add order-by as descend. <br>
+     * LARGE_FROM_FILE: {VARCHAR(500)}
+     * @return this. (NotNull)
+     */
+    public BsWhiteTsvLoadingCQ addOrderBy_LargeFromFile_Desc() { regOBD("LARGE_FROM_FILE"); return this; }
+
     protected ConditionValue _doneFlg;
     public ConditionValue xdfgetDoneFlg()
     { if (_doneFlg == null) { _doneFlg = nCV(); }

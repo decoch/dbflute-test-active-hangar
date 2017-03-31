@@ -28,7 +28,7 @@ import org.docksidestage.hangar.dbflute.dtomapper.*;
  *     TSV_LOADING_ID
  * 
  * [column]
- *     TSV_LOADING_ID, TSV_LOADING_NAME, LOADING_COUNT, LOADING_DATE, BEGIN_DATETIME, END_DATETIME, DONE_FLG
+ *     TSV_LOADING_ID, TSV_LOADING_NAME, LOADING_COUNT, LOADING_DATE, BEGIN_DATETIME, END_DATETIME, LARGE_FROM_FILE, DONE_FLG
  * 
  * [sequence]
  *     
@@ -103,6 +103,7 @@ public abstract class BsWhiteTsvLoadingDtoMapper implements DtoMapper<WhiteTsvLo
         dto.setLoadingDate(entity.getLoadingDate());
         dto.setBeginDatetime(entity.getBeginDatetime());
         dto.setEndDatetime(entity.getEndDatetime());
+        dto.setLargeFromFile(entity.getLargeFromFile());
         dto.setDoneFlg(entity.getDoneFlg());
         reflectDerivedProperty(entity, dto, true);
         return dto;
@@ -157,6 +158,9 @@ public abstract class BsWhiteTsvLoadingDtoMapper implements DtoMapper<WhiteTsvLo
         }
         if (needsMapping(dto, dto.getEndDatetime(), "endDatetime")) {
             entity.setEndDatetime(dto.getEndDatetime());
+        }
+        if (needsMapping(dto, dto.getLargeFromFile(), "largeFromFile")) {
+            entity.setLargeFromFile(dto.getLargeFromFile());
         }
         if (needsMapping(dto, dto.getDoneFlg(), "doneFlg")) {
             entity.setDoneFlgAsFlg(CDef.Flg.codeOf(dto.getDoneFlg()));

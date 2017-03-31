@@ -17,7 +17,7 @@ import org.docksidestage.hangar.dbflute.exentity.*;
  *     TSV_LOADING_ID
  *
  * [column]
- *     TSV_LOADING_ID, TSV_LOADING_NAME, LOADING_COUNT, LOADING_DATE, BEGIN_DATETIME, END_DATETIME, DONE_FLG
+ *     TSV_LOADING_ID, TSV_LOADING_NAME, LOADING_COUNT, LOADING_DATE, BEGIN_DATETIME, END_DATETIME, LARGE_FROM_FILE, DONE_FLG
  *
  * [sequence]
  *     
@@ -48,6 +48,7 @@ import org.docksidestage.hangar.dbflute.exentity.*;
  * java.time.LocalDate loadingDate = entity.getLoadingDate();
  * java.time.LocalDateTime beginDatetime = entity.getBeginDatetime();
  * java.time.LocalDateTime endDatetime = entity.getEndDatetime();
+ * String largeFromFile = entity.getLargeFromFile();
  * Boolean doneFlg = entity.getDoneFlg();
  * entity.setTsvLoadingId(tsvLoadingId);
  * entity.setTsvLoadingName(tsvLoadingName);
@@ -55,6 +56,7 @@ import org.docksidestage.hangar.dbflute.exentity.*;
  * entity.setLoadingDate(loadingDate);
  * entity.setBeginDatetime(beginDatetime);
  * entity.setEndDatetime(endDatetime);
+ * entity.setLargeFromFile(largeFromFile);
  * entity.setDoneFlg(doneFlg);
  * = = = = = = = = = =/
  * </pre>
@@ -88,6 +90,9 @@ public abstract class BsWhiteTsvLoading extends AbstractEntity implements Domain
 
     /** END_DATETIME: {TIMESTAMP(23, 10)} */
     protected java.time.LocalDateTime _endDatetime;
+
+    /** LARGE_FROM_FILE: {VARCHAR(500)} */
+    protected String _largeFromFile;
 
     /** DONE_FLG: {NotNull, BOOLEAN(1), classification=Flg} */
     protected Boolean _doneFlg;
@@ -259,6 +264,7 @@ public abstract class BsWhiteTsvLoading extends AbstractEntity implements Domain
         sb.append(dm).append(xfND(_loadingDate));
         sb.append(dm).append(xfND(_beginDatetime));
         sb.append(dm).append(xfND(_endDatetime));
+        sb.append(dm).append(xfND(_largeFromFile));
         sb.append(dm).append(xfND(_doneFlg));
         if (sb.length() > dm.length()) {
             sb.delete(0, dm.length());
@@ -386,6 +392,24 @@ public abstract class BsWhiteTsvLoading extends AbstractEntity implements Domain
     public void setEndDatetime(java.time.LocalDateTime endDatetime) {
         registerModifiedProperty("endDatetime");
         _endDatetime = endDatetime;
+    }
+
+    /**
+     * [get] LARGE_FROM_FILE: {VARCHAR(500)} <br>
+     * @return The value of the column 'LARGE_FROM_FILE'. (NullAllowed even if selected: for no constraint)
+     */
+    public String getLargeFromFile() {
+        checkSpecifiedProperty("largeFromFile");
+        return convertEmptyToNull(_largeFromFile);
+    }
+
+    /**
+     * [set] LARGE_FROM_FILE: {VARCHAR(500)} <br>
+     * @param largeFromFile The value of the column 'LARGE_FROM_FILE'. (NullAllowed: null update allowed for no constraint)
+     */
+    public void setLargeFromFile(String largeFromFile) {
+        registerModifiedProperty("largeFromFile");
+        _largeFromFile = largeFromFile;
     }
 
     /**
