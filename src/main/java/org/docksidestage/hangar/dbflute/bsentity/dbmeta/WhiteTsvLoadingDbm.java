@@ -48,6 +48,7 @@ public class WhiteTsvLoadingDbm extends AbstractDBMeta {
         setupEpg(_epgMap, et -> ((WhiteTsvLoading)et).getLoadingDate(), (et, vl) -> ((WhiteTsvLoading)et).setLoadingDate(ctld(vl)), "loadingDate");
         setupEpg(_epgMap, et -> ((WhiteTsvLoading)et).getBeginDatetime(), (et, vl) -> ((WhiteTsvLoading)et).setBeginDatetime(ctldt(vl)), "beginDatetime");
         setupEpg(_epgMap, et -> ((WhiteTsvLoading)et).getEndDatetime(), (et, vl) -> ((WhiteTsvLoading)et).setEndDatetime(ctldt(vl)), "endDatetime");
+        setupEpg(_epgMap, et -> ((WhiteTsvLoading)et).getLargeFromFile(), (et, vl) -> ((WhiteTsvLoading)et).setLargeFromFile((String)vl), "largeFromFile");
         setupEpg(_epgMap, et -> ((WhiteTsvLoading)et).getDoneFlg(), (et, vl) -> {
             ((WhiteTsvLoading)et).setDoneFlg((Boolean)vl);
         }, "doneFlg");
@@ -77,6 +78,7 @@ public class WhiteTsvLoadingDbm extends AbstractDBMeta {
     protected final ColumnInfo _columnLoadingDate = cci("LOADING_DATE", "LOADING_DATE", null, null, java.time.LocalDate.class, "loadingDate", null, false, false, true, "DATE", 8, 0, null, false, null, null, null, null, null, false);
     protected final ColumnInfo _columnBeginDatetime = cci("BEGIN_DATETIME", "BEGIN_DATETIME", null, null, java.time.LocalDateTime.class, "beginDatetime", null, false, false, true, "TIMESTAMP", 23, 10, null, false, null, null, null, null, null, false);
     protected final ColumnInfo _columnEndDatetime = cci("END_DATETIME", "END_DATETIME", null, null, java.time.LocalDateTime.class, "endDatetime", null, false, false, false, "TIMESTAMP", 23, 10, null, false, null, null, null, null, null, false);
+    protected final ColumnInfo _columnLargeFromFile = cci("LARGE_FROM_FILE", "LARGE_FROM_FILE", null, null, String.class, "largeFromFile", null, false, false, false, "VARCHAR", 500, 0, null, false, null, null, null, null, null, false);
     protected final ColumnInfo _columnDoneFlg = cci("DONE_FLG", "DONE_FLG", null, null, Boolean.class, "doneFlg", null, false, false, true, "BOOLEAN", 1, 0, null, false, null, null, null, null, CDef.DefMeta.Flg, false);
 
     /**
@@ -110,6 +112,11 @@ public class WhiteTsvLoadingDbm extends AbstractDBMeta {
      */
     public ColumnInfo columnEndDatetime() { return _columnEndDatetime; }
     /**
+     * LARGE_FROM_FILE: {VARCHAR(500)}
+     * @return The information object of specified column. (NotNull)
+     */
+    public ColumnInfo columnLargeFromFile() { return _columnLargeFromFile; }
+    /**
      * DONE_FLG: {NotNull, BOOLEAN(1), classification=Flg}
      * @return The information object of specified column. (NotNull)
      */
@@ -123,6 +130,7 @@ public class WhiteTsvLoadingDbm extends AbstractDBMeta {
         ls.add(columnLoadingDate());
         ls.add(columnBeginDatetime());
         ls.add(columnEndDatetime());
+        ls.add(columnLargeFromFile());
         ls.add(columnDoneFlg());
         return ls;
     }
