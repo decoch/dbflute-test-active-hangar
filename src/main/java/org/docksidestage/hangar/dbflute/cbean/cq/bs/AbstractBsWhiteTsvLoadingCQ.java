@@ -110,8 +110,8 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
      * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
      * And NullIgnored, OnlyOnceRegistered. <br>
      * TSV_LOADING_ID: {PK, NotNull, DECIMAL(16)}
-     * @param minNumber The min number of tsvLoadingId. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of tsvLoadingId. (NullAllowed: if null, no to-condition)
+     * @param minNumber The min number of tsvLoadingId. (basically NotNull: if op.allowOneSide(), null allowed)
+     * @param maxNumber The max number of tsvLoadingId. (basically NotNull: if op.allowOneSide(), null allowed)
      * @param opLambda The callback for option of range-of. (NotNull)
      */
     public void setTsvLoadingId_RangeOf(Long minNumber, Long maxNumber, ConditionOptionCall<RangeOfOption> opLambda) {
@@ -123,8 +123,8 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
      * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
      * And NullIgnored, OnlyOnceRegistered. <br>
      * TSV_LOADING_ID: {PK, NotNull, DECIMAL(16)}
-     * @param minNumber The min number of tsvLoadingId. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of tsvLoadingId. (NullAllowed: if null, no to-condition)
+     * @param minNumber The min number of tsvLoadingId. (basically NotNull: if op.allowOneSide(), null allowed)
+     * @param maxNumber The max number of tsvLoadingId. (basically NotNull: if op.allowOneSide(), null allowed)
      * @param rangeOfOption The option of range-of. (NotNull)
      */
     protected void setTsvLoadingId_RangeOf(Long minNumber, Long maxNumber, RangeOfOption rangeOfOption) {
@@ -134,7 +134,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
     /**
      * InScope {in (1, 2)}. And NullIgnored, NullElementIgnored, SeveralRegistered. <br>
      * TSV_LOADING_ID: {PK, NotNull, DECIMAL(16)}
-     * @param tsvLoadingIdList The collection of tsvLoadingId as inScope. (NullAllowed: if null (or empty), no condition)
+     * @param tsvLoadingIdList The collection of tsvLoadingId as inScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setTsvLoadingId_InScope(Collection<Long> tsvLoadingIdList) {
         doSetTsvLoadingId_InScope(tsvLoadingIdList);
@@ -147,7 +147,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
     /**
      * NotInScope {not in (1, 2)}. And NullIgnored, NullElementIgnored, SeveralRegistered. <br>
      * TSV_LOADING_ID: {PK, NotNull, DECIMAL(16)}
-     * @param tsvLoadingIdList The collection of tsvLoadingId as notInScope. (NullAllowed: if null (or empty), no condition)
+     * @param tsvLoadingIdList The collection of tsvLoadingId as notInScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setTsvLoadingId_NotInScope(Collection<Long> tsvLoadingIdList) {
         doSetTsvLoadingId_NotInScope(tsvLoadingIdList);
@@ -175,7 +175,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
     /**
      * Equal(=). And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
      * TSV_LOADING_NAME: {NotNull, VARCHAR(200)}
-     * @param tsvLoadingName The value of tsvLoadingName as equal. (NullAllowed: if null (or empty), no condition)
+     * @param tsvLoadingName The value of tsvLoadingName as equal. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setTsvLoadingName_Equal(String tsvLoadingName) {
         doSetTsvLoadingName_Equal(fRES(tsvLoadingName));
@@ -189,7 +189,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
      * LikeSearch with various options. (versatile) {like '%xxx%' escape ...}. And NullOrEmptyIgnored, SeveralRegistered. <br>
      * TSV_LOADING_NAME: {NotNull, VARCHAR(200)} <br>
      * <pre>e.g. setTsvLoadingName_LikeSearch("xxx", op <span style="color: #90226C; font-weight: bold"><span style="font-size: 120%">-</span>&gt;</span> op.<span style="color: #CC4747">likeContain()</span>);</pre>
-     * @param tsvLoadingName The value of tsvLoadingName as likeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param tsvLoadingName The value of tsvLoadingName as likeSearch. (basically NotNull, NotEmpty: error as default, or no condition as option)
      * @param opLambda The callback for option of like-search. (NotNull)
      */
     public void setTsvLoadingName_LikeSearch(String tsvLoadingName, ConditionOptionCall<LikeSearchOption> opLambda) {
@@ -200,7 +200,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
      * LikeSearch with various options. (versatile) {like '%xxx%' escape ...}. And NullOrEmptyIgnored, SeveralRegistered. <br>
      * TSV_LOADING_NAME: {NotNull, VARCHAR(200)} <br>
      * <pre>e.g. setTsvLoadingName_LikeSearch("xxx", new <span style="color: #CC4747">LikeSearchOption</span>().likeContain());</pre>
-     * @param tsvLoadingName The value of tsvLoadingName as likeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param tsvLoadingName The value of tsvLoadingName as likeSearch. (basically NotNull, NotEmpty: error as default, or no condition as option)
      * @param likeSearchOption The option of like-search. (NotNull)
      */
     protected void setTsvLoadingName_LikeSearch(String tsvLoadingName, LikeSearchOption likeSearchOption) {
@@ -211,7 +211,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
      * NotLikeSearch with various options. (versatile) {not like 'xxx%' escape ...} <br>
      * And NullOrEmptyIgnored, SeveralRegistered. <br>
      * TSV_LOADING_NAME: {NotNull, VARCHAR(200)}
-     * @param tsvLoadingName The value of tsvLoadingName as notLikeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param tsvLoadingName The value of tsvLoadingName as notLikeSearch. (basically NotNull, NotEmpty: error as default, or no condition as option)
      * @param opLambda The callback for option of like-search. (NotNull)
      */
     public void setTsvLoadingName_NotLikeSearch(String tsvLoadingName, ConditionOptionCall<LikeSearchOption> opLambda) {
@@ -222,7 +222,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
      * NotLikeSearch with various options. (versatile) {not like 'xxx%' escape ...} <br>
      * And NullOrEmptyIgnored, SeveralRegistered. <br>
      * TSV_LOADING_NAME: {NotNull, VARCHAR(200)}
-     * @param tsvLoadingName The value of tsvLoadingName as notLikeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param tsvLoadingName The value of tsvLoadingName as notLikeSearch. (basically NotNull, NotEmpty: error as default, or no condition as option)
      * @param likeSearchOption The option of not-like-search. (NotNull)
      */
     protected void setTsvLoadingName_NotLikeSearch(String tsvLoadingName, LikeSearchOption likeSearchOption) {
@@ -299,8 +299,8 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
      * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
      * And NullIgnored, OnlyOnceRegistered. <br>
      * LOADING_COUNT: {INTEGER(10)}
-     * @param minNumber The min number of loadingCount. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of loadingCount. (NullAllowed: if null, no to-condition)
+     * @param minNumber The min number of loadingCount. (basically NotNull: if op.allowOneSide(), null allowed)
+     * @param maxNumber The max number of loadingCount. (basically NotNull: if op.allowOneSide(), null allowed)
      * @param opLambda The callback for option of range-of. (NotNull)
      */
     public void setLoadingCount_RangeOf(Integer minNumber, Integer maxNumber, ConditionOptionCall<RangeOfOption> opLambda) {
@@ -312,8 +312,8 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
      * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
      * And NullIgnored, OnlyOnceRegistered. <br>
      * LOADING_COUNT: {INTEGER(10)}
-     * @param minNumber The min number of loadingCount. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of loadingCount. (NullAllowed: if null, no to-condition)
+     * @param minNumber The min number of loadingCount. (basically NotNull: if op.allowOneSide(), null allowed)
+     * @param maxNumber The max number of loadingCount. (basically NotNull: if op.allowOneSide(), null allowed)
      * @param rangeOfOption The option of range-of. (NotNull)
      */
     protected void setLoadingCount_RangeOf(Integer minNumber, Integer maxNumber, RangeOfOption rangeOfOption) {
@@ -323,7 +323,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
     /**
      * InScope {in (1, 2)}. And NullIgnored, NullElementIgnored, SeveralRegistered. <br>
      * LOADING_COUNT: {INTEGER(10)}
-     * @param loadingCountList The collection of loadingCount as inScope. (NullAllowed: if null (or empty), no condition)
+     * @param loadingCountList The collection of loadingCount as inScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setLoadingCount_InScope(Collection<Integer> loadingCountList) {
         doSetLoadingCount_InScope(loadingCountList);
@@ -336,7 +336,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
     /**
      * NotInScope {not in (1, 2)}. And NullIgnored, NullElementIgnored, SeveralRegistered. <br>
      * LOADING_COUNT: {INTEGER(10)}
-     * @param loadingCountList The collection of loadingCount as notInScope. (NullAllowed: if null (or empty), no condition)
+     * @param loadingCountList The collection of loadingCount as notInScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setLoadingCount_NotInScope(Collection<Integer> loadingCountList) {
         doSetLoadingCount_NotInScope(loadingCountList);
@@ -601,7 +601,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
     /**
      * Equal(=). And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
      * LARGE_FROM_FILE: {VARCHAR(500)}
-     * @param largeFromFile The value of largeFromFile as equal. (NullAllowed: if null (or empty), no condition)
+     * @param largeFromFile The value of largeFromFile as equal. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setLargeFromFile_Equal(String largeFromFile) {
         doSetLargeFromFile_Equal(fRES(largeFromFile));
@@ -614,7 +614,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
     /**
      * NotEqual(&lt;&gt;). And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
      * LARGE_FROM_FILE: {VARCHAR(500)}
-     * @param largeFromFile The value of largeFromFile as notEqual. (NullAllowed: if null (or empty), no condition)
+     * @param largeFromFile The value of largeFromFile as notEqual. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setLargeFromFile_NotEqual(String largeFromFile) {
         doSetLargeFromFile_NotEqual(fRES(largeFromFile));
@@ -627,7 +627,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
     /**
      * InScope {in ('a', 'b')}. And NullOrEmptyIgnored, NullOrEmptyElementIgnored, SeveralRegistered. <br>
      * LARGE_FROM_FILE: {VARCHAR(500)}
-     * @param largeFromFileList The collection of largeFromFile as inScope. (NullAllowed: if null (or empty), no condition)
+     * @param largeFromFileList The collection of largeFromFile as inScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setLargeFromFile_InScope(Collection<String> largeFromFileList) {
         doSetLargeFromFile_InScope(largeFromFileList);
@@ -640,7 +640,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
     /**
      * NotInScope {not in ('a', 'b')}. And NullOrEmptyIgnored, NullOrEmptyElementIgnored, SeveralRegistered. <br>
      * LARGE_FROM_FILE: {VARCHAR(500)}
-     * @param largeFromFileList The collection of largeFromFile as notInScope. (NullAllowed: if null (or empty), no condition)
+     * @param largeFromFileList The collection of largeFromFile as notInScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setLargeFromFile_NotInScope(Collection<String> largeFromFileList) {
         doSetLargeFromFile_NotInScope(largeFromFileList);
@@ -654,7 +654,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
      * LikeSearch with various options. (versatile) {like '%xxx%' escape ...}. And NullOrEmptyIgnored, SeveralRegistered. <br>
      * LARGE_FROM_FILE: {VARCHAR(500)} <br>
      * <pre>e.g. setLargeFromFile_LikeSearch("xxx", op <span style="color: #90226C; font-weight: bold"><span style="font-size: 120%">-</span>&gt;</span> op.<span style="color: #CC4747">likeContain()</span>);</pre>
-     * @param largeFromFile The value of largeFromFile as likeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param largeFromFile The value of largeFromFile as likeSearch. (basically NotNull, NotEmpty: error as default, or no condition as option)
      * @param opLambda The callback for option of like-search. (NotNull)
      */
     public void setLargeFromFile_LikeSearch(String largeFromFile, ConditionOptionCall<LikeSearchOption> opLambda) {
@@ -665,7 +665,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
      * LikeSearch with various options. (versatile) {like '%xxx%' escape ...}. And NullOrEmptyIgnored, SeveralRegistered. <br>
      * LARGE_FROM_FILE: {VARCHAR(500)} <br>
      * <pre>e.g. setLargeFromFile_LikeSearch("xxx", new <span style="color: #CC4747">LikeSearchOption</span>().likeContain());</pre>
-     * @param largeFromFile The value of largeFromFile as likeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param largeFromFile The value of largeFromFile as likeSearch. (basically NotNull, NotEmpty: error as default, or no condition as option)
      * @param likeSearchOption The option of like-search. (NotNull)
      */
     protected void setLargeFromFile_LikeSearch(String largeFromFile, LikeSearchOption likeSearchOption) {
@@ -676,7 +676,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
      * NotLikeSearch with various options. (versatile) {not like 'xxx%' escape ...} <br>
      * And NullOrEmptyIgnored, SeveralRegistered. <br>
      * LARGE_FROM_FILE: {VARCHAR(500)}
-     * @param largeFromFile The value of largeFromFile as notLikeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param largeFromFile The value of largeFromFile as notLikeSearch. (basically NotNull, NotEmpty: error as default, or no condition as option)
      * @param opLambda The callback for option of like-search. (NotNull)
      */
     public void setLargeFromFile_NotLikeSearch(String largeFromFile, ConditionOptionCall<LikeSearchOption> opLambda) {
@@ -687,7 +687,7 @@ public abstract class AbstractBsWhiteTsvLoadingCQ extends AbstractConditionQuery
      * NotLikeSearch with various options. (versatile) {not like 'xxx%' escape ...} <br>
      * And NullOrEmptyIgnored, SeveralRegistered. <br>
      * LARGE_FROM_FILE: {VARCHAR(500)}
-     * @param largeFromFile The value of largeFromFile as notLikeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param largeFromFile The value of largeFromFile as notLikeSearch. (basically NotNull, NotEmpty: error as default, or no condition as option)
      * @param likeSearchOption The option of not-like-search. (NotNull)
      */
     protected void setLargeFromFile_NotLikeSearch(String largeFromFile, LikeSearchOption likeSearchOption) {

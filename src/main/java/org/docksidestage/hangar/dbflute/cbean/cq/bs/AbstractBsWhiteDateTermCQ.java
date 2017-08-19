@@ -110,8 +110,8 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
      * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
      * And NullIgnored, OnlyOnceRegistered. <br>
      * DATE_TERM_ID: {PK, NotNull, DECIMAL(16)}
-     * @param minNumber The min number of dateTermId. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of dateTermId. (NullAllowed: if null, no to-condition)
+     * @param minNumber The min number of dateTermId. (basically NotNull: if op.allowOneSide(), null allowed)
+     * @param maxNumber The max number of dateTermId. (basically NotNull: if op.allowOneSide(), null allowed)
      * @param opLambda The callback for option of range-of. (NotNull)
      */
     public void setDateTermId_RangeOf(Long minNumber, Long maxNumber, ConditionOptionCall<RangeOfOption> opLambda) {
@@ -123,8 +123,8 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
      * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
      * And NullIgnored, OnlyOnceRegistered. <br>
      * DATE_TERM_ID: {PK, NotNull, DECIMAL(16)}
-     * @param minNumber The min number of dateTermId. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of dateTermId. (NullAllowed: if null, no to-condition)
+     * @param minNumber The min number of dateTermId. (basically NotNull: if op.allowOneSide(), null allowed)
+     * @param maxNumber The max number of dateTermId. (basically NotNull: if op.allowOneSide(), null allowed)
      * @param rangeOfOption The option of range-of. (NotNull)
      */
     protected void setDateTermId_RangeOf(Long minNumber, Long maxNumber, RangeOfOption rangeOfOption) {
@@ -134,7 +134,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * InScope {in (1, 2)}. And NullIgnored, NullElementIgnored, SeveralRegistered. <br>
      * DATE_TERM_ID: {PK, NotNull, DECIMAL(16)}
-     * @param dateTermIdList The collection of dateTermId as inScope. (NullAllowed: if null (or empty), no condition)
+     * @param dateTermIdList The collection of dateTermId as inScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setDateTermId_InScope(Collection<Long> dateTermIdList) {
         doSetDateTermId_InScope(dateTermIdList);
@@ -147,7 +147,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * NotInScope {not in (1, 2)}. And NullIgnored, NullElementIgnored, SeveralRegistered. <br>
      * DATE_TERM_ID: {PK, NotNull, DECIMAL(16)}
-     * @param dateTermIdList The collection of dateTermId as notInScope. (NullAllowed: if null (or empty), no condition)
+     * @param dateTermIdList The collection of dateTermId as notInScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setDateTermId_NotInScope(Collection<Long> dateTermIdList) {
         doSetDateTermId_NotInScope(dateTermIdList);
@@ -175,7 +175,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
      * DATE_TERM_VALUE: {NotNull, VARCHAR(200)}
-     * @param dateTermValue The value of dateTermValue as equal. (NullAllowed: if null (or empty), no condition)
+     * @param dateTermValue The value of dateTermValue as equal. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setDateTermValue_Equal(String dateTermValue) {
         doSetDateTermValue_Equal(fRES(dateTermValue));
@@ -188,7 +188,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
      * DATE_TERM_VALUE: {NotNull, VARCHAR(200)}
-     * @param dateTermValue The value of dateTermValue as notEqual. (NullAllowed: if null (or empty), no condition)
+     * @param dateTermValue The value of dateTermValue as notEqual. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setDateTermValue_NotEqual(String dateTermValue) {
         doSetDateTermValue_NotEqual(fRES(dateTermValue));
@@ -201,7 +201,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * InScope {in ('a', 'b')}. And NullOrEmptyIgnored, NullOrEmptyElementIgnored, SeveralRegistered. <br>
      * DATE_TERM_VALUE: {NotNull, VARCHAR(200)}
-     * @param dateTermValueList The collection of dateTermValue as inScope. (NullAllowed: if null (or empty), no condition)
+     * @param dateTermValueList The collection of dateTermValue as inScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setDateTermValue_InScope(Collection<String> dateTermValueList) {
         doSetDateTermValue_InScope(dateTermValueList);
@@ -214,7 +214,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
     /**
      * NotInScope {not in ('a', 'b')}. And NullOrEmptyIgnored, NullOrEmptyElementIgnored, SeveralRegistered. <br>
      * DATE_TERM_VALUE: {NotNull, VARCHAR(200)}
-     * @param dateTermValueList The collection of dateTermValue as notInScope. (NullAllowed: if null (or empty), no condition)
+     * @param dateTermValueList The collection of dateTermValue as notInScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setDateTermValue_NotInScope(Collection<String> dateTermValueList) {
         doSetDateTermValue_NotInScope(dateTermValueList);
@@ -228,7 +228,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
      * LikeSearch with various options. (versatile) {like '%xxx%' escape ...}. And NullOrEmptyIgnored, SeveralRegistered. <br>
      * DATE_TERM_VALUE: {NotNull, VARCHAR(200)} <br>
      * <pre>e.g. setDateTermValue_LikeSearch("xxx", op <span style="color: #90226C; font-weight: bold"><span style="font-size: 120%">-</span>&gt;</span> op.<span style="color: #CC4747">likeContain()</span>);</pre>
-     * @param dateTermValue The value of dateTermValue as likeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param dateTermValue The value of dateTermValue as likeSearch. (basically NotNull, NotEmpty: error as default, or no condition as option)
      * @param opLambda The callback for option of like-search. (NotNull)
      */
     public void setDateTermValue_LikeSearch(String dateTermValue, ConditionOptionCall<LikeSearchOption> opLambda) {
@@ -239,7 +239,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
      * LikeSearch with various options. (versatile) {like '%xxx%' escape ...}. And NullOrEmptyIgnored, SeveralRegistered. <br>
      * DATE_TERM_VALUE: {NotNull, VARCHAR(200)} <br>
      * <pre>e.g. setDateTermValue_LikeSearch("xxx", new <span style="color: #CC4747">LikeSearchOption</span>().likeContain());</pre>
-     * @param dateTermValue The value of dateTermValue as likeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param dateTermValue The value of dateTermValue as likeSearch. (basically NotNull, NotEmpty: error as default, or no condition as option)
      * @param likeSearchOption The option of like-search. (NotNull)
      */
     protected void setDateTermValue_LikeSearch(String dateTermValue, LikeSearchOption likeSearchOption) {
@@ -250,7 +250,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
      * NotLikeSearch with various options. (versatile) {not like 'xxx%' escape ...} <br>
      * And NullOrEmptyIgnored, SeveralRegistered. <br>
      * DATE_TERM_VALUE: {NotNull, VARCHAR(200)}
-     * @param dateTermValue The value of dateTermValue as notLikeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param dateTermValue The value of dateTermValue as notLikeSearch. (basically NotNull, NotEmpty: error as default, or no condition as option)
      * @param opLambda The callback for option of like-search. (NotNull)
      */
     public void setDateTermValue_NotLikeSearch(String dateTermValue, ConditionOptionCall<LikeSearchOption> opLambda) {
@@ -261,7 +261,7 @@ public abstract class AbstractBsWhiteDateTermCQ extends AbstractConditionQuery {
      * NotLikeSearch with various options. (versatile) {not like 'xxx%' escape ...} <br>
      * And NullOrEmptyIgnored, SeveralRegistered. <br>
      * DATE_TERM_VALUE: {NotNull, VARCHAR(200)}
-     * @param dateTermValue The value of dateTermValue as notLikeSearch. (NullAllowed: if null (or empty), no condition)
+     * @param dateTermValue The value of dateTermValue as notLikeSearch. (basically NotNull, NotEmpty: error as default, or no condition as option)
      * @param likeSearchOption The option of not-like-search. (NotNull)
      */
     protected void setDateTermValue_NotLikeSearch(String dateTermValue, LikeSearchOption likeSearchOption) {

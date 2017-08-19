@@ -66,10 +66,10 @@ public class WhiteDateTermDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                         Column Info
     //                                                                         ===========
-    protected final ColumnInfo _columnDateTermId = cci("DATE_TERM_ID", "DATE_TERM_ID", null, null, Long.class, "dateTermId", null, true, false, true, "DECIMAL", 16, 0, null, false, null, null, null, null, null, false);
-    protected final ColumnInfo _columnDateTermValue = cci("DATE_TERM_VALUE", "DATE_TERM_VALUE", null, null, String.class, "dateTermValue", null, false, false, true, "VARCHAR", 200, 0, null, false, null, null, null, null, null, false);
-    protected final ColumnInfo _columnBeginDate = cci("BEGIN_DATE", "BEGIN_DATE", null, null, java.time.LocalDate.class, "beginDate", null, false, false, true, "DATE", 8, 0, null, false, null, null, null, null, null, false);
-    protected final ColumnInfo _columnEndDate = cci("END_DATE", "END_DATE", null, null, java.time.LocalDate.class, "endDate", null, false, false, true, "DATE", 8, 0, null, false, null, null, null, null, null, false);
+    protected final ColumnInfo _columnDateTermId = cci("DATE_TERM_ID", "DATE_TERM_ID", null, null, Long.class, "dateTermId", null, true, false, true, "DECIMAL", 16, 0, null, null, false, null, null, null, null, null, false);
+    protected final ColumnInfo _columnDateTermValue = cci("DATE_TERM_VALUE", "DATE_TERM_VALUE", null, null, String.class, "dateTermValue", null, false, false, true, "VARCHAR", 200, 0, null, null, false, null, null, null, null, null, false);
+    protected final ColumnInfo _columnBeginDate = cci("BEGIN_DATE", "BEGIN_DATE", null, null, java.time.LocalDate.class, "beginDate", null, false, false, true, "DATE", 8, 0, null, null, false, null, null, null, null, null, false);
+    protected final ColumnInfo _columnEndDate = cci("END_DATE", "END_DATE", null, null, java.time.LocalDate.class, "endDate", null, false, false, true, "DATE", 8, 0, null, null, false, null, null, null, null, null, false);
 
     /**
      * DATE_TERM_ID: {PK, NotNull, DECIMAL(16)}

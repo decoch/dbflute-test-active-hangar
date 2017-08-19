@@ -110,8 +110,8 @@ public abstract class AbstractBsMemberFollowingCQ extends AbstractConditionQuery
      * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
      * And NullIgnored, OnlyOnceRegistered. <br>
      * (会員フォローイングID)MEMBER_FOLLOWING_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param minNumber The min number of memberFollowingId. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of memberFollowingId. (NullAllowed: if null, no to-condition)
+     * @param minNumber The min number of memberFollowingId. (basically NotNull: if op.allowOneSide(), null allowed)
+     * @param maxNumber The max number of memberFollowingId. (basically NotNull: if op.allowOneSide(), null allowed)
      * @param opLambda The callback for option of range-of. (NotNull)
      */
     public void setMemberFollowingId_RangeOf(Long minNumber, Long maxNumber, ConditionOptionCall<RangeOfOption> opLambda) {
@@ -123,8 +123,8 @@ public abstract class AbstractBsMemberFollowingCQ extends AbstractConditionQuery
      * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
      * And NullIgnored, OnlyOnceRegistered. <br>
      * (会員フォローイングID)MEMBER_FOLLOWING_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param minNumber The min number of memberFollowingId. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of memberFollowingId. (NullAllowed: if null, no to-condition)
+     * @param minNumber The min number of memberFollowingId. (basically NotNull: if op.allowOneSide(), null allowed)
+     * @param maxNumber The max number of memberFollowingId. (basically NotNull: if op.allowOneSide(), null allowed)
      * @param rangeOfOption The option of range-of. (NotNull)
      */
     protected void setMemberFollowingId_RangeOf(Long minNumber, Long maxNumber, RangeOfOption rangeOfOption) {
@@ -134,7 +134,7 @@ public abstract class AbstractBsMemberFollowingCQ extends AbstractConditionQuery
     /**
      * InScope {in (1, 2)}. And NullIgnored, NullElementIgnored, SeveralRegistered. <br>
      * (会員フォローイングID)MEMBER_FOLLOWING_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param memberFollowingIdList The collection of memberFollowingId as inScope. (NullAllowed: if null (or empty), no condition)
+     * @param memberFollowingIdList The collection of memberFollowingId as inScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setMemberFollowingId_InScope(Collection<Long> memberFollowingIdList) {
         doSetMemberFollowingId_InScope(memberFollowingIdList);
@@ -147,7 +147,7 @@ public abstract class AbstractBsMemberFollowingCQ extends AbstractConditionQuery
     /**
      * NotInScope {not in (1, 2)}. And NullIgnored, NullElementIgnored, SeveralRegistered. <br>
      * (会員フォローイングID)MEMBER_FOLLOWING_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param memberFollowingIdList The collection of memberFollowingId as notInScope. (NullAllowed: if null (or empty), no condition)
+     * @param memberFollowingIdList The collection of memberFollowingId as notInScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setMemberFollowingId_NotInScope(Collection<Long> memberFollowingIdList) {
         doSetMemberFollowingId_NotInScope(memberFollowingIdList);
@@ -239,8 +239,8 @@ public abstract class AbstractBsMemberFollowingCQ extends AbstractConditionQuery
      * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
      * And NullIgnored, OnlyOnceRegistered. <br>
      * (わたし)MY_MEMBER_ID: {UQ+, IX+, NotNull, INTEGER(10), FK to MEMBER}
-     * @param minNumber The min number of myMemberId. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of myMemberId. (NullAllowed: if null, no to-condition)
+     * @param minNumber The min number of myMemberId. (basically NotNull: if op.allowOneSide(), null allowed)
+     * @param maxNumber The max number of myMemberId. (basically NotNull: if op.allowOneSide(), null allowed)
      * @param opLambda The callback for option of range-of. (NotNull)
      */
     public void setMyMemberId_RangeOf(Integer minNumber, Integer maxNumber, ConditionOptionCall<RangeOfOption> opLambda) {
@@ -252,8 +252,8 @@ public abstract class AbstractBsMemberFollowingCQ extends AbstractConditionQuery
      * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
      * And NullIgnored, OnlyOnceRegistered. <br>
      * (わたし)MY_MEMBER_ID: {UQ+, IX+, NotNull, INTEGER(10), FK to MEMBER}
-     * @param minNumber The min number of myMemberId. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of myMemberId. (NullAllowed: if null, no to-condition)
+     * @param minNumber The min number of myMemberId. (basically NotNull: if op.allowOneSide(), null allowed)
+     * @param maxNumber The max number of myMemberId. (basically NotNull: if op.allowOneSide(), null allowed)
      * @param rangeOfOption The option of range-of. (NotNull)
      */
     protected void setMyMemberId_RangeOf(Integer minNumber, Integer maxNumber, RangeOfOption rangeOfOption) {
@@ -263,7 +263,7 @@ public abstract class AbstractBsMemberFollowingCQ extends AbstractConditionQuery
     /**
      * InScope {in (1, 2)}. And NullIgnored, NullElementIgnored, SeveralRegistered. <br>
      * (わたし)MY_MEMBER_ID: {UQ+, IX+, NotNull, INTEGER(10), FK to MEMBER}
-     * @param myMemberIdList The collection of myMemberId as inScope. (NullAllowed: if null (or empty), no condition)
+     * @param myMemberIdList The collection of myMemberId as inScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setMyMemberId_InScope(Collection<Integer> myMemberIdList) {
         doSetMyMemberId_InScope(myMemberIdList);
@@ -276,7 +276,7 @@ public abstract class AbstractBsMemberFollowingCQ extends AbstractConditionQuery
     /**
      * NotInScope {not in (1, 2)}. And NullIgnored, NullElementIgnored, SeveralRegistered. <br>
      * (わたし)MY_MEMBER_ID: {UQ+, IX+, NotNull, INTEGER(10), FK to MEMBER}
-     * @param myMemberIdList The collection of myMemberId as notInScope. (NullAllowed: if null (or empty), no condition)
+     * @param myMemberIdList The collection of myMemberId as notInScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setMyMemberId_NotInScope(Collection<Integer> myMemberIdList) {
         doSetMyMemberId_NotInScope(myMemberIdList);
@@ -356,8 +356,8 @@ public abstract class AbstractBsMemberFollowingCQ extends AbstractConditionQuery
      * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
      * And NullIgnored, OnlyOnceRegistered. <br>
      * (あなた)YOUR_MEMBER_ID: {+UQ, IX+, NotNull, INTEGER(10), FK to MEMBER}
-     * @param minNumber The min number of yourMemberId. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of yourMemberId. (NullAllowed: if null, no to-condition)
+     * @param minNumber The min number of yourMemberId. (basically NotNull: if op.allowOneSide(), null allowed)
+     * @param maxNumber The max number of yourMemberId. (basically NotNull: if op.allowOneSide(), null allowed)
      * @param opLambda The callback for option of range-of. (NotNull)
      */
     public void setYourMemberId_RangeOf(Integer minNumber, Integer maxNumber, ConditionOptionCall<RangeOfOption> opLambda) {
@@ -369,8 +369,8 @@ public abstract class AbstractBsMemberFollowingCQ extends AbstractConditionQuery
      * {(default) minNumber &lt;= column &lt;= maxNumber} <br>
      * And NullIgnored, OnlyOnceRegistered. <br>
      * (あなた)YOUR_MEMBER_ID: {+UQ, IX+, NotNull, INTEGER(10), FK to MEMBER}
-     * @param minNumber The min number of yourMemberId. (NullAllowed: if null, no from-condition)
-     * @param maxNumber The max number of yourMemberId. (NullAllowed: if null, no to-condition)
+     * @param minNumber The min number of yourMemberId. (basically NotNull: if op.allowOneSide(), null allowed)
+     * @param maxNumber The max number of yourMemberId. (basically NotNull: if op.allowOneSide(), null allowed)
      * @param rangeOfOption The option of range-of. (NotNull)
      */
     protected void setYourMemberId_RangeOf(Integer minNumber, Integer maxNumber, RangeOfOption rangeOfOption) {
@@ -380,7 +380,7 @@ public abstract class AbstractBsMemberFollowingCQ extends AbstractConditionQuery
     /**
      * InScope {in (1, 2)}. And NullIgnored, NullElementIgnored, SeveralRegistered. <br>
      * (あなた)YOUR_MEMBER_ID: {+UQ, IX+, NotNull, INTEGER(10), FK to MEMBER}
-     * @param yourMemberIdList The collection of yourMemberId as inScope. (NullAllowed: if null (or empty), no condition)
+     * @param yourMemberIdList The collection of yourMemberId as inScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setYourMemberId_InScope(Collection<Integer> yourMemberIdList) {
         doSetYourMemberId_InScope(yourMemberIdList);
@@ -393,7 +393,7 @@ public abstract class AbstractBsMemberFollowingCQ extends AbstractConditionQuery
     /**
      * NotInScope {not in (1, 2)}. And NullIgnored, NullElementIgnored, SeveralRegistered. <br>
      * (あなた)YOUR_MEMBER_ID: {+UQ, IX+, NotNull, INTEGER(10), FK to MEMBER}
-     * @param yourMemberIdList The collection of yourMemberId as notInScope. (NullAllowed: if null (or empty), no condition)
+     * @param yourMemberIdList The collection of yourMemberId as notInScope. (basically NotNull, NotEmpty: error as default, or no condition as option)
      */
     public void setYourMemberId_NotInScope(Collection<Integer> yourMemberIdList) {
         doSetYourMemberId_NotInScope(yourMemberIdList);
