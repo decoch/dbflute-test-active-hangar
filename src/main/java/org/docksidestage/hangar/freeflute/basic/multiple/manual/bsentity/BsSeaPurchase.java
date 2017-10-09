@@ -1,7 +1,7 @@
-package org.docksidestage.hangar.freeflute.basic.onetofree.bsentity;
+package org.docksidestage.hangar.freeflute.basic.multiple.manual.bsentity;
 
 import java.io.Serializable;
-import org.docksidestage.hangar.freeflute.basic.onetofree.exentity.*;
+import org.docksidestage.hangar.freeflute.basic.multiple.manual.exentity.*;
 
 /**
  * purchase table

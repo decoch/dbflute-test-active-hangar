@@ -1,4 +1,4 @@
-package org.docksidestage.hangar.freeflute.basic.onetofree.bsentity;
+package org.docksidestage.hangar.freeflute.compatible;
 
 import java.io.Serializable;
 
@@ -6,7 +6,7 @@ import java.io.Serializable;
  * member table
  * @author FreeGen
  */
-public class BsSeaMemberStatus implements Serializable {
+public class SeaMemberStatus implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

@@ -1,4 +1,4 @@
-package org.docksidestage.hangar.freeflute.basic.onetoone;
+package org.docksidestage.hangar.freeflute.basic.single;
 
 import java.io.Serializable;
 import java.text.MessageFormat;

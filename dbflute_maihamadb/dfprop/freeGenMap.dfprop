@@ -2,30 +2,29 @@ map:{
     # ====================================================================================
     #                                                                                Basic
     #                                                                                =====
-    ; OneToOneGen = map:{
+    ; SingleTableGen = map:{
         ; resourceMap = map:{
             ; resourceType = PROP
             ; resourceFile = ../src/main/resources/freedb/land_message.properties
         }
         ; outputMap = map:{
             ; outputDirectory = ../src/main/java
-            ; package = org.docksidestage.hangar.freeflute.basic.onetoone
+            ; package = org.docksidestage.hangar.freeflute.basic.single
             ; templateFile = basic/Messages.vm
             ; className = LandMessages
         }
     }
-    ; OneToManyGen = map:{
+    ; MultipleTableGen = map:{
         ; resourceMap = map:{
             ; resourceType = JSON_SCHEMA
             ; resourceFile = ../src/main/resources/freedb/sea_schema.json
         }
         ; outputMap = map:{
             ; outputDirectory = ../src/main/java
-            ; package = org.docksidestage.hangar.freeflute.basic.onetomany
+            ; package = org.docksidestage.hangar.freeflute.basic.multiple
             ; templateFile = basic/TableBean.vm
-            ; className = unused
         }
-        ; tableMap = map:{
+        ; optionMap = map:{
         	; tablePath = map
             ; mappingMap = map:{
                 ; type = map:{
@@ -35,16 +34,38 @@ map:{
             }
         }
     }
-    ; OneToFreeGen = map:{
+    ; MultipleTableManualGen = map:{
         ; resourceMap = map:{
             ; resourceType = JSON_SCHEMA
             ; resourceFile = ../src/main/resources/freedb/sea_schema.json
         }
         ; outputMap = map:{
             ; outputDirectory = ../src/main/java
-            ; package = org.docksidestage.hangar.freeflute.basic.onetofree
-            ; templateFile = unused
-            ; className = unused
+            ; package = org.docksidestage.hangar.freeflute.basic.multiple.manual
+        }
+        ; optionMap = map:{
+        	; tablePath = map
+            ; mappingMap = map:{
+                ; type = map:{
+                    ; numeric = Integer ; varchar = String
+                    ; date = java.time.LocalDate ; datetime = java.time.LocalDateTime
+                }
+            }
+        }
+    }
+
+    # ====================================================================================
+    #                                                                           Compatible
+    #                                                                           ==========
+    ; CompatibleTableMapGen = map:{
+        ; resourceMap = map:{
+            ; resourceType = JSON_SCHEMA
+            ; resourceFile = ../src/main/resources/freedb/sea_schema.json
+        }
+        ; outputMap = map:{
+            ; outputDirectory = ../src/main/java
+            ; package = org.docksidestage.hangar.freeflute.compatible
+            ; templateFile = basic/TableBean.vm
         }
         ; tableMap = map:{
         	; tablePath = map
@@ -94,7 +115,7 @@ map:{
             ; templateFile = jsonkey/Keys.vm
             ; className = JsonMapEmpty
         }
-        ; tableMap = map:{
+        ; optionMap = map:{
             ; keyPath = emptyKey -> map.keys
         }
     }
@@ -109,7 +130,7 @@ map:{
             ; templateFile = jsonkey/Keys.vm
             ; className = JsonMapKeys
         }
-        ; tableMap = map:{
+        ; optionMap = map:{
             ; keyPath = basicKey -> map.keys
         }
     }
@@ -139,7 +160,7 @@ map:{
             ; templateFile = jsonkey/Keys.vm
             ; className = JsonMapNameMapKeys
         }
-        ; tableMap = map:{
+        ; optionMap = map:{
             ; keyPath = topKey -> map.fooBarStatus -> map.keys
         }
     }
@@ -154,7 +175,7 @@ map:{
             ; templateFile = jsonkey/Keys.vm
             ; className = JsonMapValuesListKey
         }
-        ; tableMap = map:{
+        ; optionMap = map:{
             ; keyPath = clarinetKey -> map.values -> list.elements
         }
     }
@@ -173,7 +194,7 @@ map:{
             ; package = org.docksidestage.hangar.freeflute.solr
             ; className = unused
         }
-        ; tableMap = map:{
+        ; optionMap = map:{
             ; baseBeanClassName = BsSolrFooBean
             ; extendedBeanClassName = SolrFooBean
             ; isContainsDynamicField = true

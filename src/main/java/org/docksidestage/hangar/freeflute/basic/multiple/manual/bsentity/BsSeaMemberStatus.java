@@ -1,4 +1,4 @@
-package org.docksidestage.hangar.freeflute.basic.onetomany;
+package org.docksidestage.hangar.freeflute.basic.multiple.manual.bsentity;
 
 import java.io.Serializable;
 
@@ -6,7 +6,7 @@ import java.io.Serializable;
  * member table
  * @author FreeGen
  */
-public class SeaMemberStatus implements Serializable {
+public class BsSeaMemberStatus implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

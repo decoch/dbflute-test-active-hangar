@@ -1,4 +1,4 @@
-package org.docksidestage.hangar.freeflute.basic.onetomany;
+package org.docksidestage.hangar.freeflute.basic.multiple;
 
 import java.io.Serializable;
 
