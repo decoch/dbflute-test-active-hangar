@@ -4,8 +4,9 @@ map:{
     #                                                                                =====
     ; SingleTableGen = map:{
         ; resourceMap = map:{
+            ; baseDir = ../src/main
             ; resourceType = PROP
-            ; resourceFile = ../src/main/resources/freedb/land_message.properties
+            ; resourceFile = $$baseDir$$/resources/freedb/land_message.properties
         }
         ; outputMap = map:{
             ; outputDirectory = ../src/main/java
@@ -16,11 +17,12 @@ map:{
     }
     ; MultipleTableGen = map:{
         ; resourceMap = map:{
+            ; baseDir = ../src/main
             ; resourceType = JSON_SCHEMA
-            ; resourceFile = ../src/main/resources/freedb/sea_schema.json
+            ; resourceFile = $$baseDir$$/resources/freedb/sea_schema.json
         }
         ; outputMap = map:{
-            ; outputDirectory = ../src/main/java
+            ; outputDirectory = $$baseDir$$/java
             ; package = org.docksidestage.hangar.freeflute.basic.multiple
             ; templateFile = basic/TableBean.vm
         }
@@ -36,11 +38,12 @@ map:{
     }
     ; MultipleTableManualGen = map:{
         ; resourceMap = map:{
+            ; baseDir = ../src/main
             ; resourceType = JSON_SCHEMA
-            ; resourceFile = ../src/main/resources/freedb/sea_schema.json
+            ; resourceFile = $$baseDir$$/resources/freedb/sea_schema.json
         }
         ; outputMap = map:{
-            ; outputDirectory = ../src/main/java
+            ; outputDirectory = $$baseDir$$/java
             ; package = org.docksidestage.hangar.freeflute.basic.multiple.manual
         }
         ; optionMap = map:{
