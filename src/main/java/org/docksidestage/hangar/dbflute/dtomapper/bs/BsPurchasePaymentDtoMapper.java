@@ -23,7 +23,7 @@ import org.docksidestage.hangar.simpleflute.dto.*;
 import org.docksidestage.hangar.dbflute.dtomapper.*;
 
 /**
- * The DTO mapper of (購入支払)PURCHASE_PAYMENT as TABLE. <br>
+ * The DTO mapper of PURCHASE_PAYMENT as TABLE. <br>
  * <pre>
  * [primary-key]
  *     PURCHASE_PAYMENT_ID

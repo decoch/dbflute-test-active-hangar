@@ -23,7 +23,7 @@ import org.docksidestage.hangar.simpleflute.dto.*;
 import org.docksidestage.hangar.dbflute.dtomapper.*;
 
 /**
- * The DTO mapper of (会員住所情報)MEMBER_ADDRESS as TABLE. <br>
+ * The DTO mapper of MEMBER_ADDRESS as TABLE. <br>
  * <pre>
  * [primary-key]
  *     MEMBER_ADDRESS_ID

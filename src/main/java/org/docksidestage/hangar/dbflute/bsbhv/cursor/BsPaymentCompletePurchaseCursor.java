@@ -111,7 +111,7 @@ public class BsPaymentCompletePurchaseCursor {
     }
 
     /**
-     * [get] (会員ID)MEMBER_ID: {INTEGER(10), refers to PURCHASE.MEMBER_ID} <br>
+     * [get] MEMBER_ID: {INTEGER(10), refers to PURCHASE.MEMBER_ID} <br>
      * @return The value of memberId. (NullAllowed)
      * @throws SQLException When it fails to get the value from result set.
      */
@@ -120,7 +120,7 @@ public class BsPaymentCompletePurchaseCursor {
     }
 
     /**
-     * [get] (会員名称)MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
+     * [get] MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
      * @return The value of memberName. (NullAllowed)
      * @throws SQLException When it fails to get the value from result set.
      */
@@ -129,7 +129,7 @@ public class BsPaymentCompletePurchaseCursor {
     }
 
     /**
-     * [get] (商品ID)PRODUCT_ID: {INTEGER(10), refers to PURCHASE.PRODUCT_ID} <br>
+     * [get] PRODUCT_ID: {INTEGER(10), refers to PURCHASE.PRODUCT_ID} <br>
      * @return The value of productId. (NullAllowed)
      * @throws SQLException When it fails to get the value from result set.
      */
@@ -138,7 +138,7 @@ public class BsPaymentCompletePurchaseCursor {
     }
 
     /**
-     * [get] (商品名称)PRODUCT_NAME: {VARCHAR(50), refers to PRODUCT.PRODUCT_NAME} <br>
+     * [get] PRODUCT_NAME: {VARCHAR(50), refers to PRODUCT.PRODUCT_NAME} <br>
      * @return The value of productName. (NullAllowed)
      * @throws SQLException When it fails to get the value from result set.
      */
@@ -147,7 +147,7 @@ public class BsPaymentCompletePurchaseCursor {
     }
 
     /**
-     * [get] (購入日時)PURCHASE_DATETIME: {TIMESTAMP(23, 10), refers to PURCHASE.PURCHASE_DATETIME} <br>
+     * [get] PURCHASE_DATETIME: {TIMESTAMP(23, 10), refers to PURCHASE.PURCHASE_DATETIME} <br>
      * @return The value of purchaseDatetime. (NullAllowed)
      * @throws SQLException When it fails to get the value from result set.
      */

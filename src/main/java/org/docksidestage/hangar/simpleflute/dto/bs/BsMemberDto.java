@@ -10,7 +10,7 @@ import org.docksidestage.hangar.simpleflute.AppCDef;
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**
- * The simple DTO of (会員)MEMBER as TABLE. <br>
+ * The simple DTO of MEMBER as TABLE. <br>
  * <pre>
  * [primary-key]
  *     MEMBER_ID
@@ -56,47 +56,47 @@ public abstract class BsMemberDto implements Serializable {
     // -----------------------------------------------------
     //                                                Column
     //                                                ------
-    /** (会員ID)MEMBER_ID: {PK, ID, NotNull, INTEGER(10), FK to MEMBER_ADDRESS} */
+    /** MEMBER_ID: {PK, ID, NotNull, INTEGER(10), FK to MEMBER_ADDRESS} */
     @JsonKey
     protected Integer _memberId;
 
-    /** (会員名称)MEMBER_NAME: {IX, NotNull, VARCHAR(200)} */
+    /** MEMBER_NAME: {IX, NotNull, VARCHAR(200)} */
     @JsonKey
     protected String _memberName;
 
-    /** (会員アカウント)MEMBER_ACCOUNT: {UQ, NotNull, VARCHAR(50)} */
+    /** MEMBER_ACCOUNT: {UQ, NotNull, VARCHAR(50)} */
     @JsonKey
     protected String _memberAccount;
 
-    /** (会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} */
+    /** MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} */
     @JsonKey
     protected String _memberStatusCode;
 
-    /** (正式会員日時)FORMALIZED_DATETIME: {IX, TIMESTAMP(23, 10)} */
+    /** FORMALIZED_DATETIME: {IX, TIMESTAMP(23, 10)} */
     @JsonKey
     protected java.time.LocalDateTime _formalizedDatetime;
 
-    /** (生年月日)BIRTHDATE: {DATE(8)} */
+    /** BIRTHDATE: {DATE(8)} */
     @JsonKey
     protected java.time.LocalDate _birthdate;
 
-    /** (登録日時)REGISTER_DATETIME: {NotNull, TIMESTAMP(23, 10)} */
+    /** REGISTER_DATETIME: {NotNull, TIMESTAMP(23, 10)} */
     @JsonKey
     protected java.time.LocalDateTime _registerDatetime;
 
-    /** (登録ユーザ)REGISTER_USER: {NotNull, VARCHAR(200)} */
+    /** REGISTER_USER: {NotNull, VARCHAR(200)} */
     @JsonKey
     protected String _registerUser;
 
-    /** (更新日時)UPDATE_DATETIME: {NotNull, TIMESTAMP(23, 10)} */
+    /** UPDATE_DATETIME: {NotNull, TIMESTAMP(23, 10)} */
     @JsonKey
     protected java.time.LocalDateTime _updateDatetime;
 
-    /** (更新ユーザ)UPDATE_USER: {NotNull, VARCHAR(200)} */
+    /** UPDATE_USER: {NotNull, VARCHAR(200)} */
     @JsonKey
     protected String _updateUser;
 
-    /** (バージョンNO)VERSION_NO: {NotNull, BIGINT(19)} */
+    /** VERSION_NO: {NotNull, BIGINT(19)} */
     @JsonKey
     protected Long _versionNo;
 
@@ -378,7 +378,7 @@ public abstract class BsMemberDto implements Serializable {
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (会員ID)MEMBER_ID: {PK, ID, NotNull, INTEGER(10), FK to MEMBER_ADDRESS} <br>
+     * [get] MEMBER_ID: {PK, ID, NotNull, INTEGER(10), FK to MEMBER_ADDRESS} <br>
      * @return The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public Integer getMemberId() {
@@ -386,7 +386,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [set] (会員ID)MEMBER_ID: {PK, ID, NotNull, INTEGER(10), FK to MEMBER_ADDRESS} <br>
+     * [set] MEMBER_ID: {PK, ID, NotNull, INTEGER(10), FK to MEMBER_ADDRESS} <br>
      * @param memberId The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public void setMemberId(Integer memberId) {
@@ -395,7 +395,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [get] (会員名称)MEMBER_NAME: {IX, NotNull, VARCHAR(200)} <br>
+     * [get] MEMBER_NAME: {IX, NotNull, VARCHAR(200)} <br>
      * @return The value of the column 'MEMBER_NAME'. (NullAllowed)
      */
     public String getMemberName() {
@@ -403,7 +403,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [set] (会員名称)MEMBER_NAME: {IX, NotNull, VARCHAR(200)} <br>
+     * [set] MEMBER_NAME: {IX, NotNull, VARCHAR(200)} <br>
      * @param memberName The value of the column 'MEMBER_NAME'. (NullAllowed)
      */
     public void setMemberName(String memberName) {
@@ -412,7 +412,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [get] (会員アカウント)MEMBER_ACCOUNT: {UQ, NotNull, VARCHAR(50)} <br>
+     * [get] MEMBER_ACCOUNT: {UQ, NotNull, VARCHAR(50)} <br>
      * @return The value of the column 'MEMBER_ACCOUNT'. (NullAllowed)
      */
     public String getMemberAccount() {
@@ -420,7 +420,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [set] (会員アカウント)MEMBER_ACCOUNT: {UQ, NotNull, VARCHAR(50)} <br>
+     * [set] MEMBER_ACCOUNT: {UQ, NotNull, VARCHAR(50)} <br>
      * @param memberAccount The value of the column 'MEMBER_ACCOUNT'. (NullAllowed)
      */
     public void setMemberAccount(String memberAccount) {
@@ -429,7 +429,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [get] (会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
+     * [get] MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
      * @return The value of the column 'MEMBER_STATUS_CODE'. (NullAllowed)
      */
     public String getMemberStatusCode() {
@@ -437,7 +437,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [set] (会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
+     * [set] MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
      * @param memberStatusCode The value of the column 'MEMBER_STATUS_CODE'. (NullAllowed)
      */
     public void setMemberStatusCode(String memberStatusCode) {
@@ -446,7 +446,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [get] (正式会員日時)FORMALIZED_DATETIME: {IX, TIMESTAMP(23, 10)} <br>
+     * [get] FORMALIZED_DATETIME: {IX, TIMESTAMP(23, 10)} <br>
      * @return The value of the column 'FORMALIZED_DATETIME'. (NullAllowed)
      */
     @JSONHint(format="yyyy-MM-dd HH:mm:ss.SSS")
@@ -456,7 +456,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [set] (正式会員日時)FORMALIZED_DATETIME: {IX, TIMESTAMP(23, 10)} <br>
+     * [set] FORMALIZED_DATETIME: {IX, TIMESTAMP(23, 10)} <br>
      * @param formalizedDatetime The value of the column 'FORMALIZED_DATETIME'. (NullAllowed)
      */
     public void setFormalizedDatetime(java.time.LocalDateTime formalizedDatetime) {
@@ -465,7 +465,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [get] (生年月日)BIRTHDATE: {DATE(8)} <br>
+     * [get] BIRTHDATE: {DATE(8)} <br>
      * @return The value of the column 'BIRTHDATE'. (NullAllowed)
      */
     @JSONHint(format="yyyy-MM-dd")
@@ -475,7 +475,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [set] (生年月日)BIRTHDATE: {DATE(8)} <br>
+     * [set] BIRTHDATE: {DATE(8)} <br>
      * @param birthdate The value of the column 'BIRTHDATE'. (NullAllowed)
      */
     public void setBirthdate(java.time.LocalDate birthdate) {
@@ -484,7 +484,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [get] (登録日時)REGISTER_DATETIME: {NotNull, TIMESTAMP(23, 10)} <br>
+     * [get] REGISTER_DATETIME: {NotNull, TIMESTAMP(23, 10)} <br>
      * @return The value of the column 'REGISTER_DATETIME'. (NullAllowed)
      */
     @JSONHint(format="yyyy-MM-dd HH:mm:ss.SSS")
@@ -494,7 +494,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [set] (登録日時)REGISTER_DATETIME: {NotNull, TIMESTAMP(23, 10)} <br>
+     * [set] REGISTER_DATETIME: {NotNull, TIMESTAMP(23, 10)} <br>
      * @param registerDatetime The value of the column 'REGISTER_DATETIME'. (NullAllowed)
      */
     public void setRegisterDatetime(java.time.LocalDateTime registerDatetime) {
@@ -503,7 +503,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [get] (登録ユーザ)REGISTER_USER: {NotNull, VARCHAR(200)} <br>
+     * [get] REGISTER_USER: {NotNull, VARCHAR(200)} <br>
      * @return The value of the column 'REGISTER_USER'. (NullAllowed)
      */
     public String getRegisterUser() {
@@ -511,7 +511,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [set] (登録ユーザ)REGISTER_USER: {NotNull, VARCHAR(200)} <br>
+     * [set] REGISTER_USER: {NotNull, VARCHAR(200)} <br>
      * @param registerUser The value of the column 'REGISTER_USER'. (NullAllowed)
      */
     public void setRegisterUser(String registerUser) {
@@ -520,7 +520,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [get] (更新日時)UPDATE_DATETIME: {NotNull, TIMESTAMP(23, 10)} <br>
+     * [get] UPDATE_DATETIME: {NotNull, TIMESTAMP(23, 10)} <br>
      * @return The value of the column 'UPDATE_DATETIME'. (NullAllowed)
      */
     @JSONHint(format="yyyy-MM-dd HH:mm:ss.SSS")
@@ -530,7 +530,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [set] (更新日時)UPDATE_DATETIME: {NotNull, TIMESTAMP(23, 10)} <br>
+     * [set] UPDATE_DATETIME: {NotNull, TIMESTAMP(23, 10)} <br>
      * @param updateDatetime The value of the column 'UPDATE_DATETIME'. (NullAllowed)
      */
     public void setUpdateDatetime(java.time.LocalDateTime updateDatetime) {
@@ -539,7 +539,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [get] (更新ユーザ)UPDATE_USER: {NotNull, VARCHAR(200)} <br>
+     * [get] UPDATE_USER: {NotNull, VARCHAR(200)} <br>
      * @return The value of the column 'UPDATE_USER'. (NullAllowed)
      */
     public String getUpdateUser() {
@@ -547,7 +547,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [set] (更新ユーザ)UPDATE_USER: {NotNull, VARCHAR(200)} <br>
+     * [set] UPDATE_USER: {NotNull, VARCHAR(200)} <br>
      * @param updateUser The value of the column 'UPDATE_USER'. (NullAllowed)
      */
     public void setUpdateUser(String updateUser) {
@@ -556,7 +556,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [get] (バージョンNO)VERSION_NO: {NotNull, BIGINT(19)} <br>
+     * [get] VERSION_NO: {NotNull, BIGINT(19)} <br>
      * @return The value of the column 'VERSION_NO'. (NullAllowed)
      */
     public Long getVersionNo() {
@@ -564,7 +564,7 @@ public abstract class BsMemberDto implements Serializable {
     }
 
     /**
-     * [set] (バージョンNO)VERSION_NO: {NotNull, BIGINT(19)} <br>
+     * [set] VERSION_NO: {NotNull, BIGINT(19)} <br>
      * @param versionNo The value of the column 'VERSION_NO'. (NullAllowed)
      */
     public void setVersionNo(Long versionNo) {

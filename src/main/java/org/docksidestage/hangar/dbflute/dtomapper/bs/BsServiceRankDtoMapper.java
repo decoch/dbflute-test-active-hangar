@@ -23,7 +23,7 @@ import org.docksidestage.hangar.simpleflute.dto.*;
 import org.docksidestage.hangar.dbflute.dtomapper.*;
 
 /**
- * The DTO mapper of (サービスランク)SERVICE_RANK as TABLE. <br>
+ * The DTO mapper of SERVICE_RANK as TABLE. <br>
  * <pre>
  * [primary-key]
  *     SERVICE_RANK_CODE

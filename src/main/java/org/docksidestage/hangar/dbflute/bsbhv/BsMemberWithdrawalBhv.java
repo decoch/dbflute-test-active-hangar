@@ -20,7 +20,7 @@ import org.docksidestage.hangar.dbflute.bsentity.dbmeta.*;
 import org.docksidestage.hangar.dbflute.cbean.*;
 
 /**
- * The behavior of (会員退会情報)MEMBER_WITHDRAWAL as TABLE. <br>
+ * The behavior of MEMBER_WITHDRAWAL as TABLE. <br>
  * <pre>
  * [primary key]
  *     MEMBER_ID

@@ -10,7 +10,7 @@ import org.docksidestage.hangar.simpleflute.AppCDef;
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**
- * The simple DTO of (購入)PURCHASE as TABLE. <br>
+ * The simple DTO of PURCHASE as TABLE. <br>
  * <pre>
  * [primary-key]
  *     PURCHASE_ID
@@ -60,27 +60,27 @@ public abstract class BsPurchaseDto implements Serializable {
     @JsonKey
     protected Long _purchaseId;
 
-    /** (会員ID)MEMBER_ID: {UQ+, IX+, NotNull, INTEGER(10), FK to MEMBER} */
+    /** MEMBER_ID: {UQ+, IX+, NotNull, INTEGER(10), FK to MEMBER} */
     @JsonKey
     protected Integer _memberId;
 
-    /** (商品ID)PRODUCT_ID: {+UQ, IX+, NotNull, INTEGER(10), FK to PRODUCT} */
+    /** PRODUCT_ID: {+UQ, IX+, NotNull, INTEGER(10), FK to PRODUCT} */
     @JsonKey
     protected Integer _productId;
 
-    /** (購入日時)PURCHASE_DATETIME: {+UQ, IX+, NotNull, TIMESTAMP(23, 10)} */
+    /** PURCHASE_DATETIME: {+UQ, IX+, NotNull, TIMESTAMP(23, 10)} */
     @JsonKey
     protected java.time.LocalDateTime _purchaseDatetime;
 
-    /** (購入数量)PURCHASE_COUNT: {NotNull, INTEGER(10)} */
+    /** PURCHASE_COUNT: {NotNull, INTEGER(10)} */
     @JsonKey
     protected Integer _purchaseCount;
 
-    /** (購入価格)PURCHASE_PRICE: {IX, NotNull, INTEGER(10)} */
+    /** PURCHASE_PRICE: {IX, NotNull, INTEGER(10)} */
     @JsonKey
     protected Integer _purchasePrice;
 
-    /** (支払完了フラグ)PAYMENT_COMPLETE_FLG: {NotNull, INTEGER(10), classification=Flg} */
+    /** PAYMENT_COMPLETE_FLG: {NotNull, INTEGER(10), classification=Flg} */
     @JsonKey
     protected Integer _paymentCompleteFlg;
 
@@ -337,7 +337,7 @@ public abstract class BsPurchaseDto implements Serializable {
     }
 
     /**
-     * [get] (会員ID)MEMBER_ID: {UQ+, IX+, NotNull, INTEGER(10), FK to MEMBER} <br>
+     * [get] MEMBER_ID: {UQ+, IX+, NotNull, INTEGER(10), FK to MEMBER} <br>
      * @return The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public Integer getMemberId() {
@@ -345,7 +345,7 @@ public abstract class BsPurchaseDto implements Serializable {
     }
 
     /**
-     * [set] (会員ID)MEMBER_ID: {UQ+, IX+, NotNull, INTEGER(10), FK to MEMBER} <br>
+     * [set] MEMBER_ID: {UQ+, IX+, NotNull, INTEGER(10), FK to MEMBER} <br>
      * @param memberId The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public void setMemberId(Integer memberId) {
@@ -354,7 +354,7 @@ public abstract class BsPurchaseDto implements Serializable {
     }
 
     /**
-     * [get] (商品ID)PRODUCT_ID: {+UQ, IX+, NotNull, INTEGER(10), FK to PRODUCT} <br>
+     * [get] PRODUCT_ID: {+UQ, IX+, NotNull, INTEGER(10), FK to PRODUCT} <br>
      * @return The value of the column 'PRODUCT_ID'. (NullAllowed)
      */
     public Integer getProductId() {
@@ -362,7 +362,7 @@ public abstract class BsPurchaseDto implements Serializable {
     }
 
     /**
-     * [set] (商品ID)PRODUCT_ID: {+UQ, IX+, NotNull, INTEGER(10), FK to PRODUCT} <br>
+     * [set] PRODUCT_ID: {+UQ, IX+, NotNull, INTEGER(10), FK to PRODUCT} <br>
      * @param productId The value of the column 'PRODUCT_ID'. (NullAllowed)
      */
     public void setProductId(Integer productId) {
@@ -371,7 +371,7 @@ public abstract class BsPurchaseDto implements Serializable {
     }
 
     /**
-     * [get] (購入日時)PURCHASE_DATETIME: {+UQ, IX+, NotNull, TIMESTAMP(23, 10)} <br>
+     * [get] PURCHASE_DATETIME: {+UQ, IX+, NotNull, TIMESTAMP(23, 10)} <br>
      * @return The value of the column 'PURCHASE_DATETIME'. (NullAllowed)
      */
     @JSONHint(format="yyyy-MM-dd HH:mm:ss.SSS")
@@ -381,7 +381,7 @@ public abstract class BsPurchaseDto implements Serializable {
     }
 
     /**
-     * [set] (購入日時)PURCHASE_DATETIME: {+UQ, IX+, NotNull, TIMESTAMP(23, 10)} <br>
+     * [set] PURCHASE_DATETIME: {+UQ, IX+, NotNull, TIMESTAMP(23, 10)} <br>
      * @param purchaseDatetime The value of the column 'PURCHASE_DATETIME'. (NullAllowed)
      */
     public void setPurchaseDatetime(java.time.LocalDateTime purchaseDatetime) {
@@ -390,7 +390,7 @@ public abstract class BsPurchaseDto implements Serializable {
     }
 
     /**
-     * [get] (購入数量)PURCHASE_COUNT: {NotNull, INTEGER(10)} <br>
+     * [get] PURCHASE_COUNT: {NotNull, INTEGER(10)} <br>
      * @return The value of the column 'PURCHASE_COUNT'. (NullAllowed)
      */
     public Integer getPurchaseCount() {
@@ -398,7 +398,7 @@ public abstract class BsPurchaseDto implements Serializable {
     }
 
     /**
-     * [set] (購入数量)PURCHASE_COUNT: {NotNull, INTEGER(10)} <br>
+     * [set] PURCHASE_COUNT: {NotNull, INTEGER(10)} <br>
      * @param purchaseCount The value of the column 'PURCHASE_COUNT'. (NullAllowed)
      */
     public void setPurchaseCount(Integer purchaseCount) {
@@ -407,7 +407,7 @@ public abstract class BsPurchaseDto implements Serializable {
     }
 
     /**
-     * [get] (購入価格)PURCHASE_PRICE: {IX, NotNull, INTEGER(10)} <br>
+     * [get] PURCHASE_PRICE: {IX, NotNull, INTEGER(10)} <br>
      * @return The value of the column 'PURCHASE_PRICE'. (NullAllowed)
      */
     public Integer getPurchasePrice() {
@@ -415,7 +415,7 @@ public abstract class BsPurchaseDto implements Serializable {
     }
 
     /**
-     * [set] (購入価格)PURCHASE_PRICE: {IX, NotNull, INTEGER(10)} <br>
+     * [set] PURCHASE_PRICE: {IX, NotNull, INTEGER(10)} <br>
      * @param purchasePrice The value of the column 'PURCHASE_PRICE'. (NullAllowed)
      */
     public void setPurchasePrice(Integer purchasePrice) {
@@ -424,7 +424,7 @@ public abstract class BsPurchaseDto implements Serializable {
     }
 
     /**
-     * [get] (支払完了フラグ)PAYMENT_COMPLETE_FLG: {NotNull, INTEGER(10), classification=Flg} <br>
+     * [get] PAYMENT_COMPLETE_FLG: {NotNull, INTEGER(10), classification=Flg} <br>
      * @return The value of the column 'PAYMENT_COMPLETE_FLG'. (NullAllowed)
      */
     public Integer getPaymentCompleteFlg() {
@@ -432,7 +432,7 @@ public abstract class BsPurchaseDto implements Serializable {
     }
 
     /**
-     * [set] (支払完了フラグ)PAYMENT_COMPLETE_FLG: {NotNull, INTEGER(10), classification=Flg} <br>
+     * [set] PAYMENT_COMPLETE_FLG: {NotNull, INTEGER(10), classification=Flg} <br>
      * @param paymentCompleteFlg The value of the column 'PAYMENT_COMPLETE_FLG'. (NullAllowed)
      */
     public void setPaymentCompleteFlg(Integer paymentCompleteFlg) {

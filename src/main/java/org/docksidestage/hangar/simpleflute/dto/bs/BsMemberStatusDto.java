@@ -8,7 +8,7 @@ import org.docksidestage.hangar.simpleflute.AppCDef;
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**
- * The simple DTO of (会員ステータス)MEMBER_STATUS as TABLE. <br>
+ * The simple DTO of MEMBER_STATUS as TABLE. <br>
  * <pre>
  * [primary-key]
  *     MEMBER_STATUS_CODE
@@ -54,19 +54,19 @@ public abstract class BsMemberStatusDto implements Serializable {
     // -----------------------------------------------------
     //                                                Column
     //                                                ------
-    /** (会員ステータスコード)MEMBER_STATUS_CODE: {PK, NotNull, CHAR(3), classification=MemberStatus} */
+    /** MEMBER_STATUS_CODE: {PK, NotNull, CHAR(3), classification=MemberStatus} */
     @JsonKey
     protected String _memberStatusCode;
 
-    /** (会員ステータス名称)MEMBER_STATUS_NAME: {NotNull, VARCHAR(50)} */
+    /** MEMBER_STATUS_NAME: {NotNull, VARCHAR(50)} */
     @JsonKey
     protected String _memberStatusName;
 
-    /** (説明)DESCRIPTION: {NotNull, VARCHAR(200)} */
+    /** DESCRIPTION: {NotNull, VARCHAR(200)} */
     @JsonKey
     protected String _description;
 
-    /** (表示順)DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} */
+    /** DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} */
     @JsonKey
     protected Integer _displayOrder;
 
@@ -258,7 +258,7 @@ public abstract class BsMemberStatusDto implements Serializable {
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (会員ステータスコード)MEMBER_STATUS_CODE: {PK, NotNull, CHAR(3), classification=MemberStatus} <br>
+     * [get] MEMBER_STATUS_CODE: {PK, NotNull, CHAR(3), classification=MemberStatus} <br>
      * @return The value of the column 'MEMBER_STATUS_CODE'. (NullAllowed)
      */
     public String getMemberStatusCode() {
@@ -266,7 +266,7 @@ public abstract class BsMemberStatusDto implements Serializable {
     }
 
     /**
-     * [set] (会員ステータスコード)MEMBER_STATUS_CODE: {PK, NotNull, CHAR(3), classification=MemberStatus} <br>
+     * [set] MEMBER_STATUS_CODE: {PK, NotNull, CHAR(3), classification=MemberStatus} <br>
      * @param memberStatusCode The value of the column 'MEMBER_STATUS_CODE'. (NullAllowed)
      */
     public void setMemberStatusCode(String memberStatusCode) {
@@ -275,7 +275,7 @@ public abstract class BsMemberStatusDto implements Serializable {
     }
 
     /**
-     * [get] (会員ステータス名称)MEMBER_STATUS_NAME: {NotNull, VARCHAR(50)} <br>
+     * [get] MEMBER_STATUS_NAME: {NotNull, VARCHAR(50)} <br>
      * @return The value of the column 'MEMBER_STATUS_NAME'. (NullAllowed)
      */
     public String getMemberStatusName() {
@@ -283,7 +283,7 @@ public abstract class BsMemberStatusDto implements Serializable {
     }
 
     /**
-     * [set] (会員ステータス名称)MEMBER_STATUS_NAME: {NotNull, VARCHAR(50)} <br>
+     * [set] MEMBER_STATUS_NAME: {NotNull, VARCHAR(50)} <br>
      * @param memberStatusName The value of the column 'MEMBER_STATUS_NAME'. (NullAllowed)
      */
     public void setMemberStatusName(String memberStatusName) {
@@ -292,7 +292,7 @@ public abstract class BsMemberStatusDto implements Serializable {
     }
 
     /**
-     * [get] (説明)DESCRIPTION: {NotNull, VARCHAR(200)} <br>
+     * [get] DESCRIPTION: {NotNull, VARCHAR(200)} <br>
      * @return The value of the column 'DESCRIPTION'. (NullAllowed)
      */
     public String getDescription() {
@@ -300,7 +300,7 @@ public abstract class BsMemberStatusDto implements Serializable {
     }
 
     /**
-     * [set] (説明)DESCRIPTION: {NotNull, VARCHAR(200)} <br>
+     * [set] DESCRIPTION: {NotNull, VARCHAR(200)} <br>
      * @param description The value of the column 'DESCRIPTION'. (NullAllowed)
      */
     public void setDescription(String description) {
@@ -309,7 +309,7 @@ public abstract class BsMemberStatusDto implements Serializable {
     }
 
     /**
-     * [get] (表示順)DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} <br>
+     * [get] DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} <br>
      * @return The value of the column 'DISPLAY_ORDER'. (NullAllowed)
      */
     public Integer getDisplayOrder() {
@@ -317,7 +317,7 @@ public abstract class BsMemberStatusDto implements Serializable {
     }
 
     /**
-     * [set] (表示順)DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} <br>
+     * [set] DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} <br>
      * @param displayOrder The value of the column 'DISPLAY_ORDER'. (NullAllowed)
      */
     public void setDisplayOrder(Integer displayOrder) {

@@ -11,7 +11,7 @@ import org.docksidestage.hangar.dbflute.allcommon.CDef;
 import org.docksidestage.hangar.dbflute.exentity.*;
 
 /**
- * The entity of (地域)REGION as TABLE. <br>
+ * The entity of REGION as TABLE. <br>
  * <pre>
  * [primary-key]
  *     REGION_ID
@@ -61,10 +61,10 @@ public abstract class BsRegion extends AbstractEntity implements DomainEntity {
     // ===================================================================================
     //                                                                           Attribute
     //                                                                           =========
-    /** (地域ID)REGION_ID: {PK, NotNull, INTEGER(10), classification=Region} */
+    /** REGION_ID: {PK, NotNull, INTEGER(10), classification=Region} */
     protected Integer _regionId;
 
-    /** (地域名称)REGION_NAME: {NotNull, VARCHAR(50)} */
+    /** REGION_NAME: {NotNull, VARCHAR(50)} */
     protected String _regionName;
 
     // ===================================================================================
@@ -94,7 +94,7 @@ public abstract class BsRegion extends AbstractEntity implements DomainEntity {
     //                                                             =======================
     /**
      * Get the value of regionId as the classification of Region. <br>
-     * (地域ID)REGION_ID: {PK, NotNull, INTEGER(10), classification=Region} <br>
+     * REGION_ID: {PK, NotNull, INTEGER(10), classification=Region} <br>
      * mainly region of member address
      * <p>It's treated as case insensitive and if the code value is null, it returns null.</p>
      * @return The instance of classification definition (as ENUM type). (NullAllowed: when the column value is null)
@@ -105,7 +105,7 @@ public abstract class BsRegion extends AbstractEntity implements DomainEntity {
 
     /**
      * Set the value of regionId as the classification of Region. <br>
-     * (地域ID)REGION_ID: {PK, NotNull, INTEGER(10), classification=Region} <br>
+     * REGION_ID: {PK, NotNull, INTEGER(10), classification=Region} <br>
      * mainly region of member address
      * @param cdef The instance of classification definition (as ENUM type). (NullAllowed: if null, null value is set to the column)
      */
@@ -201,11 +201,11 @@ public abstract class BsRegion extends AbstractEntity implements DomainEntity {
     // ===================================================================================
     //                                                                   Referrer Property
     //                                                                   =================
-    /** (会員住所情報)MEMBER_ADDRESS by REGION_ID, named 'memberAddressList'. */
+    /** MEMBER_ADDRESS by REGION_ID, named 'memberAddressList'. */
     protected List<MemberAddress> _memberAddressList;
 
     /**
-     * [get] (会員住所情報)MEMBER_ADDRESS by REGION_ID, named 'memberAddressList'.
+     * [get] MEMBER_ADDRESS by REGION_ID, named 'memberAddressList'.
      * @return The entity list of referrer property 'memberAddressList'. (NotNull: even if no loading, returns empty list)
      */
     public List<MemberAddress> getMemberAddressList() {
@@ -214,7 +214,7 @@ public abstract class BsRegion extends AbstractEntity implements DomainEntity {
     }
 
     /**
-     * [set] (会員住所情報)MEMBER_ADDRESS by REGION_ID, named 'memberAddressList'.
+     * [set] MEMBER_ADDRESS by REGION_ID, named 'memberAddressList'.
      * @param memberAddressList The entity list of referrer property 'memberAddressList'. (NullAllowed)
      */
     public void setMemberAddressList(List<MemberAddress> memberAddressList) {
@@ -287,7 +287,7 @@ public abstract class BsRegion extends AbstractEntity implements DomainEntity {
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (地域ID)REGION_ID: {PK, NotNull, INTEGER(10), classification=Region} <br>
+     * [get] REGION_ID: {PK, NotNull, INTEGER(10), classification=Region} <br>
      * @return The value of the column 'REGION_ID'. (basically NotNull if selected: for the constraint)
      */
     public Integer getRegionId() {
@@ -296,7 +296,7 @@ public abstract class BsRegion extends AbstractEntity implements DomainEntity {
     }
 
     /**
-     * [set] (地域ID)REGION_ID: {PK, NotNull, INTEGER(10), classification=Region} <br>
+     * [set] REGION_ID: {PK, NotNull, INTEGER(10), classification=Region} <br>
      * @param regionId The value of the column 'REGION_ID'. (basically NotNull if update: for the constraint)
      */
     public void setRegionId(Integer regionId) {
@@ -305,7 +305,7 @@ public abstract class BsRegion extends AbstractEntity implements DomainEntity {
     }
 
     /**
-     * [get] (地域名称)REGION_NAME: {NotNull, VARCHAR(50)} <br>
+     * [get] REGION_NAME: {NotNull, VARCHAR(50)} <br>
      * @return The value of the column 'REGION_NAME'. (basically NotNull if selected: for the constraint)
      */
     public String getRegionName() {
@@ -314,7 +314,7 @@ public abstract class BsRegion extends AbstractEntity implements DomainEntity {
     }
 
     /**
-     * [set] (地域名称)REGION_NAME: {NotNull, VARCHAR(50)} <br>
+     * [set] REGION_NAME: {NotNull, VARCHAR(50)} <br>
      * @param regionName The value of the column 'REGION_NAME'. (basically NotNull if update: for the constraint)
      */
     public void setRegionName(String regionName) {

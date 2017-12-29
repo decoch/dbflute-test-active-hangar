@@ -68,22 +68,22 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     // ===================================================================================
     //                                                                           Attribute
     //                                                                           =========
-    /** (会員ID)MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} */
+    /** MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} */
     protected Integer _memberId;
 
-    /** (会員名称)MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} */
+    /** MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} */
     protected String _memberName;
 
-    /** (登録日時)REGISTER_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.REGISTER_DATETIME} */
+    /** REGISTER_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.REGISTER_DATETIME} */
     protected java.time.LocalDateTime _registerDatetime;
 
-    /** (登録ユーザ)REGISTER_USER: {VARCHAR(200), refers to MEMBER.REGISTER_USER} */
+    /** REGISTER_USER: {VARCHAR(200), refers to MEMBER.REGISTER_USER} */
     protected String _registerUser;
 
-    /** (更新日時)UPDATE_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.UPDATE_DATETIME} */
+    /** UPDATE_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.UPDATE_DATETIME} */
     protected java.time.LocalDateTime _updateDatetime;
 
-    /** (更新ユーザ)UPDATE_USER: {VARCHAR(200), refers to MEMBER.UPDATE_USER} */
+    /** UPDATE_USER: {VARCHAR(200), refers to MEMBER.UPDATE_USER} */
     protected String _updateUser;
 
     // ===================================================================================
@@ -184,7 +184,7 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (会員ID)MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
+     * [get] MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
      * @return The value of the column 'MEMBER_ID'. (NullAllowed even if selected: for no constraint)
      */
     public Integer getMemberId() {
@@ -193,7 +193,7 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     }
 
     /**
-     * [set] (会員ID)MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
+     * [set] MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
      * @param memberId The value of the column 'MEMBER_ID'. (NullAllowed: null update allowed for no constraint)
      */
     public void setMemberId(Integer memberId) {
@@ -202,7 +202,7 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     }
 
     /**
-     * [get] (会員名称)MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
+     * [get] MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
      * @return The value of the column 'MEMBER_NAME'. (NullAllowed even if selected: for no constraint)
      */
     public String getMemberName() {
@@ -211,7 +211,7 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     }
 
     /**
-     * [set] (会員名称)MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
+     * [set] MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
      * @param memberName The value of the column 'MEMBER_NAME'. (NullAllowed: null update allowed for no constraint)
      */
     public void setMemberName(String memberName) {
@@ -220,7 +220,7 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     }
 
     /**
-     * [get] (登録日時)REGISTER_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.REGISTER_DATETIME} <br>
+     * [get] REGISTER_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.REGISTER_DATETIME} <br>
      * @return The value of the column 'REGISTER_DATETIME'. (NullAllowed even if selected: for no constraint)
      */
     public java.time.LocalDateTime getRegisterDatetime() {
@@ -229,7 +229,7 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     }
 
     /**
-     * [set] (登録日時)REGISTER_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.REGISTER_DATETIME} <br>
+     * [set] REGISTER_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.REGISTER_DATETIME} <br>
      * @param registerDatetime The value of the column 'REGISTER_DATETIME'. (NullAllowed: null update allowed for no constraint)
      */
     public void setRegisterDatetime(java.time.LocalDateTime registerDatetime) {
@@ -238,7 +238,7 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     }
 
     /**
-     * [get] (登録ユーザ)REGISTER_USER: {VARCHAR(200), refers to MEMBER.REGISTER_USER} <br>
+     * [get] REGISTER_USER: {VARCHAR(200), refers to MEMBER.REGISTER_USER} <br>
      * @return The value of the column 'REGISTER_USER'. (NullAllowed even if selected: for no constraint)
      */
     public String getRegisterUser() {
@@ -247,7 +247,7 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     }
 
     /**
-     * [set] (登録ユーザ)REGISTER_USER: {VARCHAR(200), refers to MEMBER.REGISTER_USER} <br>
+     * [set] REGISTER_USER: {VARCHAR(200), refers to MEMBER.REGISTER_USER} <br>
      * @param registerUser The value of the column 'REGISTER_USER'. (NullAllowed: null update allowed for no constraint)
      */
     public void setRegisterUser(String registerUser) {
@@ -256,7 +256,7 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     }
 
     /**
-     * [get] (更新日時)UPDATE_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.UPDATE_DATETIME} <br>
+     * [get] UPDATE_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.UPDATE_DATETIME} <br>
      * @return The value of the column 'UPDATE_DATETIME'. (NullAllowed even if selected: for no constraint)
      */
     public java.time.LocalDateTime getUpdateDatetime() {
@@ -265,7 +265,7 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     }
 
     /**
-     * [set] (更新日時)UPDATE_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.UPDATE_DATETIME} <br>
+     * [set] UPDATE_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.UPDATE_DATETIME} <br>
      * @param updateDatetime The value of the column 'UPDATE_DATETIME'. (NullAllowed: null update allowed for no constraint)
      */
     public void setUpdateDatetime(java.time.LocalDateTime updateDatetime) {
@@ -274,7 +274,7 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     }
 
     /**
-     * [get] (更新ユーザ)UPDATE_USER: {VARCHAR(200), refers to MEMBER.UPDATE_USER} <br>
+     * [get] UPDATE_USER: {VARCHAR(200), refers to MEMBER.UPDATE_USER} <br>
      * @return The value of the column 'UPDATE_USER'. (NullAllowed even if selected: for no constraint)
      */
     public String getUpdateUser() {
@@ -283,7 +283,7 @@ public abstract class BsCommonColumnMember extends AbstractEntity implements Cus
     }
 
     /**
-     * [set] (更新ユーザ)UPDATE_USER: {VARCHAR(200), refers to MEMBER.UPDATE_USER} <br>
+     * [set] UPDATE_USER: {VARCHAR(200), refers to MEMBER.UPDATE_USER} <br>
      * @param updateUser The value of the column 'UPDATE_USER'. (NullAllowed: null update allowed for no constraint)
      */
     public void setUpdateUser(String updateUser) {

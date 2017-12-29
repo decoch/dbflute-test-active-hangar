@@ -74,30 +74,28 @@ public class ProductCategoryDbm extends AbstractDBMeta {
     public String getTableDispName() { return _tableDispName; }
     public String getTablePropertyName() { return _tablePropertyName; }
     public TableSqlName getTableSqlName() { return _tableSqlName; }
-    protected final String _tableAlias = "商品カテゴリ";
-    public String getTableAlias() { return _tableAlias; }
-    protected final String _tableComment = "商品のカテゴリを表現するマスタ。自己参照FKの階層になっている。";
+    protected final String _tableComment = "商品カテゴリ: 商品のカテゴリを表現するマスタ。自己参照FKの階層になっている。";
     public String getTableComment() { return _tableComment; }
 
     // ===================================================================================
     //                                                                         Column Info
     //                                                                         ===========
-    protected final ColumnInfo _columnProductCategoryCode = cci("PRODUCT_CATEGORY_CODE", "PRODUCT_CATEGORY_CODE", null, "商品カテゴリコード", String.class, "productCategoryCode", null, true, false, true, "CHAR", 3, 0, null, null, false, null, "自分のテーブルの別のレコードからも参照される。", null, "productList,productCategorySelfList", null, false);
-    protected final ColumnInfo _columnProductCategoryName = cci("PRODUCT_CATEGORY_NAME", "PRODUCT_CATEGORY_NAME", null, "商品カテゴリ名称", String.class, "productCategoryName", null, false, false, true, "VARCHAR", 50, 0, null, null, false, null, null, null, null, null, false);
-    protected final ColumnInfo _columnParentCategoryCode = cci("PARENT_CATEGORY_CODE", "PARENT_CATEGORY_CODE", null, "親カテゴリコード", String.class, "parentCategoryCode", null, false, false, false, "CHAR", 3, 0, null, null, false, null, "最上位の場合はデータなし。まさひく自己参照FKカラム！", "productCategorySelf", null, null, false);
+    protected final ColumnInfo _columnProductCategoryCode = cci("PRODUCT_CATEGORY_CODE", "PRODUCT_CATEGORY_CODE", null, null, String.class, "productCategoryCode", null, true, false, true, "CHAR", 3, 0, null, null, false, null, "商品カテゴリコード: 自分のテーブルの別のレコードからも参照される。", null, "productList,productCategorySelfList", null, false);
+    protected final ColumnInfo _columnProductCategoryName = cci("PRODUCT_CATEGORY_NAME", "PRODUCT_CATEGORY_NAME", null, null, String.class, "productCategoryName", null, false, false, true, "VARCHAR", 50, 0, null, null, false, null, "商品カテゴリ名称:", null, null, null, false);
+    protected final ColumnInfo _columnParentCategoryCode = cci("PARENT_CATEGORY_CODE", "PARENT_CATEGORY_CODE", null, null, String.class, "parentCategoryCode", null, false, false, false, "CHAR", 3, 0, null, null, false, null, "親カテゴリコード: 最上位の場合はデータなし。まさひく自己参照FKカラム！", "productCategorySelf", null, null, false);
 
     /**
-     * (商品カテゴリコード)PRODUCT_CATEGORY_CODE: {PK, NotNull, CHAR(3)}
+     * PRODUCT_CATEGORY_CODE: {PK, NotNull, CHAR(3)}
      * @return The information object of specified column. (NotNull)
      */
     public ColumnInfo columnProductCategoryCode() { return _columnProductCategoryCode; }
     /**
-     * (商品カテゴリ名称)PRODUCT_CATEGORY_NAME: {NotNull, VARCHAR(50)}
+     * PRODUCT_CATEGORY_NAME: {NotNull, VARCHAR(50)}
      * @return The information object of specified column. (NotNull)
      */
     public ColumnInfo columnProductCategoryName() { return _columnProductCategoryName; }
     /**
-     * (親カテゴリコード)PARENT_CATEGORY_CODE: {IX, CHAR(3), FK to PRODUCT_CATEGORY}
+     * PARENT_CATEGORY_CODE: {IX, CHAR(3), FK to PRODUCT_CATEGORY}
      * @return The information object of specified column. (NotNull)
      */
     public ColumnInfo columnParentCategoryCode() { return _columnParentCategoryCode; }
@@ -131,7 +129,7 @@ public class ProductCategoryDbm extends AbstractDBMeta {
     //                                      Foreign Property
     //                                      ----------------
     /**
-     * (商品カテゴリ)PRODUCT_CATEGORY by my PARENT_CATEGORY_CODE, named 'productCategorySelf'.
+     * PRODUCT_CATEGORY by my PARENT_CATEGORY_CODE, named 'productCategorySelf'.
      * @return The information object of foreign property. (NotNull)
      */
     public ForeignInfo foreignProductCategorySelf() {
@@ -143,7 +141,7 @@ public class ProductCategoryDbm extends AbstractDBMeta {
     //                                     Referrer Property
     //                                     -----------------
     /**
-     * (商品)PRODUCT by PRODUCT_CATEGORY_CODE, named 'productList'.
+     * PRODUCT by PRODUCT_CATEGORY_CODE, named 'productList'.
      * @return The information object of referrer property. (NotNull)
      */
     public ReferrerInfo referrerProductList() {
@@ -151,7 +149,7 @@ public class ProductCategoryDbm extends AbstractDBMeta {
         return cri("FK_PRODUCT_PRODUCT_CATEGORY", "productList", this, ProductDbm.getInstance(), mp, false, "productCategory");
     }
     /**
-     * (商品カテゴリ)PRODUCT_CATEGORY by PARENT_CATEGORY_CODE, named 'productCategorySelfList'.
+     * PRODUCT_CATEGORY by PARENT_CATEGORY_CODE, named 'productCategorySelfList'.
      * @return The information object of referrer property. (NotNull)
      */
     public ReferrerInfo referrerProductCategorySelfList() {

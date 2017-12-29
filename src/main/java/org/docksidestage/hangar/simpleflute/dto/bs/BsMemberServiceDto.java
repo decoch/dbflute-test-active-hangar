@@ -10,7 +10,7 @@ import org.docksidestage.hangar.simpleflute.AppCDef;
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**
- * The simple DTO of (会員サービス)MEMBER_SERVICE as TABLE. <br>
+ * The simple DTO of MEMBER_SERVICE as TABLE. <br>
  * <pre>
  * [primary-key]
  *     MEMBER_SERVICE_ID
@@ -56,19 +56,19 @@ public abstract class BsMemberServiceDto implements Serializable {
     // -----------------------------------------------------
     //                                                Column
     //                                                ------
-    /** (会員サービスID)MEMBER_SERVICE_ID: {PK, ID, NotNull, INTEGER(10)} */
+    /** MEMBER_SERVICE_ID: {PK, ID, NotNull, INTEGER(10)} */
     @JsonKey
     protected Integer _memberServiceId;
 
-    /** (会員ID)MEMBER_ID: {UQ, IX, NotNull, INTEGER(10), FK to MEMBER} */
+    /** MEMBER_ID: {UQ, IX, NotNull, INTEGER(10), FK to MEMBER} */
     @JsonKey
     protected Integer _memberId;
 
-    /** (サービスポイント数)SERVICE_POINT_COUNT: {IX, NotNull, INTEGER(10)} */
+    /** SERVICE_POINT_COUNT: {IX, NotNull, INTEGER(10)} */
     @JsonKey
     protected Integer _servicePointCount;
 
-    /** (サービスランクコード)SERVICE_RANK_CODE: {IX, NotNull, CHAR(3), FK to SERVICE_RANK, classification=ServiceRank} */
+    /** SERVICE_RANK_CODE: {IX, NotNull, CHAR(3), FK to SERVICE_RANK, classification=ServiceRank} */
     @JsonKey
     protected String _serviceRankCode;
 
@@ -321,7 +321,7 @@ public abstract class BsMemberServiceDto implements Serializable {
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (会員サービスID)MEMBER_SERVICE_ID: {PK, ID, NotNull, INTEGER(10)} <br>
+     * [get] MEMBER_SERVICE_ID: {PK, ID, NotNull, INTEGER(10)} <br>
      * @return The value of the column 'MEMBER_SERVICE_ID'. (NullAllowed)
      */
     public Integer getMemberServiceId() {
@@ -329,7 +329,7 @@ public abstract class BsMemberServiceDto implements Serializable {
     }
 
     /**
-     * [set] (会員サービスID)MEMBER_SERVICE_ID: {PK, ID, NotNull, INTEGER(10)} <br>
+     * [set] MEMBER_SERVICE_ID: {PK, ID, NotNull, INTEGER(10)} <br>
      * @param memberServiceId The value of the column 'MEMBER_SERVICE_ID'. (NullAllowed)
      */
     public void setMemberServiceId(Integer memberServiceId) {
@@ -338,7 +338,7 @@ public abstract class BsMemberServiceDto implements Serializable {
     }
 
     /**
-     * [get] (会員ID)MEMBER_ID: {UQ, IX, NotNull, INTEGER(10), FK to MEMBER} <br>
+     * [get] MEMBER_ID: {UQ, IX, NotNull, INTEGER(10), FK to MEMBER} <br>
      * @return The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public Integer getMemberId() {
@@ -346,7 +346,7 @@ public abstract class BsMemberServiceDto implements Serializable {
     }
 
     /**
-     * [set] (会員ID)MEMBER_ID: {UQ, IX, NotNull, INTEGER(10), FK to MEMBER} <br>
+     * [set] MEMBER_ID: {UQ, IX, NotNull, INTEGER(10), FK to MEMBER} <br>
      * @param memberId The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public void setMemberId(Integer memberId) {
@@ -355,7 +355,7 @@ public abstract class BsMemberServiceDto implements Serializable {
     }
 
     /**
-     * [get] (サービスポイント数)SERVICE_POINT_COUNT: {IX, NotNull, INTEGER(10)} <br>
+     * [get] SERVICE_POINT_COUNT: {IX, NotNull, INTEGER(10)} <br>
      * @return The value of the column 'SERVICE_POINT_COUNT'. (NullAllowed)
      */
     public Integer getServicePointCount() {
@@ -363,7 +363,7 @@ public abstract class BsMemberServiceDto implements Serializable {
     }
 
     /**
-     * [set] (サービスポイント数)SERVICE_POINT_COUNT: {IX, NotNull, INTEGER(10)} <br>
+     * [set] SERVICE_POINT_COUNT: {IX, NotNull, INTEGER(10)} <br>
      * @param servicePointCount The value of the column 'SERVICE_POINT_COUNT'. (NullAllowed)
      */
     public void setServicePointCount(Integer servicePointCount) {
@@ -372,7 +372,7 @@ public abstract class BsMemberServiceDto implements Serializable {
     }
 
     /**
-     * [get] (サービスランクコード)SERVICE_RANK_CODE: {IX, NotNull, CHAR(3), FK to SERVICE_RANK, classification=ServiceRank} <br>
+     * [get] SERVICE_RANK_CODE: {IX, NotNull, CHAR(3), FK to SERVICE_RANK, classification=ServiceRank} <br>
      * @return The value of the column 'SERVICE_RANK_CODE'. (NullAllowed)
      */
     public String getServiceRankCode() {
@@ -380,7 +380,7 @@ public abstract class BsMemberServiceDto implements Serializable {
     }
 
     /**
-     * [set] (サービスランクコード)SERVICE_RANK_CODE: {IX, NotNull, CHAR(3), FK to SERVICE_RANK, classification=ServiceRank} <br>
+     * [set] SERVICE_RANK_CODE: {IX, NotNull, CHAR(3), FK to SERVICE_RANK, classification=ServiceRank} <br>
      * @param serviceRankCode The value of the column 'SERVICE_RANK_CODE'. (NullAllowed)
      */
     public void setServiceRankCode(String serviceRankCode) {

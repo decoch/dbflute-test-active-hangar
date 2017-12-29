@@ -52,11 +52,11 @@ public abstract class BsUnpaidSummaryMemberDto implements Serializable {
     // -----------------------------------------------------
     //                                                Column
     //                                                ------
-    /** (会員ID)UNPAID_MAN_ID: {PK, INTEGER(10), refers to MEMBER.MEMBER_ID} */
+    /** UNPAID_MAN_ID: {PK, INTEGER(10), refers to MEMBER.MEMBER_ID} */
     @JsonKey
     protected Integer _unpaidManId;
 
-    /** (会員名称)UNPAID_MAN_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} */
+    /** UNPAID_MAN_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} */
     @JsonKey
     protected String _unpaidManName;
 
@@ -64,7 +64,7 @@ public abstract class BsUnpaidSummaryMemberDto implements Serializable {
     @JsonKey
     protected Long _unpaidPriceSummary;
 
-    /** (会員ステータス名称)STATUS_NAME: {VARCHAR(50), refers to MEMBER_STATUS.MEMBER_STATUS_NAME} */
+    /** STATUS_NAME: {VARCHAR(50), refers to MEMBER_STATUS.MEMBER_STATUS_NAME} */
     @JsonKey
     protected String _statusName;
 
@@ -149,7 +149,7 @@ public abstract class BsUnpaidSummaryMemberDto implements Serializable {
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (会員ID)UNPAID_MAN_ID: {PK, INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
+     * [get] UNPAID_MAN_ID: {PK, INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
      * @return The value of the column 'UNPAID_MAN_ID'. (NullAllowed)
      */
     public Integer getUnpaidManId() {
@@ -157,7 +157,7 @@ public abstract class BsUnpaidSummaryMemberDto implements Serializable {
     }
 
     /**
-     * [set] (会員ID)UNPAID_MAN_ID: {PK, INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
+     * [set] UNPAID_MAN_ID: {PK, INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
      * @param unpaidManId The value of the column 'UNPAID_MAN_ID'. (NullAllowed)
      */
     public void setUnpaidManId(Integer unpaidManId) {
@@ -166,7 +166,7 @@ public abstract class BsUnpaidSummaryMemberDto implements Serializable {
     }
 
     /**
-     * [get] (会員名称)UNPAID_MAN_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
+     * [get] UNPAID_MAN_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
      * @return The value of the column 'UNPAID_MAN_NAME'. (NullAllowed)
      */
     public String getUnpaidManName() {
@@ -174,7 +174,7 @@ public abstract class BsUnpaidSummaryMemberDto implements Serializable {
     }
 
     /**
-     * [set] (会員名称)UNPAID_MAN_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
+     * [set] UNPAID_MAN_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
      * @param unpaidManName The value of the column 'UNPAID_MAN_NAME'. (NullAllowed)
      */
     public void setUnpaidManName(String unpaidManName) {
@@ -200,7 +200,7 @@ public abstract class BsUnpaidSummaryMemberDto implements Serializable {
     }
 
     /**
-     * [get] (会員ステータス名称)STATUS_NAME: {VARCHAR(50), refers to MEMBER_STATUS.MEMBER_STATUS_NAME} <br>
+     * [get] STATUS_NAME: {VARCHAR(50), refers to MEMBER_STATUS.MEMBER_STATUS_NAME} <br>
      * @return The value of the column 'STATUS_NAME'. (NullAllowed)
      */
     public String getStatusName() {
@@ -208,7 +208,7 @@ public abstract class BsUnpaidSummaryMemberDto implements Serializable {
     }
 
     /**
-     * [set] (会員ステータス名称)STATUS_NAME: {VARCHAR(50), refers to MEMBER_STATUS.MEMBER_STATUS_NAME} <br>
+     * [set] STATUS_NAME: {VARCHAR(50), refers to MEMBER_STATUS.MEMBER_STATUS_NAME} <br>
      * @param statusName The value of the column 'STATUS_NAME'. (NullAllowed)
      */
     public void setStatusName(String statusName) {

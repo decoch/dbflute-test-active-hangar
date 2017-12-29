@@ -10,7 +10,7 @@ import org.docksidestage.hangar.simpleflute.AppCDef;
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**
- * The simple DTO of (購入支払)PURCHASE_PAYMENT as TABLE. <br>
+ * The simple DTO of PURCHASE_PAYMENT as TABLE. <br>
  * <pre>
  * [primary-key]
  *     PURCHASE_PAYMENT_ID
@@ -56,23 +56,23 @@ public abstract class BsPurchasePaymentDto implements Serializable {
     // -----------------------------------------------------
     //                                                Column
     //                                                ------
-    /** (購入支払ID)PURCHASE_PAYMENT_ID: {PK, ID, NotNull, BIGINT(19)} */
+    /** PURCHASE_PAYMENT_ID: {PK, ID, NotNull, BIGINT(19)} */
     @JsonKey
     protected Long _purchasePaymentId;
 
-    /** (購入ID)PURCHASE_ID: {IX, NotNull, BIGINT(19), FK to PURCHASE} */
+    /** PURCHASE_ID: {IX, NotNull, BIGINT(19), FK to PURCHASE} */
     @JsonKey
     protected Long _purchaseId;
 
-    /** (支払金額)PAYMENT_AMOUNT: {NotNull, DECIMAL(10, 2)} */
+    /** PAYMENT_AMOUNT: {NotNull, DECIMAL(10, 2)} */
     @JsonKey
     protected java.math.BigDecimal _paymentAmount;
 
-    /** (支払日時)PAYMENT_DATETIME: {IX+, NotNull, TIMESTAMP(23, 10)} */
+    /** PAYMENT_DATETIME: {IX+, NotNull, TIMESTAMP(23, 10)} */
     @JsonKey
     protected java.time.LocalDateTime _paymentDatetime;
 
-    /** (支払方法コード)PAYMENT_METHOD_CODE: {NotNull, CHAR(3), classification=PaymentMethod} */
+    /** PAYMENT_METHOD_CODE: {NotNull, CHAR(3), classification=PaymentMethod} */
     @JsonKey
     protected String _paymentMethodCode;
 
@@ -273,7 +273,7 @@ public abstract class BsPurchasePaymentDto implements Serializable {
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (購入支払ID)PURCHASE_PAYMENT_ID: {PK, ID, NotNull, BIGINT(19)} <br>
+     * [get] PURCHASE_PAYMENT_ID: {PK, ID, NotNull, BIGINT(19)} <br>
      * @return The value of the column 'PURCHASE_PAYMENT_ID'. (NullAllowed)
      */
     public Long getPurchasePaymentId() {
@@ -281,7 +281,7 @@ public abstract class BsPurchasePaymentDto implements Serializable {
     }
 
     /**
-     * [set] (購入支払ID)PURCHASE_PAYMENT_ID: {PK, ID, NotNull, BIGINT(19)} <br>
+     * [set] PURCHASE_PAYMENT_ID: {PK, ID, NotNull, BIGINT(19)} <br>
      * @param purchasePaymentId The value of the column 'PURCHASE_PAYMENT_ID'. (NullAllowed)
      */
     public void setPurchasePaymentId(Long purchasePaymentId) {
@@ -290,7 +290,7 @@ public abstract class BsPurchasePaymentDto implements Serializable {
     }
 
     /**
-     * [get] (購入ID)PURCHASE_ID: {IX, NotNull, BIGINT(19), FK to PURCHASE} <br>
+     * [get] PURCHASE_ID: {IX, NotNull, BIGINT(19), FK to PURCHASE} <br>
      * @return The value of the column 'PURCHASE_ID'. (NullAllowed)
      */
     public Long getPurchaseId() {
@@ -298,7 +298,7 @@ public abstract class BsPurchasePaymentDto implements Serializable {
     }
 
     /**
-     * [set] (購入ID)PURCHASE_ID: {IX, NotNull, BIGINT(19), FK to PURCHASE} <br>
+     * [set] PURCHASE_ID: {IX, NotNull, BIGINT(19), FK to PURCHASE} <br>
      * @param purchaseId The value of the column 'PURCHASE_ID'. (NullAllowed)
      */
     public void setPurchaseId(Long purchaseId) {
@@ -307,7 +307,7 @@ public abstract class BsPurchasePaymentDto implements Serializable {
     }
 
     /**
-     * [get] (支払金額)PAYMENT_AMOUNT: {NotNull, DECIMAL(10, 2)} <br>
+     * [get] PAYMENT_AMOUNT: {NotNull, DECIMAL(10, 2)} <br>
      * @return The value of the column 'PAYMENT_AMOUNT'. (NullAllowed)
      */
     public java.math.BigDecimal getPaymentAmount() {
@@ -315,7 +315,7 @@ public abstract class BsPurchasePaymentDto implements Serializable {
     }
 
     /**
-     * [set] (支払金額)PAYMENT_AMOUNT: {NotNull, DECIMAL(10, 2)} <br>
+     * [set] PAYMENT_AMOUNT: {NotNull, DECIMAL(10, 2)} <br>
      * @param paymentAmount The value of the column 'PAYMENT_AMOUNT'. (NullAllowed)
      */
     public void setPaymentAmount(java.math.BigDecimal paymentAmount) {
@@ -324,7 +324,7 @@ public abstract class BsPurchasePaymentDto implements Serializable {
     }
 
     /**
-     * [get] (支払日時)PAYMENT_DATETIME: {IX+, NotNull, TIMESTAMP(23, 10)} <br>
+     * [get] PAYMENT_DATETIME: {IX+, NotNull, TIMESTAMP(23, 10)} <br>
      * @return The value of the column 'PAYMENT_DATETIME'. (NullAllowed)
      */
     @JSONHint(format="yyyy-MM-dd HH:mm:ss.SSS")
@@ -334,7 +334,7 @@ public abstract class BsPurchasePaymentDto implements Serializable {
     }
 
     /**
-     * [set] (支払日時)PAYMENT_DATETIME: {IX+, NotNull, TIMESTAMP(23, 10)} <br>
+     * [set] PAYMENT_DATETIME: {IX+, NotNull, TIMESTAMP(23, 10)} <br>
      * @param paymentDatetime The value of the column 'PAYMENT_DATETIME'. (NullAllowed)
      */
     public void setPaymentDatetime(java.time.LocalDateTime paymentDatetime) {
@@ -343,7 +343,7 @@ public abstract class BsPurchasePaymentDto implements Serializable {
     }
 
     /**
-     * [get] (支払方法コード)PAYMENT_METHOD_CODE: {NotNull, CHAR(3), classification=PaymentMethod} <br>
+     * [get] PAYMENT_METHOD_CODE: {NotNull, CHAR(3), classification=PaymentMethod} <br>
      * @return The value of the column 'PAYMENT_METHOD_CODE'. (NullAllowed)
      */
     public String getPaymentMethodCode() {
@@ -351,7 +351,7 @@ public abstract class BsPurchasePaymentDto implements Serializable {
     }
 
     /**
-     * [set] (支払方法コード)PAYMENT_METHOD_CODE: {NotNull, CHAR(3), classification=PaymentMethod} <br>
+     * [set] PAYMENT_METHOD_CODE: {NotNull, CHAR(3), classification=PaymentMethod} <br>
      * @param paymentMethodCode The value of the column 'PAYMENT_METHOD_CODE'. (NullAllowed)
      */
     public void setPaymentMethodCode(String paymentMethodCode) {

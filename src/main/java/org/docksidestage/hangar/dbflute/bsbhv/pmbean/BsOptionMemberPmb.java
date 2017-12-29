@@ -50,13 +50,13 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     /** The parameter of toFormalizedMonth:toDate(option). */
     protected java.time.LocalDateTime _toFormalizedMonth;
 
-    /** The parameter of memberStatusCode:ref(MEMBER) :: refers to (会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus}. */
+    /** The parameter of memberStatusCode:ref(MEMBER) :: refers to MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus}. */
     protected String _memberStatusCode;
 
-    /** The parameter of displayOrder:ref(MEMBER_STATUS) :: refers to (表示順)DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)}. */
+    /** The parameter of displayOrder:ref(MEMBER_STATUS) :: refers to DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)}. */
     protected Integer _displayOrder;
 
-    /** The parameter of birthdate:fromDate|ref(MEMBER.BIRTHDATE) :: refers to (生年月日)BIRTHDATE: {DATE(8)}. */
+    /** The parameter of birthdate:fromDate|ref(MEMBER.BIRTHDATE) :: refers to BIRTHDATE: {DATE(8)}. */
     protected java.time.LocalDate _birthdate;
 
     /** The parameter of status:cls(MemberStatus). */
@@ -65,7 +65,7 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     /** The parameter of statusFormalized:cls(MemberStatus.Formalized). */
     protected String _statusFormalized = CDef.MemberStatus.Formalized.code();
 
-    /** The parameter of statusList:ref(MEMBER.MEMBER_STATUS_CODE) :: refers to (会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus}. */
+    /** The parameter of statusList:ref(MEMBER.MEMBER_STATUS_CODE) :: refers to MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus}. */
     protected List<org.docksidestage.hangar.dbflute.allcommon.CDef.MemberStatus> _statusList;
 
     /** The parameter of statusFixedList:cls(MemberStatus.Formalized, Withdrawal). */
@@ -346,7 +346,7 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     }
 
     /**
-     * [get] memberStatusCode:ref(MEMBER) :: refers to (会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
+     * [get] memberStatusCode:ref(MEMBER) :: refers to MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
      * // reference option (including classification)
      * @return The value of memberStatusCode. (NullAllowed, NotEmptyString(when String): if empty string, returns null)
      */
@@ -357,7 +357,7 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     }
 
     /**
-     * [set as MemberStatus] memberStatusCode:ref(MEMBER) :: refers to (会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
+     * [set as MemberStatus] memberStatusCode:ref(MEMBER) :: refers to MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
      * status of member from entry to withdrawal
      * @param cdef The instance of classification definition (as ENUM type). (NullAllowed: if null, null value is set to the property)
      */
@@ -366,7 +366,7 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     }
 
     /**
-     * [set as Formalized] memberStatusCode:ref(MEMBER) :: refers to (会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
+     * [set as Formalized] memberStatusCode:ref(MEMBER) :: refers to MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
      * // reference option (including classification) <br>
      * as formal member, allowed to use all service
      */
@@ -375,7 +375,7 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     }
 
     /**
-     * [set as Withdrawal] memberStatusCode:ref(MEMBER) :: refers to (会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
+     * [set as Withdrawal] memberStatusCode:ref(MEMBER) :: refers to MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
      * // reference option (including classification) <br>
      * withdrawal is fixed, not allowed to use service
      */
@@ -384,7 +384,7 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     }
 
     /**
-     * [set as Provisional] memberStatusCode:ref(MEMBER) :: refers to (会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
+     * [set as Provisional] memberStatusCode:ref(MEMBER) :: refers to MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
      * // reference option (including classification) <br>
      * first status after entry, allowed to use only part of service
      */
@@ -393,7 +393,7 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     }
 
     /**
-     * [get] displayOrder:ref(MEMBER_STATUS) :: refers to (表示順)DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} <br>
+     * [get] displayOrder:ref(MEMBER_STATUS) :: refers to DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} <br>
      * @return The value of displayOrder. (NullAllowed, NotEmptyString(when String): if empty string, returns null)
      */
     public Integer getDisplayOrder() {
@@ -401,7 +401,7 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     }
 
     /**
-     * [set] displayOrder:ref(MEMBER_STATUS) :: refers to (表示順)DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} <br>
+     * [set] displayOrder:ref(MEMBER_STATUS) :: refers to DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} <br>
      * @param displayOrder The value of displayOrder. (NullAllowed)
      */
     public void setDisplayOrder(Integer displayOrder) {
@@ -409,7 +409,7 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     }
 
     /**
-     * [get] birthdate:fromDate|ref(MEMBER.BIRTHDATE) :: refers to (生年月日)BIRTHDATE: {DATE(8)} <br>
+     * [get] birthdate:fromDate|ref(MEMBER.BIRTHDATE) :: refers to BIRTHDATE: {DATE(8)} <br>
      * // several options
      * @return The value of birthdate. (NullAllowed, NotEmptyString(when String): if empty string, returns null)
      */
@@ -418,7 +418,7 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     }
 
     /**
-     * [set as fromDate] birthdate:fromDate|ref(MEMBER.BIRTHDATE) :: refers to (生年月日)BIRTHDATE: {DATE(8)} <br>
+     * [set as fromDate] birthdate:fromDate|ref(MEMBER.BIRTHDATE) :: refers to BIRTHDATE: {DATE(8)} <br>
      * // several options
      * @param birthdate The value of birthdate. (NullAllowed)
      */
@@ -481,7 +481,7 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     }
 
     /**
-     * [get] statusList:ref(MEMBER.MEMBER_STATUS_CODE) :: refers to (会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
+     * [get] statusList:ref(MEMBER.MEMBER_STATUS_CODE) :: refers to MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
      * // classification to list
      * @return The value of statusList. (NullAllowed, NotEmptyString(when String): if empty string, returns null)
      */
@@ -490,7 +490,7 @@ public class BsOptionMemberPmb implements ListHandlingPmb<MemberBhv, OptionMembe
     }
 
     /**
-     * [set] statusList:ref(MEMBER.MEMBER_STATUS_CODE) :: refers to (会員ステータスコード)MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
+     * [set] statusList:ref(MEMBER.MEMBER_STATUS_CODE) :: refers to MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
      * // classification to list
      * @param statusList The value of statusList. (NullAllowed)
      */

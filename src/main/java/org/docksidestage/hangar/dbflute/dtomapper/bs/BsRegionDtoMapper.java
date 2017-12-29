@@ -23,7 +23,7 @@ import org.docksidestage.hangar.simpleflute.dto.*;
 import org.docksidestage.hangar.dbflute.dtomapper.*;
 
 /**
- * The DTO mapper of (地域)REGION as TABLE. <br>
+ * The DTO mapper of REGION as TABLE. <br>
  * <pre>
  * [primary-key]
  *     REGION_ID

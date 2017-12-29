@@ -55,31 +55,31 @@ public abstract class BsOptionMemberDto implements Serializable {
     // -----------------------------------------------------
     //                                                Column
     //                                                ------
-    /** (会員ID)MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} */
+    /** MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} */
     @JsonKey
     protected Integer _memberId;
 
-    /** (会員名称)MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} */
+    /** MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} */
     @JsonKey
     protected String _memberName;
 
-    /** (生年月日)BIRTHDATE: {DATE(8), refers to MEMBER.BIRTHDATE} */
+    /** BIRTHDATE: {DATE(8), refers to MEMBER.BIRTHDATE} */
     @JsonKey
     protected java.time.LocalDate _birthdate;
 
-    /** (正式会員日時)FORMALIZED_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.FORMALIZED_DATETIME} */
+    /** FORMALIZED_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.FORMALIZED_DATETIME} */
     @JsonKey
     protected java.time.LocalDateTime _formalizedDatetime;
 
-    /** (会員ステータスコード)MEMBER_STATUS_CODE: {CHAR(3), refers to MEMBER.MEMBER_STATUS_CODE, classification=MemberStatus} */
+    /** MEMBER_STATUS_CODE: {CHAR(3), refers to MEMBER.MEMBER_STATUS_CODE, classification=MemberStatus} */
     @JsonKey
     protected String _memberStatusCode;
 
-    /** (会員ステータス名称)MEMBER_STATUS_NAME: {NotNull, VARCHAR(50), refers to MEMBER_STATUS.MEMBER_STATUS_NAME} */
+    /** MEMBER_STATUS_NAME: {NotNull, VARCHAR(50), refers to MEMBER_STATUS.MEMBER_STATUS_NAME} */
     @JsonKey
     protected String _memberStatusName;
 
-    /** (表示順)STATUS_DISPLAY_ORDER: {INTEGER(10), refers to MEMBER_STATUS.DISPLAY_ORDER} */
+    /** STATUS_DISPLAY_ORDER: {INTEGER(10), refers to MEMBER_STATUS.DISPLAY_ORDER} */
     @JsonKey
     protected Integer _statusDisplayOrder;
 
@@ -335,7 +335,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (会員ID)MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
+     * [get] MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
      * @return The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public Integer getMemberId() {
@@ -343,7 +343,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [set] (会員ID)MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
+     * [set] MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
      * @param memberId The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public void setMemberId(Integer memberId) {
@@ -352,7 +352,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [get] (会員名称)MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
+     * [get] MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
      * @return The value of the column 'MEMBER_NAME'. (NullAllowed)
      */
     public String getMemberName() {
@@ -360,7 +360,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [set] (会員名称)MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
+     * [set] MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
      * @param memberName The value of the column 'MEMBER_NAME'. (NullAllowed)
      */
     public void setMemberName(String memberName) {
@@ -369,7 +369,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [get] (生年月日)BIRTHDATE: {DATE(8), refers to MEMBER.BIRTHDATE} <br>
+     * [get] BIRTHDATE: {DATE(8), refers to MEMBER.BIRTHDATE} <br>
      * @return The value of the column 'BIRTHDATE'. (NullAllowed)
      */
     @JSONHint(format="yyyy-MM-dd")
@@ -379,7 +379,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [set] (生年月日)BIRTHDATE: {DATE(8), refers to MEMBER.BIRTHDATE} <br>
+     * [set] BIRTHDATE: {DATE(8), refers to MEMBER.BIRTHDATE} <br>
      * @param birthdate The value of the column 'BIRTHDATE'. (NullAllowed)
      */
     public void setBirthdate(java.time.LocalDate birthdate) {
@@ -388,7 +388,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [get] (正式会員日時)FORMALIZED_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.FORMALIZED_DATETIME} <br>
+     * [get] FORMALIZED_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.FORMALIZED_DATETIME} <br>
      * @return The value of the column 'FORMALIZED_DATETIME'. (NullAllowed)
      */
     @JSONHint(format="yyyy-MM-dd HH:mm:ss.SSS")
@@ -398,7 +398,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [set] (正式会員日時)FORMALIZED_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.FORMALIZED_DATETIME} <br>
+     * [set] FORMALIZED_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.FORMALIZED_DATETIME} <br>
      * @param formalizedDatetime The value of the column 'FORMALIZED_DATETIME'. (NullAllowed)
      */
     public void setFormalizedDatetime(java.time.LocalDateTime formalizedDatetime) {
@@ -407,7 +407,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [get] (会員ステータスコード)MEMBER_STATUS_CODE: {CHAR(3), refers to MEMBER.MEMBER_STATUS_CODE, classification=MemberStatus} <br>
+     * [get] MEMBER_STATUS_CODE: {CHAR(3), refers to MEMBER.MEMBER_STATUS_CODE, classification=MemberStatus} <br>
      * @return The value of the column 'MEMBER_STATUS_CODE'. (NullAllowed)
      */
     public String getMemberStatusCode() {
@@ -415,7 +415,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [set] (会員ステータスコード)MEMBER_STATUS_CODE: {CHAR(3), refers to MEMBER.MEMBER_STATUS_CODE, classification=MemberStatus} <br>
+     * [set] MEMBER_STATUS_CODE: {CHAR(3), refers to MEMBER.MEMBER_STATUS_CODE, classification=MemberStatus} <br>
      * @param memberStatusCode The value of the column 'MEMBER_STATUS_CODE'. (NullAllowed)
      */
     public void setMemberStatusCode(String memberStatusCode) {
@@ -424,7 +424,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [get] (会員ステータス名称)MEMBER_STATUS_NAME: {NotNull, VARCHAR(50), refers to MEMBER_STATUS.MEMBER_STATUS_NAME} <br>
+     * [get] MEMBER_STATUS_NAME: {NotNull, VARCHAR(50), refers to MEMBER_STATUS.MEMBER_STATUS_NAME} <br>
      * @return The value of the column 'MEMBER_STATUS_NAME'. (NullAllowed)
      */
     public String getMemberStatusName() {
@@ -432,7 +432,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [set] (会員ステータス名称)MEMBER_STATUS_NAME: {NotNull, VARCHAR(50), refers to MEMBER_STATUS.MEMBER_STATUS_NAME} <br>
+     * [set] MEMBER_STATUS_NAME: {NotNull, VARCHAR(50), refers to MEMBER_STATUS.MEMBER_STATUS_NAME} <br>
      * @param memberStatusName The value of the column 'MEMBER_STATUS_NAME'. (NullAllowed)
      */
     public void setMemberStatusName(String memberStatusName) {
@@ -441,7 +441,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [get] (表示順)STATUS_DISPLAY_ORDER: {INTEGER(10), refers to MEMBER_STATUS.DISPLAY_ORDER} <br>
+     * [get] STATUS_DISPLAY_ORDER: {INTEGER(10), refers to MEMBER_STATUS.DISPLAY_ORDER} <br>
      * @return The value of the column 'STATUS_DISPLAY_ORDER'. (NullAllowed)
      */
     public Integer getStatusDisplayOrder() {
@@ -449,7 +449,7 @@ public abstract class BsOptionMemberDto implements Serializable {
     }
 
     /**
-     * [set] (表示順)STATUS_DISPLAY_ORDER: {INTEGER(10), refers to MEMBER_STATUS.DISPLAY_ORDER} <br>
+     * [set] STATUS_DISPLAY_ORDER: {INTEGER(10), refers to MEMBER_STATUS.DISPLAY_ORDER} <br>
      * @param statusDisplayOrder The value of the column 'STATUS_DISPLAY_ORDER'. (NullAllowed)
      */
     public void setStatusDisplayOrder(Integer statusDisplayOrder) {

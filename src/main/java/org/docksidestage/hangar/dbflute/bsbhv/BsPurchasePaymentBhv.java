@@ -20,7 +20,7 @@ import org.docksidestage.hangar.dbflute.bsentity.dbmeta.*;
 import org.docksidestage.hangar.dbflute.cbean.*;
 
 /**
- * The behavior of (購入支払)PURCHASE_PAYMENT as TABLE. <br>
+ * The behavior of PURCHASE_PAYMENT as TABLE. <br>
  * <pre>
  * [primary key]
  *     PURCHASE_PAYMENT_ID
@@ -157,7 +157,7 @@ public abstract class BsPurchasePaymentBhv extends AbstractBehaviorWritable<Purc
 
     /**
      * Select the entity by the primary-key value.
-     * @param purchasePaymentId (購入支払ID): PK, ID, NotNull, BIGINT(19). (NotNull)
+     * @param purchasePaymentId : PK, ID, NotNull, BIGINT(19). (NotNull)
      * @return The optional entity selected by the PK. (NotNull: if no data, empty entity)
      * @throws EntityAlreadyDeletedException When get(), required() of return value is called and the value is null, which means entity has already been deleted (not found).
      * @throws EntityDuplicatedException When the entity has been duplicated.

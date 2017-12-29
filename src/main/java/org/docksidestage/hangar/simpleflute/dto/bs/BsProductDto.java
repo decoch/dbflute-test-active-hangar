@@ -10,7 +10,7 @@ import org.docksidestage.hangar.simpleflute.AppCDef;
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**
- * The simple DTO of (商品)PRODUCT as TABLE. <br>
+ * The simple DTO of PRODUCT as TABLE. <br>
  * <pre>
  * [primary-key]
  *     PRODUCT_ID
@@ -60,11 +60,11 @@ public abstract class BsProductDto implements Serializable {
     @JsonKey
     protected Integer _productId;
 
-    /** (商品名称)PRODUCT_NAME: {IX, NotNull, VARCHAR(50)} */
+    /** PRODUCT_NAME: {IX, NotNull, VARCHAR(50)} */
     @JsonKey
     protected String _productName;
 
-    /** (商品ハンドルコード)PRODUCT_HANDLE_CODE: {UQ, NotNull, VARCHAR(100)} */
+    /** PRODUCT_HANDLE_CODE: {UQ, NotNull, VARCHAR(100)} */
     @JsonKey
     protected String _productHandleCode;
 
@@ -76,7 +76,7 @@ public abstract class BsProductDto implements Serializable {
     @JsonKey
     protected String _productStatusCode;
 
-    /** (定価)REGULAR_PRICE: {NotNull, INTEGER(10)} */
+    /** REGULAR_PRICE: {NotNull, INTEGER(10)} */
     @JsonKey
     protected Integer _regularPrice;
 
@@ -321,7 +321,7 @@ public abstract class BsProductDto implements Serializable {
     }
 
     /**
-     * [get] (商品名称)PRODUCT_NAME: {IX, NotNull, VARCHAR(50)} <br>
+     * [get] PRODUCT_NAME: {IX, NotNull, VARCHAR(50)} <br>
      * @return The value of the column 'PRODUCT_NAME'. (NullAllowed)
      */
     public String getProductName() {
@@ -329,7 +329,7 @@ public abstract class BsProductDto implements Serializable {
     }
 
     /**
-     * [set] (商品名称)PRODUCT_NAME: {IX, NotNull, VARCHAR(50)} <br>
+     * [set] PRODUCT_NAME: {IX, NotNull, VARCHAR(50)} <br>
      * @param productName The value of the column 'PRODUCT_NAME'. (NullAllowed)
      */
     public void setProductName(String productName) {
@@ -338,7 +338,7 @@ public abstract class BsProductDto implements Serializable {
     }
 
     /**
-     * [get] (商品ハンドルコード)PRODUCT_HANDLE_CODE: {UQ, NotNull, VARCHAR(100)} <br>
+     * [get] PRODUCT_HANDLE_CODE: {UQ, NotNull, VARCHAR(100)} <br>
      * @return The value of the column 'PRODUCT_HANDLE_CODE'. (NullAllowed)
      */
     public String getProductHandleCode() {
@@ -346,7 +346,7 @@ public abstract class BsProductDto implements Serializable {
     }
 
     /**
-     * [set] (商品ハンドルコード)PRODUCT_HANDLE_CODE: {UQ, NotNull, VARCHAR(100)} <br>
+     * [set] PRODUCT_HANDLE_CODE: {UQ, NotNull, VARCHAR(100)} <br>
      * @param productHandleCode The value of the column 'PRODUCT_HANDLE_CODE'. (NullAllowed)
      */
     public void setProductHandleCode(String productHandleCode) {
@@ -389,7 +389,7 @@ public abstract class BsProductDto implements Serializable {
     }
 
     /**
-     * [get] (定価)REGULAR_PRICE: {NotNull, INTEGER(10)} <br>
+     * [get] REGULAR_PRICE: {NotNull, INTEGER(10)} <br>
      * @return The value of the column 'REGULAR_PRICE'. (NullAllowed)
      */
     public Integer getRegularPrice() {
@@ -397,7 +397,7 @@ public abstract class BsProductDto implements Serializable {
     }
 
     /**
-     * [set] (定価)REGULAR_PRICE: {NotNull, INTEGER(10)} <br>
+     * [set] REGULAR_PRICE: {NotNull, INTEGER(10)} <br>
      * @param regularPrice The value of the column 'REGULAR_PRICE'. (NullAllowed)
      */
     public void setRegularPrice(Integer regularPrice) {

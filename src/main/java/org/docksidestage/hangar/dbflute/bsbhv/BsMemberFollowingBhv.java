@@ -20,7 +20,7 @@ import org.docksidestage.hangar.dbflute.bsentity.dbmeta.*;
 import org.docksidestage.hangar.dbflute.cbean.*;
 
 /**
- * The behavior of (会員フォローイング)MEMBER_FOLLOWING as TABLE. <br>
+ * The behavior of MEMBER_FOLLOWING as TABLE. <br>
  * <pre>
  * [primary key]
  *     MEMBER_FOLLOWING_ID
@@ -157,7 +157,7 @@ public abstract class BsMemberFollowingBhv extends AbstractBehaviorWritable<Memb
 
     /**
      * Select the entity by the primary-key value.
-     * @param memberFollowingId (会員フォローイングID): PK, ID, NotNull, BIGINT(19). (NotNull)
+     * @param memberFollowingId : PK, ID, NotNull, BIGINT(19). (NotNull)
      * @return The optional entity selected by the PK. (NotNull: if no data, empty entity)
      * @throws EntityAlreadyDeletedException When get(), required() of return value is called and the value is null, which means entity has already been deleted (not found).
      * @throws EntityDuplicatedException When the entity has been duplicated.
@@ -186,8 +186,8 @@ public abstract class BsMemberFollowingBhv extends AbstractBehaviorWritable<Memb
 
     /**
      * Select the entity by the unique-key value.
-     * @param myMemberId (わたし): UQ+, IX+, NotNull, INTEGER(10), FK to MEMBER. (NotNull)
-     * @param yourMemberId (あなた): +UQ, IX+, NotNull, INTEGER(10), FK to MEMBER. (NotNull)
+     * @param myMemberId : UQ+, IX+, NotNull, INTEGER(10), FK to MEMBER. (NotNull)
+     * @param yourMemberId : +UQ, IX+, NotNull, INTEGER(10), FK to MEMBER. (NotNull)
      * @return The optional entity selected by the unique key. (NotNull: if no data, empty entity)
      * @throws EntityAlreadyDeletedException When get(), required() of return value is called and the value is null, which means entity has already been deleted (not found).
      * @throws EntityDuplicatedException When the entity has been duplicated.

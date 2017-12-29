@@ -10,7 +10,7 @@ import org.docksidestage.hangar.simpleflute.AppCDef;
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**
- * The simple DTO of (会員退会情報)MEMBER_WITHDRAWAL as TABLE. <br>
+ * The simple DTO of MEMBER_WITHDRAWAL as TABLE. <br>
  * <pre>
  * [primary-key]
  *     MEMBER_ID
@@ -60,15 +60,15 @@ public abstract class BsMemberWithdrawalDto implements Serializable {
     @JsonKey
     protected Integer _memberId;
 
-    /** (退会理由コード)WITHDRAWAL_REASON_CODE: {IX, CHAR(3), FK to WITHDRAWAL_REASON, classification=WithdrawalReason} */
+    /** WITHDRAWAL_REASON_CODE: {IX, CHAR(3), FK to WITHDRAWAL_REASON, classification=WithdrawalReason} */
     @JsonKey
     protected String _withdrawalReasonCode;
 
-    /** (退会理由入力テキスト)WITHDRAWAL_REASON_INPUT_TEXT: {CLOB(2147483647)} */
+    /** WITHDRAWAL_REASON_INPUT_TEXT: {CLOB(2147483647)} */
     @JsonKey
     protected String _withdrawalReasonInputText;
 
-    /** (退会日時)WITHDRAWAL_DATETIME: {NotNull, TIMESTAMP(23, 10)} */
+    /** WITHDRAWAL_DATETIME: {NotNull, TIMESTAMP(23, 10)} */
     @JsonKey
     protected java.time.LocalDateTime _withdrawalDatetime;
 
@@ -314,7 +314,7 @@ public abstract class BsMemberWithdrawalDto implements Serializable {
     }
 
     /**
-     * [get] (退会理由コード)WITHDRAWAL_REASON_CODE: {IX, CHAR(3), FK to WITHDRAWAL_REASON, classification=WithdrawalReason} <br>
+     * [get] WITHDRAWAL_REASON_CODE: {IX, CHAR(3), FK to WITHDRAWAL_REASON, classification=WithdrawalReason} <br>
      * @return The value of the column 'WITHDRAWAL_REASON_CODE'. (NullAllowed)
      */
     public String getWithdrawalReasonCode() {
@@ -322,7 +322,7 @@ public abstract class BsMemberWithdrawalDto implements Serializable {
     }
 
     /**
-     * [set] (退会理由コード)WITHDRAWAL_REASON_CODE: {IX, CHAR(3), FK to WITHDRAWAL_REASON, classification=WithdrawalReason} <br>
+     * [set] WITHDRAWAL_REASON_CODE: {IX, CHAR(3), FK to WITHDRAWAL_REASON, classification=WithdrawalReason} <br>
      * @param withdrawalReasonCode The value of the column 'WITHDRAWAL_REASON_CODE'. (NullAllowed)
      */
     public void setWithdrawalReasonCode(String withdrawalReasonCode) {
@@ -331,7 +331,7 @@ public abstract class BsMemberWithdrawalDto implements Serializable {
     }
 
     /**
-     * [get] (退会理由入力テキスト)WITHDRAWAL_REASON_INPUT_TEXT: {CLOB(2147483647)} <br>
+     * [get] WITHDRAWAL_REASON_INPUT_TEXT: {CLOB(2147483647)} <br>
      * @return The value of the column 'WITHDRAWAL_REASON_INPUT_TEXT'. (NullAllowed)
      */
     public String getWithdrawalReasonInputText() {
@@ -339,7 +339,7 @@ public abstract class BsMemberWithdrawalDto implements Serializable {
     }
 
     /**
-     * [set] (退会理由入力テキスト)WITHDRAWAL_REASON_INPUT_TEXT: {CLOB(2147483647)} <br>
+     * [set] WITHDRAWAL_REASON_INPUT_TEXT: {CLOB(2147483647)} <br>
      * @param withdrawalReasonInputText The value of the column 'WITHDRAWAL_REASON_INPUT_TEXT'. (NullAllowed)
      */
     public void setWithdrawalReasonInputText(String withdrawalReasonInputText) {
@@ -348,7 +348,7 @@ public abstract class BsMemberWithdrawalDto implements Serializable {
     }
 
     /**
-     * [get] (退会日時)WITHDRAWAL_DATETIME: {NotNull, TIMESTAMP(23, 10)} <br>
+     * [get] WITHDRAWAL_DATETIME: {NotNull, TIMESTAMP(23, 10)} <br>
      * @return The value of the column 'WITHDRAWAL_DATETIME'. (NullAllowed)
      */
     @JSONHint(format="yyyy-MM-dd HH:mm:ss.SSS")
@@ -358,7 +358,7 @@ public abstract class BsMemberWithdrawalDto implements Serializable {
     }
 
     /**
-     * [set] (退会日時)WITHDRAWAL_DATETIME: {NotNull, TIMESTAMP(23, 10)} <br>
+     * [set] WITHDRAWAL_DATETIME: {NotNull, TIMESTAMP(23, 10)} <br>
      * @param withdrawalDatetime The value of the column 'WITHDRAWAL_DATETIME'. (NullAllowed)
      */
     public void setWithdrawalDatetime(java.time.LocalDateTime withdrawalDatetime) {

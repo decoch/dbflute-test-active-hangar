@@ -23,7 +23,7 @@ import org.docksidestage.hangar.simpleflute.dto.*;
 import org.docksidestage.hangar.dbflute.dtomapper.*;
 
 /**
- * The DTO mapper of (会員ログイン)MEMBER_LOGIN as TABLE. <br>
+ * The DTO mapper of MEMBER_LOGIN as TABLE. <br>
  * <pre>
  * [primary-key]
  *     MEMBER_LOGIN_ID

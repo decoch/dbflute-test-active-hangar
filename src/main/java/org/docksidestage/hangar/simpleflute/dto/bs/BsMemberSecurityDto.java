@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**
- * The simple DTO of (会員セキュリティ情報)MEMBER_SECURITY as TABLE. <br>
+ * The simple DTO of MEMBER_SECURITY as TABLE. <br>
  * <pre>
  * [primary-key]
  *     MEMBER_ID
@@ -55,23 +55,23 @@ public abstract class BsMemberSecurityDto implements Serializable {
     // -----------------------------------------------------
     //                                                Column
     //                                                ------
-    /** (会員ID)MEMBER_ID: {PK, NotNull, INTEGER(10), FK to MEMBER} */
+    /** MEMBER_ID: {PK, NotNull, INTEGER(10), FK to MEMBER} */
     @JsonKey
     protected Integer _memberId;
 
-    /** (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(100)} */
+    /** LOGIN_PASSWORD: {NotNull, VARCHAR(100)} */
     @JsonKey
     protected String _loginPassword;
 
-    /** (リマインダ質問)REMINDER_QUESTION: {NotNull, VARCHAR(50)} */
+    /** REMINDER_QUESTION: {NotNull, VARCHAR(50)} */
     @JsonKey
     protected String _reminderQuestion;
 
-    /** (リマインダ回答)REMINDER_ANSWER: {NotNull, VARCHAR(50)} */
+    /** REMINDER_ANSWER: {NotNull, VARCHAR(50)} */
     @JsonKey
     protected String _reminderAnswer;
 
-    /** (リマインダ利用回数)REMINDER_USE_COUNT: {NotNull, INTEGER(10)} */
+    /** REMINDER_USE_COUNT: {NotNull, INTEGER(10)} */
     @JsonKey
     protected Integer _reminderUseCount;
 
@@ -192,7 +192,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (会員ID)MEMBER_ID: {PK, NotNull, INTEGER(10), FK to MEMBER} <br>
+     * [get] MEMBER_ID: {PK, NotNull, INTEGER(10), FK to MEMBER} <br>
      * @return The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public Integer getMemberId() {
@@ -200,7 +200,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     }
 
     /**
-     * [set] (会員ID)MEMBER_ID: {PK, NotNull, INTEGER(10), FK to MEMBER} <br>
+     * [set] MEMBER_ID: {PK, NotNull, INTEGER(10), FK to MEMBER} <br>
      * @param memberId The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public void setMemberId(Integer memberId) {
@@ -209,7 +209,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     }
 
     /**
-     * [get] (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(100)} <br>
+     * [get] LOGIN_PASSWORD: {NotNull, VARCHAR(100)} <br>
      * @return The value of the column 'LOGIN_PASSWORD'. (NullAllowed)
      */
     public String getLoginPassword() {
@@ -217,7 +217,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     }
 
     /**
-     * [set] (ログインパスワード)LOGIN_PASSWORD: {NotNull, VARCHAR(100)} <br>
+     * [set] LOGIN_PASSWORD: {NotNull, VARCHAR(100)} <br>
      * @param loginPassword The value of the column 'LOGIN_PASSWORD'. (NullAllowed)
      */
     public void setLoginPassword(String loginPassword) {
@@ -226,7 +226,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     }
 
     /**
-     * [get] (リマインダ質問)REMINDER_QUESTION: {NotNull, VARCHAR(50)} <br>
+     * [get] REMINDER_QUESTION: {NotNull, VARCHAR(50)} <br>
      * @return The value of the column 'REMINDER_QUESTION'. (NullAllowed)
      */
     public String getReminderQuestion() {
@@ -234,7 +234,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     }
 
     /**
-     * [set] (リマインダ質問)REMINDER_QUESTION: {NotNull, VARCHAR(50)} <br>
+     * [set] REMINDER_QUESTION: {NotNull, VARCHAR(50)} <br>
      * @param reminderQuestion The value of the column 'REMINDER_QUESTION'. (NullAllowed)
      */
     public void setReminderQuestion(String reminderQuestion) {
@@ -243,7 +243,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     }
 
     /**
-     * [get] (リマインダ回答)REMINDER_ANSWER: {NotNull, VARCHAR(50)} <br>
+     * [get] REMINDER_ANSWER: {NotNull, VARCHAR(50)} <br>
      * @return The value of the column 'REMINDER_ANSWER'. (NullAllowed)
      */
     public String getReminderAnswer() {
@@ -251,7 +251,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     }
 
     /**
-     * [set] (リマインダ回答)REMINDER_ANSWER: {NotNull, VARCHAR(50)} <br>
+     * [set] REMINDER_ANSWER: {NotNull, VARCHAR(50)} <br>
      * @param reminderAnswer The value of the column 'REMINDER_ANSWER'. (NullAllowed)
      */
     public void setReminderAnswer(String reminderAnswer) {
@@ -260,7 +260,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     }
 
     /**
-     * [get] (リマインダ利用回数)REMINDER_USE_COUNT: {NotNull, INTEGER(10)} <br>
+     * [get] REMINDER_USE_COUNT: {NotNull, INTEGER(10)} <br>
      * @return The value of the column 'REMINDER_USE_COUNT'. (NullAllowed)
      */
     public Integer getReminderUseCount() {
@@ -268,7 +268,7 @@ public abstract class BsMemberSecurityDto implements Serializable {
     }
 
     /**
-     * [set] (リマインダ利用回数)REMINDER_USE_COUNT: {NotNull, INTEGER(10)} <br>
+     * [set] REMINDER_USE_COUNT: {NotNull, INTEGER(10)} <br>
      * @param reminderUseCount The value of the column 'REMINDER_USE_COUNT'. (NullAllowed)
      */
     public void setReminderUseCount(Integer reminderUseCount) {

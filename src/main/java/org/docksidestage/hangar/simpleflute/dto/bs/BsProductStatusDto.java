@@ -8,7 +8,7 @@ import org.docksidestage.hangar.simpleflute.AppCDef;
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**
- * The simple DTO of (商品ステータス)PRODUCT_STATUS as TABLE. <br>
+ * The simple DTO of PRODUCT_STATUS as TABLE. <br>
  * <pre>
  * [primary-key]
  *     PRODUCT_STATUS_CODE
@@ -54,15 +54,15 @@ public abstract class BsProductStatusDto implements Serializable {
     // -----------------------------------------------------
     //                                                Column
     //                                                ------
-    /** (商品ステータスコード)PRODUCT_STATUS_CODE: {PK, NotNull, CHAR(3), classification=ProductStatus} */
+    /** PRODUCT_STATUS_CODE: {PK, NotNull, CHAR(3), classification=ProductStatus} */
     @JsonKey
     protected String _productStatusCode;
 
-    /** (商品ステータス名称)PRODUCT_STATUS_NAME: {NotNull, VARCHAR(50)} */
+    /** PRODUCT_STATUS_NAME: {NotNull, VARCHAR(50)} */
     @JsonKey
     protected String _productStatusName;
 
-    /** (表示順)DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} */
+    /** DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} */
     @JsonKey
     protected Integer _displayOrder;
 
@@ -253,7 +253,7 @@ public abstract class BsProductStatusDto implements Serializable {
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (商品ステータスコード)PRODUCT_STATUS_CODE: {PK, NotNull, CHAR(3), classification=ProductStatus} <br>
+     * [get] PRODUCT_STATUS_CODE: {PK, NotNull, CHAR(3), classification=ProductStatus} <br>
      * @return The value of the column 'PRODUCT_STATUS_CODE'. (NullAllowed)
      */
     public String getProductStatusCode() {
@@ -261,7 +261,7 @@ public abstract class BsProductStatusDto implements Serializable {
     }
 
     /**
-     * [set] (商品ステータスコード)PRODUCT_STATUS_CODE: {PK, NotNull, CHAR(3), classification=ProductStatus} <br>
+     * [set] PRODUCT_STATUS_CODE: {PK, NotNull, CHAR(3), classification=ProductStatus} <br>
      * @param productStatusCode The value of the column 'PRODUCT_STATUS_CODE'. (NullAllowed)
      */
     public void setProductStatusCode(String productStatusCode) {
@@ -270,7 +270,7 @@ public abstract class BsProductStatusDto implements Serializable {
     }
 
     /**
-     * [get] (商品ステータス名称)PRODUCT_STATUS_NAME: {NotNull, VARCHAR(50)} <br>
+     * [get] PRODUCT_STATUS_NAME: {NotNull, VARCHAR(50)} <br>
      * @return The value of the column 'PRODUCT_STATUS_NAME'. (NullAllowed)
      */
     public String getProductStatusName() {
@@ -278,7 +278,7 @@ public abstract class BsProductStatusDto implements Serializable {
     }
 
     /**
-     * [set] (商品ステータス名称)PRODUCT_STATUS_NAME: {NotNull, VARCHAR(50)} <br>
+     * [set] PRODUCT_STATUS_NAME: {NotNull, VARCHAR(50)} <br>
      * @param productStatusName The value of the column 'PRODUCT_STATUS_NAME'. (NullAllowed)
      */
     public void setProductStatusName(String productStatusName) {
@@ -287,7 +287,7 @@ public abstract class BsProductStatusDto implements Serializable {
     }
 
     /**
-     * [get] (表示順)DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} <br>
+     * [get] DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} <br>
      * @return The value of the column 'DISPLAY_ORDER'. (NullAllowed)
      */
     public Integer getDisplayOrder() {
@@ -295,7 +295,7 @@ public abstract class BsProductStatusDto implements Serializable {
     }
 
     /**
-     * [set] (表示順)DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} <br>
+     * [set] DISPLAY_ORDER: {UQ, NotNull, INTEGER(10)} <br>
      * @param displayOrder The value of the column 'DISPLAY_ORDER'. (NullAllowed)
      */
     public void setDisplayOrder(Integer displayOrder) {

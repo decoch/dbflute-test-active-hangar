@@ -7,7 +7,7 @@ import net.vvakame.util.jsonpullparser.annotation.*;
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**
- * The simple DTO of (商品カテゴリ)PRODUCT_CATEGORY as TABLE. <br>
+ * The simple DTO of PRODUCT_CATEGORY as TABLE. <br>
  * <pre>
  * [primary-key]
  *     PRODUCT_CATEGORY_CODE
@@ -53,15 +53,15 @@ public abstract class BsProductCategoryDto implements Serializable {
     // -----------------------------------------------------
     //                                                Column
     //                                                ------
-    /** (商品カテゴリコード)PRODUCT_CATEGORY_CODE: {PK, NotNull, CHAR(3)} */
+    /** PRODUCT_CATEGORY_CODE: {PK, NotNull, CHAR(3)} */
     @JsonKey
     protected String _productCategoryCode;
 
-    /** (商品カテゴリ名称)PRODUCT_CATEGORY_NAME: {NotNull, VARCHAR(50)} */
+    /** PRODUCT_CATEGORY_NAME: {NotNull, VARCHAR(50)} */
     @JsonKey
     protected String _productCategoryName;
 
-    /** (親カテゴリコード)PARENT_CATEGORY_CODE: {IX, CHAR(3), FK to PRODUCT_CATEGORY} */
+    /** PARENT_CATEGORY_CODE: {IX, CHAR(3), FK to PRODUCT_CATEGORY} */
     @JsonKey
     protected String _parentCategoryCode;
 
@@ -177,7 +177,7 @@ public abstract class BsProductCategoryDto implements Serializable {
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (商品カテゴリコード)PRODUCT_CATEGORY_CODE: {PK, NotNull, CHAR(3)} <br>
+     * [get] PRODUCT_CATEGORY_CODE: {PK, NotNull, CHAR(3)} <br>
      * @return The value of the column 'PRODUCT_CATEGORY_CODE'. (NullAllowed)
      */
     public String getProductCategoryCode() {
@@ -185,7 +185,7 @@ public abstract class BsProductCategoryDto implements Serializable {
     }
 
     /**
-     * [set] (商品カテゴリコード)PRODUCT_CATEGORY_CODE: {PK, NotNull, CHAR(3)} <br>
+     * [set] PRODUCT_CATEGORY_CODE: {PK, NotNull, CHAR(3)} <br>
      * @param productCategoryCode The value of the column 'PRODUCT_CATEGORY_CODE'. (NullAllowed)
      */
     public void setProductCategoryCode(String productCategoryCode) {
@@ -194,7 +194,7 @@ public abstract class BsProductCategoryDto implements Serializable {
     }
 
     /**
-     * [get] (商品カテゴリ名称)PRODUCT_CATEGORY_NAME: {NotNull, VARCHAR(50)} <br>
+     * [get] PRODUCT_CATEGORY_NAME: {NotNull, VARCHAR(50)} <br>
      * @return The value of the column 'PRODUCT_CATEGORY_NAME'. (NullAllowed)
      */
     public String getProductCategoryName() {
@@ -202,7 +202,7 @@ public abstract class BsProductCategoryDto implements Serializable {
     }
 
     /**
-     * [set] (商品カテゴリ名称)PRODUCT_CATEGORY_NAME: {NotNull, VARCHAR(50)} <br>
+     * [set] PRODUCT_CATEGORY_NAME: {NotNull, VARCHAR(50)} <br>
      * @param productCategoryName The value of the column 'PRODUCT_CATEGORY_NAME'. (NullAllowed)
      */
     public void setProductCategoryName(String productCategoryName) {
@@ -211,7 +211,7 @@ public abstract class BsProductCategoryDto implements Serializable {
     }
 
     /**
-     * [get] (親カテゴリコード)PARENT_CATEGORY_CODE: {IX, CHAR(3), FK to PRODUCT_CATEGORY} <br>
+     * [get] PARENT_CATEGORY_CODE: {IX, CHAR(3), FK to PRODUCT_CATEGORY} <br>
      * @return The value of the column 'PARENT_CATEGORY_CODE'. (NullAllowed)
      */
     public String getParentCategoryCode() {
@@ -219,7 +219,7 @@ public abstract class BsProductCategoryDto implements Serializable {
     }
 
     /**
-     * [set] (親カテゴリコード)PARENT_CATEGORY_CODE: {IX, CHAR(3), FK to PRODUCT_CATEGORY} <br>
+     * [set] PARENT_CATEGORY_CODE: {IX, CHAR(3), FK to PRODUCT_CATEGORY} <br>
      * @param parentCategoryCode The value of the column 'PARENT_CATEGORY_CODE'. (NullAllowed)
      */
     public void setParentCategoryCode(String parentCategoryCode) {

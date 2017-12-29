@@ -98,7 +98,7 @@ public class BsPurchaseSummaryMemberCursor {
     //                                                                  Type Safe Accessor
     //                                                                  ==================
     /**
-     * [get] (会員ID)MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
+     * [get] MEMBER_ID: {INTEGER(10), refers to MEMBER.MEMBER_ID} <br>
      * @return The value of memberId. (NullAllowed)
      * @throws SQLException When it fails to get the value from result set.
      */
@@ -107,7 +107,7 @@ public class BsPurchaseSummaryMemberCursor {
     }
 
     /**
-     * [get] (会員名称)MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
+     * [get] MEMBER_NAME: {VARCHAR(200), refers to MEMBER.MEMBER_NAME} <br>
      * @return The value of memberName. (NullAllowed)
      * @throws SQLException When it fails to get the value from result set.
      */
@@ -116,7 +116,7 @@ public class BsPurchaseSummaryMemberCursor {
     }
 
     /**
-     * [get] (生年月日)BIRTHDATE: {DATE(8), refers to MEMBER.BIRTHDATE} <br>
+     * [get] BIRTHDATE: {DATE(8), refers to MEMBER.BIRTHDATE} <br>
      * @return The value of birthdate. (NullAllowed)
      * @throws SQLException When it fails to get the value from result set.
      */
@@ -125,7 +125,7 @@ public class BsPurchaseSummaryMemberCursor {
     }
 
     /**
-     * [get] (正式会員日時)FORMALIZED_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.FORMALIZED_DATETIME} <br>
+     * [get] FORMALIZED_DATETIME: {TIMESTAMP(23, 10), refers to MEMBER.FORMALIZED_DATETIME} <br>
      * @return The value of formalizedDatetime. (NullAllowed)
      * @throws SQLException When it fails to get the value from result set.
      */

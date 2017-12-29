@@ -10,7 +10,7 @@ import org.docksidestage.hangar.simpleflute.AppCDef;
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**
- * The simple DTO of (会員ログイン)MEMBER_LOGIN as TABLE. <br>
+ * The simple DTO of MEMBER_LOGIN as TABLE. <br>
  * <pre>
  * [primary-key]
  *     MEMBER_LOGIN_ID
@@ -56,23 +56,23 @@ public abstract class BsMemberLoginDto implements Serializable {
     // -----------------------------------------------------
     //                                                Column
     //                                                ------
-    /** (会員ログインID)MEMBER_LOGIN_ID: {PK, ID, NotNull, BIGINT(19)} */
+    /** MEMBER_LOGIN_ID: {PK, ID, NotNull, BIGINT(19)} */
     @JsonKey
     protected Long _memberLoginId;
 
-    /** (会員ID)MEMBER_ID: {UQ+, IX, NotNull, INTEGER(10), FK to MEMBER} */
+    /** MEMBER_ID: {UQ+, IX, NotNull, INTEGER(10), FK to MEMBER} */
     @JsonKey
     protected Integer _memberId;
 
-    /** (ログイン日時)LOGIN_DATETIME: {+UQ, IX, NotNull, TIMESTAMP(23, 10)} */
+    /** LOGIN_DATETIME: {+UQ, IX, NotNull, TIMESTAMP(23, 10)} */
     @JsonKey
     protected java.time.LocalDateTime _loginDatetime;
 
-    /** (モバイルログインフラグ)MOBILE_LOGIN_FLG: {NotNull, INTEGER(10), classification=Flg} */
+    /** MOBILE_LOGIN_FLG: {NotNull, INTEGER(10), classification=Flg} */
     @JsonKey
     protected Integer _mobileLoginFlg;
 
-    /** (ログイン時会員ステータスコード)LOGIN_MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} */
+    /** LOGIN_MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} */
     @JsonKey
     protected String _loginMemberStatusCode;
 
@@ -320,7 +320,7 @@ public abstract class BsMemberLoginDto implements Serializable {
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (会員ログインID)MEMBER_LOGIN_ID: {PK, ID, NotNull, BIGINT(19)} <br>
+     * [get] MEMBER_LOGIN_ID: {PK, ID, NotNull, BIGINT(19)} <br>
      * @return The value of the column 'MEMBER_LOGIN_ID'. (NullAllowed)
      */
     public Long getMemberLoginId() {
@@ -328,7 +328,7 @@ public abstract class BsMemberLoginDto implements Serializable {
     }
 
     /**
-     * [set] (会員ログインID)MEMBER_LOGIN_ID: {PK, ID, NotNull, BIGINT(19)} <br>
+     * [set] MEMBER_LOGIN_ID: {PK, ID, NotNull, BIGINT(19)} <br>
      * @param memberLoginId The value of the column 'MEMBER_LOGIN_ID'. (NullAllowed)
      */
     public void setMemberLoginId(Long memberLoginId) {
@@ -337,7 +337,7 @@ public abstract class BsMemberLoginDto implements Serializable {
     }
 
     /**
-     * [get] (会員ID)MEMBER_ID: {UQ+, IX, NotNull, INTEGER(10), FK to MEMBER} <br>
+     * [get] MEMBER_ID: {UQ+, IX, NotNull, INTEGER(10), FK to MEMBER} <br>
      * @return The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public Integer getMemberId() {
@@ -345,7 +345,7 @@ public abstract class BsMemberLoginDto implements Serializable {
     }
 
     /**
-     * [set] (会員ID)MEMBER_ID: {UQ+, IX, NotNull, INTEGER(10), FK to MEMBER} <br>
+     * [set] MEMBER_ID: {UQ+, IX, NotNull, INTEGER(10), FK to MEMBER} <br>
      * @param memberId The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public void setMemberId(Integer memberId) {
@@ -354,7 +354,7 @@ public abstract class BsMemberLoginDto implements Serializable {
     }
 
     /**
-     * [get] (ログイン日時)LOGIN_DATETIME: {+UQ, IX, NotNull, TIMESTAMP(23, 10)} <br>
+     * [get] LOGIN_DATETIME: {+UQ, IX, NotNull, TIMESTAMP(23, 10)} <br>
      * @return The value of the column 'LOGIN_DATETIME'. (NullAllowed)
      */
     @JSONHint(format="yyyy-MM-dd HH:mm:ss.SSS")
@@ -364,7 +364,7 @@ public abstract class BsMemberLoginDto implements Serializable {
     }
 
     /**
-     * [set] (ログイン日時)LOGIN_DATETIME: {+UQ, IX, NotNull, TIMESTAMP(23, 10)} <br>
+     * [set] LOGIN_DATETIME: {+UQ, IX, NotNull, TIMESTAMP(23, 10)} <br>
      * @param loginDatetime The value of the column 'LOGIN_DATETIME'. (NullAllowed)
      */
     public void setLoginDatetime(java.time.LocalDateTime loginDatetime) {
@@ -373,7 +373,7 @@ public abstract class BsMemberLoginDto implements Serializable {
     }
 
     /**
-     * [get] (モバイルログインフラグ)MOBILE_LOGIN_FLG: {NotNull, INTEGER(10), classification=Flg} <br>
+     * [get] MOBILE_LOGIN_FLG: {NotNull, INTEGER(10), classification=Flg} <br>
      * @return The value of the column 'MOBILE_LOGIN_FLG'. (NullAllowed)
      */
     public Integer getMobileLoginFlg() {
@@ -381,7 +381,7 @@ public abstract class BsMemberLoginDto implements Serializable {
     }
 
     /**
-     * [set] (モバイルログインフラグ)MOBILE_LOGIN_FLG: {NotNull, INTEGER(10), classification=Flg} <br>
+     * [set] MOBILE_LOGIN_FLG: {NotNull, INTEGER(10), classification=Flg} <br>
      * @param mobileLoginFlg The value of the column 'MOBILE_LOGIN_FLG'. (NullAllowed)
      */
     public void setMobileLoginFlg(Integer mobileLoginFlg) {
@@ -390,7 +390,7 @@ public abstract class BsMemberLoginDto implements Serializable {
     }
 
     /**
-     * [get] (ログイン時会員ステータスコード)LOGIN_MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
+     * [get] LOGIN_MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
      * @return The value of the column 'LOGIN_MEMBER_STATUS_CODE'. (NullAllowed)
      */
     public String getLoginMemberStatusCode() {
@@ -398,7 +398,7 @@ public abstract class BsMemberLoginDto implements Serializable {
     }
 
     /**
-     * [set] (ログイン時会員ステータスコード)LOGIN_MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
+     * [set] LOGIN_MEMBER_STATUS_CODE: {IX, NotNull, CHAR(3), FK to MEMBER_STATUS, classification=MemberStatus} <br>
      * @param loginMemberStatusCode The value of the column 'LOGIN_MEMBER_STATUS_CODE'. (NullAllowed)
      */
     public void setLoginMemberStatusCode(String loginMemberStatusCode) {

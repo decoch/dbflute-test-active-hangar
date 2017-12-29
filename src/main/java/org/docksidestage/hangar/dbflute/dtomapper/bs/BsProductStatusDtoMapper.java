@@ -23,7 +23,7 @@ import org.docksidestage.hangar.simpleflute.dto.*;
 import org.docksidestage.hangar.dbflute.dtomapper.*;
 
 /**
- * The DTO mapper of (商品ステータス)PRODUCT_STATUS as TABLE. <br>
+ * The DTO mapper of PRODUCT_STATUS as TABLE. <br>
  * <pre>
  * [primary-key]
  *     PRODUCT_STATUS_CODE

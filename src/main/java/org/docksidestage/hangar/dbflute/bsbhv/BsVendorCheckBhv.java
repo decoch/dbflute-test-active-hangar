@@ -58,9 +58,9 @@ public abstract class BsVendorCheckBhv extends AbstractBehaviorWritable<VendorCh
     //                                                                          ==========
     /*df:beginQueryPath*/
     public static final String PATH_whitebox_vendorcheck_selectDoubleByteOnSql = "whitebox:vendorcheck:selectDoubleByteOnSql";
+    public static final String PATH_whitebox_vendorcheck_selectVendorCheckIntegerSum = "whitebox:vendorcheck:selectVendorCheckIntegerSum";
     public static final String PATH_whitebox_vendorcheck_selectSimpleVendorCheck = "whitebox:vendorcheck:selectSimpleVendorCheck";
     public static final String PATH_whitebox_vendorcheck_selectVendorCheckDecimalSum = "whitebox:vendorcheck:selectVendorCheckDecimalSum";
-    public static final String PATH_whitebox_vendorcheck_selectVendorCheckIntegerSum = "whitebox:vendorcheck:selectVendorCheckIntegerSum";
     /*df:endQueryPath*/
 
     // ===================================================================================

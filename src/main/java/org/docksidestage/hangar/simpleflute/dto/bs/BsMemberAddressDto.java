@@ -10,7 +10,7 @@ import org.docksidestage.hangar.simpleflute.AppCDef;
 import org.docksidestage.hangar.simpleflute.dto.*;
 
 /**
- * The simple DTO of (会員住所情報)MEMBER_ADDRESS as TABLE. <br>
+ * The simple DTO of MEMBER_ADDRESS as TABLE. <br>
  * <pre>
  * [primary-key]
  *     MEMBER_ADDRESS_ID
@@ -56,27 +56,27 @@ public abstract class BsMemberAddressDto implements Serializable {
     // -----------------------------------------------------
     //                                                Column
     //                                                ------
-    /** (会員住所ID)MEMBER_ADDRESS_ID: {PK, ID, NotNull, INTEGER(10)} */
+    /** MEMBER_ADDRESS_ID: {PK, ID, NotNull, INTEGER(10)} */
     @JsonKey
     protected Integer _memberAddressId;
 
-    /** (会員ID)MEMBER_ID: {UQ+, IX, NotNull, INTEGER(10), FK to MEMBER} */
+    /** MEMBER_ID: {UQ+, IX, NotNull, INTEGER(10), FK to MEMBER} */
     @JsonKey
     protected Integer _memberId;
 
-    /** (有効開始日)VALID_BEGIN_DATE: {+UQ, NotNull, DATE(8)} */
+    /** VALID_BEGIN_DATE: {+UQ, NotNull, DATE(8)} */
     @JsonKey
     protected java.time.LocalDate _validBeginDate;
 
-    /** (有効終了日)VALID_END_DATE: {NotNull, DATE(8)} */
+    /** VALID_END_DATE: {NotNull, DATE(8)} */
     @JsonKey
     protected java.time.LocalDate _validEndDate;
 
-    /** (住所)ADDRESS: {NotNull, VARCHAR(200)} */
+    /** ADDRESS: {NotNull, VARCHAR(200)} */
     @JsonKey
     protected String _address;
 
-    /** (地域ID)REGION_ID: {IX, NotNull, INTEGER(10), FK to REGION, classification=Region} */
+    /** REGION_ID: {IX, NotNull, INTEGER(10), FK to REGION, classification=Region} */
     @JsonKey
     protected Integer _regionId;
 
@@ -312,7 +312,7 @@ public abstract class BsMemberAddressDto implements Serializable {
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] (会員住所ID)MEMBER_ADDRESS_ID: {PK, ID, NotNull, INTEGER(10)} <br>
+     * [get] MEMBER_ADDRESS_ID: {PK, ID, NotNull, INTEGER(10)} <br>
      * @return The value of the column 'MEMBER_ADDRESS_ID'. (NullAllowed)
      */
     public Integer getMemberAddressId() {
@@ -320,7 +320,7 @@ public abstract class BsMemberAddressDto implements Serializable {
     }
 
     /**
-     * [set] (会員住所ID)MEMBER_ADDRESS_ID: {PK, ID, NotNull, INTEGER(10)} <br>
+     * [set] MEMBER_ADDRESS_ID: {PK, ID, NotNull, INTEGER(10)} <br>
      * @param memberAddressId The value of the column 'MEMBER_ADDRESS_ID'. (NullAllowed)
      */
     public void setMemberAddressId(Integer memberAddressId) {
@@ -329,7 +329,7 @@ public abstract class BsMemberAddressDto implements Serializable {
     }
 
     /**
-     * [get] (会員ID)MEMBER_ID: {UQ+, IX, NotNull, INTEGER(10), FK to MEMBER} <br>
+     * [get] MEMBER_ID: {UQ+, IX, NotNull, INTEGER(10), FK to MEMBER} <br>
      * @return The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public Integer getMemberId() {
@@ -337,7 +337,7 @@ public abstract class BsMemberAddressDto implements Serializable {
     }
 
     /**
-     * [set] (会員ID)MEMBER_ID: {UQ+, IX, NotNull, INTEGER(10), FK to MEMBER} <br>
+     * [set] MEMBER_ID: {UQ+, IX, NotNull, INTEGER(10), FK to MEMBER} <br>
      * @param memberId The value of the column 'MEMBER_ID'. (NullAllowed)
      */
     public void setMemberId(Integer memberId) {
@@ -346,7 +346,7 @@ public abstract class BsMemberAddressDto implements Serializable {
     }
 
     /**
-     * [get] (有効開始日)VALID_BEGIN_DATE: {+UQ, NotNull, DATE(8)} <br>
+     * [get] VALID_BEGIN_DATE: {+UQ, NotNull, DATE(8)} <br>
      * @return The value of the column 'VALID_BEGIN_DATE'. (NullAllowed)
      */
     @JSONHint(format="yyyy-MM-dd")
@@ -356,7 +356,7 @@ public abstract class BsMemberAddressDto implements Serializable {
     }
 
     /**
-     * [set] (有効開始日)VALID_BEGIN_DATE: {+UQ, NotNull, DATE(8)} <br>
+     * [set] VALID_BEGIN_DATE: {+UQ, NotNull, DATE(8)} <br>
      * @param validBeginDate The value of the column 'VALID_BEGIN_DATE'. (NullAllowed)
      */
     public void setValidBeginDate(java.time.LocalDate validBeginDate) {
@@ -365,7 +365,7 @@ public abstract class BsMemberAddressDto implements Serializable {
     }
 
     /**
-     * [get] (有効終了日)VALID_END_DATE: {NotNull, DATE(8)} <br>
+     * [get] VALID_END_DATE: {NotNull, DATE(8)} <br>
      * @return The value of the column 'VALID_END_DATE'. (NullAllowed)
      */
     @JSONHint(format="yyyy-MM-dd")
@@ -375,7 +375,7 @@ public abstract class BsMemberAddressDto implements Serializable {
     }
 
     /**
-     * [set] (有効終了日)VALID_END_DATE: {NotNull, DATE(8)} <br>
+     * [set] VALID_END_DATE: {NotNull, DATE(8)} <br>
      * @param validEndDate The value of the column 'VALID_END_DATE'. (NullAllowed)
      */
     public void setValidEndDate(java.time.LocalDate validEndDate) {
@@ -384,7 +384,7 @@ public abstract class BsMemberAddressDto implements Serializable {
     }
 
     /**
-     * [get] (住所)ADDRESS: {NotNull, VARCHAR(200)} <br>
+     * [get] ADDRESS: {NotNull, VARCHAR(200)} <br>
      * @return The value of the column 'ADDRESS'. (NullAllowed)
      */
     public String getAddress() {
@@ -392,7 +392,7 @@ public abstract class BsMemberAddressDto implements Serializable {
     }
 
     /**
-     * [set] (住所)ADDRESS: {NotNull, VARCHAR(200)} <br>
+     * [set] ADDRESS: {NotNull, VARCHAR(200)} <br>
      * @param address The value of the column 'ADDRESS'. (NullAllowed)
      */
     public void setAddress(String address) {
@@ -401,7 +401,7 @@ public abstract class BsMemberAddressDto implements Serializable {
     }
 
     /**
-     * [get] (地域ID)REGION_ID: {IX, NotNull, INTEGER(10), FK to REGION, classification=Region} <br>
+     * [get] REGION_ID: {IX, NotNull, INTEGER(10), FK to REGION, classification=Region} <br>
      * @return The value of the column 'REGION_ID'. (NullAllowed)
      */
     public Integer getRegionId() {
@@ -409,7 +409,7 @@ public abstract class BsMemberAddressDto implements Serializable {
     }
 
     /**
-     * [set] (地域ID)REGION_ID: {IX, NotNull, INTEGER(10), FK to REGION, classification=Region} <br>
+     * [set] REGION_ID: {IX, NotNull, INTEGER(10), FK to REGION, classification=Region} <br>
      * @param regionId The value of the column 'REGION_ID'. (NullAllowed)
      */
     public void setRegionId(Integer regionId) {
