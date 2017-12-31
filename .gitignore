@@ -3,7 +3,6 @@
 /.idea
 /*.iml
 /*.epoch
-/dbflute-intro.*
 /mydbflute/intro_resources
 /tm.out
 /tm.out.*
