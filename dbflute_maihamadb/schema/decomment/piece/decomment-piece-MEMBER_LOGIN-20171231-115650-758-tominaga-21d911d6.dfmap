@@ -1,0 +1,20 @@
+map:{
+    ; formatVersion = 1.0
+    ; tableName = MEMBER_LOGIN
+    ; columnName = null
+    ; targetType = TABLE
+    ; decomment = 会員ログイン: ログインするたびに登録されるログイン履歴。
+登録されたら更新されるも削除されることもない。さらには、登録する人もプログラムもはっきりしているので、(紙面の都合上もあって)ここでは共通カラムは省略している。
+
+コンフリクト解消 / カラム情報画面。
+    ; databaseComment = 会員ログイン:&nbsp\;ログインするたびに登録されるログイン履歴。
+登録されたら更新されるも削除されることもない。さらには、登録する人もプログラムもはっきりしているので、(紙面の都合上もあって)ここでは共通カラムは省略している。
+    ; commentVersion = 0
+    ; authorList = list:{
+        ; tominaga
+    }
+    ; pieceCode = 21d911d6
+    ; pieceDatetime = 2017-12-31T11:56:50.757
+    ; pieceOwner = tominaga
+    ; previousPieceList = list:{}
+}
