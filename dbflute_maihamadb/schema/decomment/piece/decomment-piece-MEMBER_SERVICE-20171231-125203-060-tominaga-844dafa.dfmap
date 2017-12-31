@@ -1,0 +1,21 @@
+map:{
+    ; formatVersion = 1.0
+    ; tableName = MEMBER_SERVICE
+    ; columnName = null
+    ; targetType = TABLE
+    ; decomment = 会員サービス: 会員のサービス情報（ポイントサービスなど）。
+テストケースのために、あえて統一性を崩してユニーク制約経由の one-to-one を表現している。
+データベースコメントとのコンフリクト解消
+    ; databaseComment = 会員サービス:&nbsp\;会員のサービス情報（ポイントサービスなど）。
+テストケースのために、あえて統一性を崩してユニーク制約経由の&nbsp\;one-to-one&nbsp\;を表現している。
+    ; commentVersion = 0
+    ; authorList = list:{
+        ; tominaga
+    }
+    ; pieceCode = 844dafa
+    ; pieceDatetime = 2017-12-31T12:52:03.059
+    ; pieceOwner = tominaga
+    ; previousPieceList = list:{
+        ; fdd15de2
+    }
+}
