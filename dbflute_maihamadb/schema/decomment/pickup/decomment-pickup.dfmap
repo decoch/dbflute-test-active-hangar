@@ -1,6 +1,6 @@
 map:{
     ; formatVersion = 1.0
-    ; pickupDatetime = 2017-12-31T12:00:48.695
+    ; pickupDatetime = 2017-12-31T14:21:35.969
     ; decoMap = map:{
         ; tableList = list:{
             ; map:{
@@ -96,6 +96,47 @@ map:{
                             }
                         }
                     }
+                    ; map:{
+                        ; columnName = MEMBER_ACCOUNT
+                        ; propertyList = list:{
+                            ; map:{
+                                ; decomment = 会員アカウント: ログインIDとして利用する。
+昨今メールアドレスをログインIDとすることが多いので、あまり見かけないかも!?
+データベースコメントとのコンフリクト
+                                ; databaseComment = 会員アカウント:&nbsp\;ログインIDとして利用する。
+                                ; pieceCode = f3a66631
+                                ; pieceOwner = tominaga
+                                ; pieceDatetime = 2017-12-31T12:50:48.880
+                                ; previousPieceList = list:{}
+                                ; commentVersion = 0
+                                ; authorList = list:{
+                                    ; tominaga
+                                }
+                            }
+                        }
+                    }
+                    ; map:{
+                        ; columnName = MEMBER_STATUS_CODE
+                        ; propertyList = list:{
+                            ; map:{
+                                ; decomment = 会員ステータスコード: 会員ステータスを参照するコード。
+ステータスが変わるたびに、このカラムが更新される。
+データベースコメントとのコンフリクト解消
+                                ; databaseComment = 会員ステータスコード:&nbsp\;会員ステータスを参照するコード。
+ステータスが変わるたびに、このカラムが更新される。
+                                ; pieceCode = 7828efb9
+                                ; pieceOwner = tominaga
+                                ; pieceDatetime = 2017-12-31T12:52:12.901
+                                ; previousPieceList = list:{
+                                    ; 245efe01
+                                }
+                                ; commentVersion = 0
+                                ; authorList = list:{
+                                    ; tominaga
+                                }
+                            }
+                        }
+                    }
                 }
             }
             ; map:{
@@ -174,6 +215,72 @@ map:{
                         ; previousPieceList = list:{
                             ; b0d4fcd9
                         }
+                        ; commentVersion = 0
+                        ; authorList = list:{
+                            ; tominaga
+                        }
+                    }
+                }
+                ; columnList = list:{}
+            }
+            ; map:{
+                ; tableName = SERVICE_RANK
+                ; propertyList = list:{
+                    ; map:{
+                        ; decomment = サービスランク: 会員のサービスレベルを表現するランク。(ゴールドとかプラチナとか)
+
+author チェック 1 (普通にコメント)
+author チェック2 (2回目のコメント)
+author チェック3 (3回目のコメント、ここで athorが重複していなければ ok )
+                        ; databaseComment = サービスランク:&nbsp\;会員のサービスレベルを表現するランク。(ゴールドとかプラチナとか)
+                        ; pieceCode = fd289d71
+                        ; pieceOwner = yuto
+                        ; pieceDatetime = 2017-12-31T14:10:33.713
+                        ; previousPieceList = list:{
+                            ; ec458ce5
+                        }
+                        ; commentVersion = 0
+                        ; authorList = list:{
+                            ; yuto
+                        }
+                    }
+                }
+                ; columnList = list:{}
+            }
+            ; map:{
+                ; tableName = MEMBER_SERVICE
+                ; propertyList = list:{
+                    ; map:{
+                        ; decomment = 会員サービス: 会員のサービス情報（ポイントサービスなど）。
+テストケースのために、あえて統一性を崩してユニーク制約経由の one-to-one を表現している。
+データベースコメントとのコンフリクト解消
+                        ; databaseComment = 会員サービス:&nbsp\;会員のサービス情報（ポイントサービスなど）。
+テストケースのために、あえて統一性を崩してユニーク制約経由の&nbsp\;one-to-one&nbsp\;を表現している。
+                        ; pieceCode = 844dafa
+                        ; pieceOwner = tominaga
+                        ; pieceDatetime = 2017-12-31T12:52:03.059
+                        ; previousPieceList = list:{
+                            ; fdd15de2
+                        }
+                        ; commentVersion = 0
+                        ; authorList = list:{
+                            ; tominaga
+                        }
+                    }
+                }
+                ; columnList = list:{}
+            }
+            ; map:{
+                ; tableName = MEMBER_SECURITY
+                ; propertyList = list:{
+                    ; map:{
+                        ; decomment = 会員セキュリティ情報: 会員とは one-to-one で、会員一人につき必ず一つのセキュリティ情報がある
+データベースコメントとのコンフリクト
+                        ; databaseComment = 会員セキュリティ情報:&nbsp\
+                        ; pieceCode = 7345a949
+                        ; pieceOwner = tominaga
+                        ; pieceDatetime = 2017-12-31T12:50:37.546
+                        ; previousPieceList = list:{}
                         ; commentVersion = 0
                         ; authorList = list:{
                             ; tominaga
