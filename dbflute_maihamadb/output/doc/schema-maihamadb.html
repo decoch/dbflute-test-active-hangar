@@ -5306,6 +5306,125 @@ function Decomment() {
 	// setup from dbflute if decomment pickup exists
 	this.embeddedPickup = {
 		'tables': [
+				 {
+				'tableName': 'MEMBER'
+				, 'properties': [
+						 {
+						'decomment': '会員: 会員のプロフィールやアカウントなどの基本情報を保持する。<br>基本的に物理削除はなく、退会したらステータスが退会会員になる。<br>ライフサイクルやカテゴリの違う会員情報は、one-to-oneなどの関連テーブルにて。<br><br>コンフリクト'
+						, 'databaseComment': '会員:&nbsp;会員のプロフィールやアカウントなどの基本情報を保持する。<br>基本的に物理削除はなく、退会したらステータスが退会会員になる。<br>ライフサイクルやカテゴリの違う会員情報は、one-to-oneなどの関連テーブルにて。'
+						, 'commentVersion': 0
+						, 'authors': ['tominaga']
+						, 'pieceCode': '3e615c80'
+						, 'pieceDatatime': '2017-12-31T11:49:55.185'
+						, 'previousPieces': []
+					}
+						, {
+						'decomment': 'コンフリクトテスト'
+						, 'databaseComment': '会員:&nbsp;会員のプロフィールやアカウントなどの基本情報を保持する。<br>基本的に物理削除はなく、退会したらステータスが退会会員になる。<br>ライフサイクルやカテゴリの違う会員情報は、one-to-oneなどの関連テーブルにて。'
+						, 'commentVersion': 0
+						, 'authors': ['tominaga']
+						, 'pieceCode': '1e591f9f'
+						, 'pieceDatatime': '2017-12-31T11:49:59.057'
+						, 'previousPieces': []
+					}
+				]
+				, 'columns': [
+						 {
+						'columnName': 'MEMBER_NAME'
+						, 'properties': [
+								 {
+								'decomment': '会員名称: 会員のフルネームの名称。<br>苗字と名前を分けて管理することが多いが、ここでは単純にひとまとめ。<br><br>カラムコメントのコンフリクト解消'
+								, 'databaseComment': '会員名称:&nbsp;会員のフルネームの名称。<br>苗字と名前を分けて管理することが多いが、ここでは単純にひとまとめ。'
+								, 'commentVersion': 0
+								, 'authors': ['tominaga']
+								, 'pieceCode': '5e59cdfd'
+								, 'pieceDatatime': '2017-12-31T11:58:10.824'
+								, 'previousPieces': ['69c2659c','27b34e2']
+							}
+						]
+					}
+						, {
+						'columnName': 'MEMBER_ID'
+						, 'properties': [
+								 {
+								'decomment': '会員ID: 連番として自動採番される。会員IDだけに限らず採番方法はDBMS次第。<br>カラムコメントのコンフリクト。'
+								, 'databaseComment': '会員ID:&nbsp;連番として自動採番される。会員IDだけに限らず採番方法はDBMS次第。'
+								, 'commentVersion': 0
+								, 'authors': ['tominaga']
+								, 'pieceCode': 'f5bf0b86'
+								, 'pieceDatatime': '2017-12-31T11:57:46.838'
+								, 'previousPieces': []
+							}
+								, {
+								'decomment': '会員ID: 連番として自動採番される。会員IDだけに限らず採番方法はDBMS次第。<br>会員ID: 連番として自動採番される。会員IDだけに限らず採番方法はDBMS次第。<br>カラムコメントのコンフリクト。'
+								, 'databaseComment': '会員ID:&nbsp;連番として自動採番される。会員IDだけに限らず採番方法はDBMS次第。'
+								, 'commentVersion': 0
+								, 'authors': ['tominaga']
+								, 'pieceCode': '9551bbaf'
+								, 'pieceDatatime': '2017-12-31T11:57:44.776'
+								, 'previousPieces': []
+							}
+						]
+					}
+				]
+			}
+				, {
+				'tableName': 'MEMBER_FOLLOWING'
+				, 'properties': [
+						 {
+						'decomment': 'コンフリクトを解消'
+						, 'databaseComment': '会員フォローイング:&nbsp;とある会員が他の会員をフォローできる。すると、フォローした会員の購入履歴が閲覧できる。'
+						, 'commentVersion': 0
+						, 'authors': ['tominaga']
+						, 'pieceCode': '91edc2bc'
+						, 'pieceDatatime': '2017-12-31T11:55:50.626'
+						, 'previousPieces': ['447942a6','e1bffe9a']
+					}
+				]
+				, 'columns': [
+				]
+			}
+				, {
+				'tableName': 'MEMBER_LOGIN'
+				, 'properties': [
+						 {
+						'decomment': '会員ログイン: ログインするたびに登録されるログイン履歴。<br>登録されたら更新されるも削除されることもない。さらには、登録する人もプログラムもはっきりしているので、(紙面の都合上もあって)ここでは共通カラムは省略している。<br><br>コンフリクト解消 / カラム情報画面。'
+						, 'databaseComment': '会員ログイン:&nbsp;ログインするたびに登録されるログイン履歴。<br>登録されたら更新されるも削除されることもない。さらには、登録する人もプログラムもはっきりしているので、(紙面の都合上もあって)ここでは共通カラムは省略している。'
+						, 'commentVersion': 0
+						, 'authors': ['tominaga']
+						, 'pieceCode': '128854b0'
+						, 'pieceDatatime': '2017-12-31T11:57:03.965'
+						, 'previousPieces': ['21d911d6','1f34e772']
+					}
+				]
+				, 'columns': [
+				]
+			}
+				, {
+				'tableName': 'MEMBER_ADDRESS'
+				, 'properties': [
+						 {
+						'decomment': 'カラム情報の画面でのコンフリクトテスト'
+						, 'databaseComment': '会員住所情報:&nbsp;会員の住所に関する情報で、同時に有効期間ごとに履歴管理されている。<br>会員を基点に考えた場合、構造的には&nbsp;one-to-many&nbsp;だが、業務的な定型条件で&nbsp;one-to-one&nbsp;になる。このような構造を「業務的one-to-one」と呼ぶ！<br>有効期間は隙間なく埋められるが、ここでは住所情報のない会員も存在し、厳密には(業務的な)&nbsp;"1&nbsp;:&nbsp;0..1"&nbsp;である。'
+						, 'commentVersion': 0
+						, 'authors': ['tominaga']
+						, 'pieceCode': '2b22a580'
+						, 'pieceDatatime': '2017-12-31T11:56:24.762'
+						, 'previousPieces': ['b0d4fcd9']
+					}
+						, {
+						'decomment': 'カラム情報の画面でのコンフリクトテスト'
+						, 'databaseComment': '会員住所情報:&nbsp;会員の住所に関する情報で、同時に有効期間ごとに履歴管理されている。<br>会員を基点に考えた場合、構造的には&nbsp;one-to-many&nbsp;だが、業務的な定型条件で&nbsp;one-to-one&nbsp;になる。このような構造を「業務的one-to-one」と呼ぶ！<br>有効期間は隙間なく埋められるが、ここでは住所情報のない会員も存在し、厳密には(業務的な)&nbsp;"1&nbsp;:&nbsp;0..1"&nbsp;である。'
+						, 'commentVersion': 0
+						, 'authors': ['tominaga']
+						, 'pieceCode': 'e65e25df'
+						, 'pieceDatatime': '2017-12-31T11:56:22.501'
+						, 'previousPieces': ['b0d4fcd9']
+					}
+				]
+				, 'columns': [
+				]
+			}
 		]}
 	this.pickupStore = {
 		'MEMBER': {

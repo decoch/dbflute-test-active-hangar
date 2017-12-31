@@ -1,0 +1,187 @@
+map:{
+    ; formatVersion = 1.0
+    ; pickupDatetime = 2017-12-31T12:00:48.695
+    ; decoMap = map:{
+        ; tableList = list:{
+            ; map:{
+                ; tableName = MEMBER
+                ; propertyList = list:{
+                    ; map:{
+                        ; decomment = 会員: 会員のプロフィールやアカウントなどの基本情報を保持する。
+基本的に物理削除はなく、退会したらステータスが退会会員になる。
+ライフサイクルやカテゴリの違う会員情報は、one-to-oneなどの関連テーブルにて。
+
+コンフリクト
+                        ; databaseComment = 会員:&nbsp\;会員のプロフィールやアカウントなどの基本情報を保持する。
+基本的に物理削除はなく、退会したらステータスが退会会員になる。
+ライフサイクルやカテゴリの違う会員情報は、one-to-oneなどの関連テーブルにて。
+                        ; pieceCode = 3e615c80
+                        ; pieceOwner = tominaga
+                        ; pieceDatetime = 2017-12-31T11:49:55.185
+                        ; previousPieceList = list:{}
+                        ; commentVersion = 0
+                        ; authorList = list:{
+                            ; tominaga
+                        }
+                    }
+                    ; map:{
+                        ; decomment = コンフリクトテスト
+                        ; databaseComment = 会員:&nbsp\;会員のプロフィールやアカウントなどの基本情報を保持する。
+基本的に物理削除はなく、退会したらステータスが退会会員になる。
+ライフサイクルやカテゴリの違う会員情報は、one-to-oneなどの関連テーブルにて。
+                        ; pieceCode = 1e591f9f
+                        ; pieceOwner = tominaga
+                        ; pieceDatetime = 2017-12-31T11:49:59.057
+                        ; previousPieceList = list:{}
+                        ; commentVersion = 0
+                        ; authorList = list:{
+                            ; tominaga
+                        }
+                    }
+                }
+                ; columnList = list:{
+                    ; map:{
+                        ; columnName = MEMBER_NAME
+                        ; propertyList = list:{
+                            ; map:{
+                                ; decomment = 会員名称: 会員のフルネームの名称。
+苗字と名前を分けて管理することが多いが、ここでは単純にひとまとめ。
+
+カラムコメントのコンフリクト解消
+                                ; databaseComment = 会員名称:&nbsp\;会員のフルネームの名称。
+苗字と名前を分けて管理することが多いが、ここでは単純にひとまとめ。
+                                ; pieceCode = 5e59cdfd
+                                ; pieceOwner = tominaga
+                                ; pieceDatetime = 2017-12-31T11:58:10.824
+                                ; previousPieceList = list:{
+                                    ; 69c2659c
+                                    ; 27b34e2
+                                }
+                                ; commentVersion = 0
+                                ; authorList = list:{
+                                    ; tominaga
+                                }
+                            }
+                        }
+                    }
+                    ; map:{
+                        ; columnName = MEMBER_ID
+                        ; propertyList = list:{
+                            ; map:{
+                                ; decomment = 会員ID: 連番として自動採番される。会員IDだけに限らず採番方法はDBMS次第。
+カラムコメントのコンフリクト。
+                                ; databaseComment = 会員ID:&nbsp\;連番として自動採番される。会員IDだけに限らず採番方法はDBMS次第。
+                                ; pieceCode = f5bf0b86
+                                ; pieceOwner = tominaga
+                                ; pieceDatetime = 2017-12-31T11:57:46.838
+                                ; previousPieceList = list:{}
+                                ; commentVersion = 0
+                                ; authorList = list:{
+                                    ; tominaga
+                                }
+                            }
+                            ; map:{
+                                ; decomment = 会員ID: 連番として自動採番される。会員IDだけに限らず採番方法はDBMS次第。
+会員ID: 連番として自動採番される。会員IDだけに限らず採番方法はDBMS次第。
+カラムコメントのコンフリクト。
+                                ; databaseComment = 会員ID:&nbsp\;連番として自動採番される。会員IDだけに限らず採番方法はDBMS次第。
+                                ; pieceCode = 9551bbaf
+                                ; pieceOwner = tominaga
+                                ; pieceDatetime = 2017-12-31T11:57:44.776
+                                ; previousPieceList = list:{}
+                                ; commentVersion = 0
+                                ; authorList = list:{
+                                    ; tominaga
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            ; map:{
+                ; tableName = MEMBER_FOLLOWING
+                ; propertyList = list:{
+                    ; map:{
+                        ; decomment = コンフリクトを解消
+                        ; databaseComment = 会員フォローイング:&nbsp\;とある会員が他の会員をフォローできる。すると、フォローした会員の購入履歴が閲覧できる。
+                        ; pieceCode = 91edc2bc
+                        ; pieceOwner = tominaga
+                        ; pieceDatetime = 2017-12-31T11:55:50.626
+                        ; previousPieceList = list:{
+                            ; 447942a6
+                            ; e1bffe9a
+                        }
+                        ; commentVersion = 0
+                        ; authorList = list:{
+                            ; tominaga
+                        }
+                    }
+                }
+                ; columnList = list:{}
+            }
+            ; map:{
+                ; tableName = MEMBER_LOGIN
+                ; propertyList = list:{
+                    ; map:{
+                        ; decomment = 会員ログイン: ログインするたびに登録されるログイン履歴。
+登録されたら更新されるも削除されることもない。さらには、登録する人もプログラムもはっきりしているので、(紙面の都合上もあって)ここでは共通カラムは省略している。
+
+コンフリクト解消 / カラム情報画面。
+                        ; databaseComment = 会員ログイン:&nbsp\;ログインするたびに登録されるログイン履歴。
+登録されたら更新されるも削除されることもない。さらには、登録する人もプログラムもはっきりしているので、(紙面の都合上もあって)ここでは共通カラムは省略している。
+                        ; pieceCode = 128854b0
+                        ; pieceOwner = tominaga
+                        ; pieceDatetime = 2017-12-31T11:57:03.965
+                        ; previousPieceList = list:{
+                            ; 21d911d6
+                            ; 1f34e772
+                        }
+                        ; commentVersion = 0
+                        ; authorList = list:{
+                            ; tominaga
+                        }
+                    }
+                }
+                ; columnList = list:{}
+            }
+            ; map:{
+                ; tableName = MEMBER_ADDRESS
+                ; propertyList = list:{
+                    ; map:{
+                        ; decomment = カラム情報の画面でのコンフリクトテスト
+                        ; databaseComment = 会員住所情報:&nbsp\;会員の住所に関する情報で、同時に有効期間ごとに履歴管理されている。
+会員を基点に考えた場合、構造的には&nbsp\;one-to-many&nbsp\;だが、業務的な定型条件で&nbsp\;one-to-one&nbsp\;になる。このような構造を「業務的one-to-one」と呼ぶ！
+有効期間は隙間なく埋められるが、ここでは住所情報のない会員も存在し、厳密には(業務的な)&nbsp\;"1&nbsp\;:&nbsp\;0..1"&nbsp\;である。
+                        ; pieceCode = 2b22a580
+                        ; pieceOwner = tominaga
+                        ; pieceDatetime = 2017-12-31T11:56:24.762
+                        ; previousPieceList = list:{
+                            ; b0d4fcd9
+                        }
+                        ; commentVersion = 0
+                        ; authorList = list:{
+                            ; tominaga
+                        }
+                    }
+                    ; map:{
+                        ; decomment = カラム情報の画面でのコンフリクトテスト
+                        ; databaseComment = 会員住所情報:&nbsp\;会員の住所に関する情報で、同時に有効期間ごとに履歴管理されている。
+会員を基点に考えた場合、構造的には&nbsp\;one-to-many&nbsp\;だが、業務的な定型条件で&nbsp\;one-to-one&nbsp\;になる。このような構造を「業務的one-to-one」と呼ぶ！
+有効期間は隙間なく埋められるが、ここでは住所情報のない会員も存在し、厳密には(業務的な)&nbsp\;"1&nbsp\;:&nbsp\;0..1"&nbsp\;である。
+                        ; pieceCode = e65e25df
+                        ; pieceOwner = tominaga
+                        ; pieceDatetime = 2017-12-31T11:56:22.501
+                        ; previousPieceList = list:{
+                            ; b0d4fcd9
+                        }
+                        ; commentVersion = 0
+                        ; authorList = list:{
+                            ; tominaga
+                        }
+                    }
+                }
+                ; columnList = list:{}
+            }
+        }
+    }
+}
