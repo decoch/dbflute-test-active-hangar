@@ -1,0 +1,16 @@
+map:{
+    ; formatVersion = 1.0
+    ; tableName = VENDOR_$_DOLLAR
+    ; columnName = VENDOR_$_DOLLAR_ID
+    ; targetType = COLUMN
+    ; decomment = だらーがはいってるからむでやんすやんす
+    ; databaseComment = 
+    ; commentVersion = 0
+    ; authorList = list:{
+        ; jflute
+    }
+    ; pieceCode = 7362395c
+    ; pieceDatetime = 2017-12-31T16:09:47.420
+    ; pieceOwner = jflute
+    ; previousPieceList = list:{}
+}

@@ -1,0 +1,16 @@
+map:{
+    ; formatVersion = 1.0
+    ; tableName = VENDOR_$_DOLLAR
+    ; columnName = VENDOR_$_DOLLAR_NAME
+    ; targetType = COLUMN
+    ; decomment = めっちゃ記号入れてやつ$$$%&amp\;&#x27\;&amp\;&#x27\;&amp\;#$!&quot\;&#x60\;~|^¥¥+*::\}/???.,&gt\;+@\=---\=\=,
+    ; databaseComment = 
+    ; commentVersion = 0
+    ; authorList = list:{
+        ; jflute
+    }
+    ; pieceCode = a70cab60
+    ; pieceDatetime = 2017-12-31T16:10:27.123
+    ; pieceOwner = jflute
+    ; previousPieceList = list:{}
+}
